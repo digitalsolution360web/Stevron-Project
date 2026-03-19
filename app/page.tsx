@@ -2,10 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, ChevronDown, ArrowRight } from "lucide-react";
 
 export default function Home() {
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    const autoSlide = setInterval(() => {
+      const isAtEnd = slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth - 10;
+      if (isAtEnd) {
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        slider.scrollBy({ left: 300, behavior: "smooth" });
+      }
+    }, 4000);
+
+    return () => clearInterval(autoSlide);
+  }, []);
+
   return (
     <div className="flex flex-col">
       {/* Hero Section - Tightened aspect ratio on mobile to reduce vertical gaps */}
@@ -48,7 +66,7 @@ export default function Home() {
 
       {/* About Us Section - Aligned to Navbar Width */}
       <section className="bg-white pt-1 sm:pt-2 pb-0">
-        <div className="mx-auto w-full max-w-[1440px] px-10 sm:px-10 lg:px-16">
+        <div className="mx-auto w-full max-w-[1752px] px-10 sm:px-10 lg:px-16">
           <div className="relative w-full aspect-[16/7] sm:aspect-[16/5.6] overflow-hidden">
             <Image
               src="/about.webp"
@@ -77,14 +95,15 @@ export default function Home() {
           {/* Categories Grid - alignment same as navbar */}
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-6">
             {[
-              { title: "DC TOOLS", image: "/7.webp" },
-              { title: "AC TOOLS", image: "/8.webp" },
-              { title: "ACCESSORIES", image: "/5.webp" },
-              { title: "HAND TOOLS", image: "/9.webp" },
+              { title: "DC TOOLS", image: "/7.webp", href: "/dc-products" },
+              { title: "AC TOOLS", image: "/8.webp", href: "/ac-products" },
+              { title: "ACCESSORIES", image: "/5.webp", href: "#" },
+              { title: "HAND TOOLS", image: "/9.webp", href: "#" },
             ].map((item, index) => (
-              <div
+              <Link
                 key={index}
-                className="flex h-[320px] xs:h-[350px] sm:h-[400px] lg:h-[380px] w-full flex-col overflow-hidden border border-[#A7A7A7] rounded-[12px] shadow-sm"
+                href={item.href}
+                className="flex h-[320px] xs:h-[350px] sm:h-[400px] lg:h-[380px] w-full flex-col overflow-hidden border border-[#A7A7A7] rounded-[12px] shadow-sm transition-transform hover:scale-[1.02]"
               >
                 {/* Header Box - Restored: White bg, Black text */}
                 <div className="flex h-[42px] w-full items-center justify-center bg-white border-b border-[#A7A7A7]">
@@ -102,7 +121,7 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, 350px"
                   />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -213,18 +232,28 @@ export default function Home() {
           {/* Product Grid with Navigation Arrows */}
           <div className="relative w-full">
             {/* Left Arrow */}
-            <button className="absolute left-[-40px] top-1/2 hidden h-8 w-8 -translate-y-1/2 items-center justify-center text-[#000000]/50 hover:text-[#000000] sm:flex lg:left-[-60px]">
+            <button 
+              onClick={() => sliderRef.current?.scrollBy({ left: -300, behavior: 'smooth' })}
+              className="absolute left-[-40px] top-1/2 hidden z-10 h-8 w-8 -translate-y-1/2 items-center justify-center text-[#000000]/50 hover:text-[#000000] sm:flex lg:left-[-60px]"
+            >
               <ChevronLeft size={32} strokeWidth={1.5} />
             </button>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div 
+              ref={sliderRef}
+              id="professional-tools-slider"
+              className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               {[
                 { name: "75NM", subtitle: "Taladro Percutor Compacto", image: "/6.webp" },
                 { name: "45NM", subtitle: "Taladro Percutor", image: "/6.webp" },
                 { name: "400NM", subtitle: "Llave de Impacto", image: "/6.webp" },
                 { name: "600NM", subtitle: "Llave de Impacto", image: "/6.webp" },
+                { name: "800NM", subtitle: "Taladro Inalámbrico", image: "/6.webp" },
+                { name: "1000NM", subtitle: "Taladro Profesional", image: "/6.webp" },
               ].map((product, idx) => (
-                <div key={idx} className="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E5E5] shadow-sm transition-all hover:shadow-md">
+                <div key={idx} className="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E5E5] shadow-sm transition-all hover:shadow-md min-w-[280px] sm:min-w-[calc(50%-8px)] lg:min-w-[calc(25%-12px)] snap-start">
                   {/* Top: Image (White BG) */}
                   <div className="flex aspect-square w-full items-center justify-center bg-[#FFFFFF] p-8">
                     <Image
@@ -236,11 +265,11 @@ export default function Home() {
                     />
                   </div>
                   {/* Bottom: Info (Black BG) */}
-                  <div className="flex flex-col bg-[#171717] px-5 py-4">
+                  <div className="flex flex-col flex-1 bg-[#171717] px-5 py-4">
                     <h3 className="mb-1 font-orbitron text-[16px] font-bold text-[#FFFFFF]">{product.name}</h3>
                     <p className="mb-3 font-sans text-[12px] font-extralight text-[#A3A3A3] tracking-[0.03em]">{product.subtitle}</p>
                     {/* View Details Button */}
-                    <button className="flex h-[28px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[13px] font-medium text-[#565656] font-orbitron">
+                    <button className="mt-auto flex h-[28px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[13px] font-medium text-[#565656] font-orbitron">
                       View Details
                       <ArrowRight size={16} strokeWidth={2} className="text-[#565656]" />
                     </button>
@@ -250,7 +279,10 @@ export default function Home() {
             </div>
 
             {/* Right Arrow */}
-            <button className="absolute right-[-40px] top-1/2 hidden h-8 w-8 -translate-y-1/2 items-center justify-center text-[#000000]/50 hover:text-[#000000] sm:flex lg:right-[-60px]">
+            <button 
+              onClick={() => sliderRef.current?.scrollBy({ left: 300, behavior: 'smooth' })}
+              className="absolute right-[-40px] top-1/2 hidden z-10 h-8 w-8 -translate-y-1/2 items-center justify-center text-[#000000]/50 hover:text-[#000000] sm:flex lg:right-[-60px]"
+            >
               <ChevronRight size={32} strokeWidth={1.5} />
             </button>
           </div>
@@ -258,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* Brand Categories Section - Figma: Full width background, 3 cards */}
-      <section className="relative w-full overflow-hidden py-16 sm:py-24">
+      <section className="relative w-full overflow-hidden py-10 sm:py-12">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -278,8 +310,8 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Cards Grid - 3 cards, Figma: 305x151px each */}
-          <div className="grid w-full grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          {/* Cards Grid - 3 cards, full width to align with other sections */}
+          <div className="grid w-full grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 name: "BONHOEFFER",
@@ -300,35 +332,77 @@ export default function Home() {
                 color: "#00A3FF", // Blue
               }
             ].map((brand, idx) => (
-              <div 
-                key={idx} 
-                className="flex h-[151px] w-[305px] mx-auto flex-col items-center rounded-[12px] bg-white p-4 shadow-[1px_2px_10.6px_1px_rgba(0,0,0,0.15)] border border-black/5 transition-all hover:scale-[1.03] hover:shadow-xl"
+              <div
+                key={idx}
+                className="flex min-h-[190px] w-full flex-col items-center justify-center rounded-[12px] bg-white p-6 lg:p-8 shadow-[1px_2px_10.6px_1px_rgba(0,0,0,0.15)] border border-black/5 transition-all hover:scale-[1.03] hover:shadow-xl"
               >
                 {/* Brand Logo/Text - Figma: Antenna 36px Black/Bold */}
-                <h2 
-                  className="mb-1 font-orbitron text-[36px] font-black tracking-tighter"
+                <h2
+                  className="mb-1 font-orbitron text-[28px] lg:text-[34px] xl:text-[36px] font-black tracking-tighter w-full text-center"
                   style={{ color: brand.color }}
                 >
                   {brand.name}
                 </h2>
 
                 {/* Subtitle with Side Lines */}
-                <div className="mb-4 flex w-full items-center gap-2 px-2">
+                <div className="mb-5 flex w-full items-center gap-2 px-2">
                   <div className="h-[1px] flex-1 bg-[#A7A7A7]" />
-                  <span className="whitespace-nowrap font-sans text-[10px] font-bold text-[#565656]">
+                  <span className="whitespace-nowrap font-sans text-[9px] lg:text-[10px] xl:text-[11px] font-bold text-[#565656]">
                     {brand.subtitle}
                   </span>
                   <div className="h-[1px] flex-1 bg-[#A7A7A7]" />
                 </div>
 
                 {/* Website Link Pill */}
-                <div className="mt-auto flex h-[32px] w-full items-center justify-center rounded-full bg-black px-4">
-                  <span 
-                    className="font-sans text-[14px] font-extralight tracking-tight"
+                <div className="mt-auto flex h-[32px] lg:h-[36px] w-full max-w-[280px] items-center justify-center rounded-full bg-black px-4">
+                  <span
+                    className="font-sans text-[12px] lg:text-[14px] font-extralight tracking-tight whitespace-nowrap"
                     style={{ color: brand.color }}
                   >
                     {brand.website}
                   </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-white py-12">
+        <div className="mx-auto w-full max-w-[1440px] px-10 sm:px-10 lg:px-16 flex flex-col items-center">
+          {/* Section Label */}
+          <div className="mb-4 flex h-[35px] items-center justify-center rounded-[5px] bg-[#000000] px-8 shadow-sm">
+            <span className="font-orbitron text-[14px] font-normal tracking-wider text-[#FFFFFF]">
+              Frequently Asked Questions
+            </span>
+          </div>
+          
+          {/* Subtitle */}
+          <p className="mb-6 max-w-[750px] text-center font-sans text-[14px] leading-relaxed text-[#565656]">
+            Find answers to common questions about our products, services, and partnerships.<br className="hidden sm:block" />
+            Can&apos;t find what you&apos;re looking for? Contact our support team.
+          </p>
+
+          {/* FAQ list */}
+          <div className="flex w-full max-w-[920px] flex-col gap-2.5">
+            {[
+              "What types of industrial equipment does Stevron manufacture?",
+              "Do you offer warranty on your products?",
+              "How can I become a distributor for Stevron products?",
+              "Do you provide international shipping and support?",
+              "How do I find the right product for my specific needs?",
+              "What kind of technical support and training do you provide?",
+            ].map((question, idx) => (
+              <div 
+                key={idx} 
+                className="flex items-center justify-between rounded-[8px] border border-[#E5E5E5] bg-[#FFFFFF] px-6 py-[16px] shadow-[0_4px_12px_-2px_rgba(0,0,0,0.06)] transition-all hover:shadow-md cursor-pointer group"
+              >
+                <span className="font-sans text-[15px] font-medium text-[#1A1A1A]">
+                  {question}
+                </span>
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#94A034] shadow-sm transition-transform group-hover:scale-110">
+                  <ChevronDown size={14} className="text-white" strokeWidth={3} />
                 </div>
               </div>
             ))}
@@ -352,31 +426,31 @@ function CTASection() {
         {/* Top Divider */}
         <div className="w-full h-[1px] bg-[#E5E5E5] mb-16" />
 
-      <div className="flex flex-col items-center gap-8 text-center max-w-[800px]">
-        {/* Title Pill */}
-        <div className="bg-black text-white px-8 py-2 rounded-[5px] shadow-lg">
-          <span className="font-orbitron text-[14px] sm:text-[16px] font-bold tracking-wider uppercase">
-            Ready to Experience Excellence?
-          </span>
+        <div className="flex flex-col items-center gap-8 text-center max-w-[800px]">
+          {/* Title Pill */}
+          <div className="bg-black text-white px-8 py-2 rounded-[5px] shadow-lg">
+            <span className="font-orbitron text-[14px] sm:text-[16px] font-bold tracking-wider uppercase">
+              Ready to Experience Excellence?
+            </span>
+          </div>
+
+          {/* Description */}
+          <p className="font-sans text-[16px] text-[#565656] leading-relaxed">
+            Join thousands of satisfied customers who trust Stevron for their industrial equipment needs.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-2">
+            <button className="bg-[#94A034] text-white font-orbitron text-[14px] px-10 py-3 rounded-[5px] shadow-md transition-opacity hover:opacity-90">
+              Explore Products
+            </button>
+            <button className="bg-[#94A034] text-white font-orbitron text-[14px] px-10 py-3 rounded-[5px] shadow-md transition-opacity hover:opacity-90">
+              Become Distributor
+            </button>
+          </div>
         </div>
 
-        {/* Description */}
-        <p className="font-sans text-[16px] text-[#565656] leading-relaxed">
-          Join thousands of satisfied customers who trust Stevron for their industrial equipment needs.
-        </p>
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-2">
-          <button className="bg-[#94A034] text-white font-orbitron text-[14px] px-10 py-3 rounded-[5px] shadow-md transition-opacity hover:opacity-90">
-            Explore Products
-          </button>
-          <button className="bg-[#94A034] text-white font-orbitron text-[14px] px-10 py-3 rounded-[5px] shadow-md transition-opacity hover:opacity-90">
-            Become Distributor
-          </button>
-        </div>
-      </div>
-
-      {/* Bottom Divider */}
+        {/* Bottom Divider */}
         <div className="w-full h-[1px] bg-[#E5E5E5] mt-16" />
       </div>
     </section>
@@ -392,12 +466,12 @@ function Footer() {
           <h2 className="font-orbitron text-[20px] font-normal leading-[33px] text-white">
             Subscribe to Our Newsletter
           </h2>
-          
+
           <div className="relative w-full max-w-[562px]">
             <div className="flex h-[53.46px] w-full items-center bg-white rounded-full overflow-hidden p-1 shadow-lg">
-              <input 
-                type="email" 
-                placeholder="Your Email Address" 
+              <input
+                type="email"
+                placeholder="Your Email Address"
                 className="flex-1 px-6 outline-none text-[#A3A3A3] font-sans text-[14px]"
               />
               <button className="bg-[#94A034] h-full px-8 rounded-full text-white font-orbitron text-[14px] font-bold transition-opacity hover:opacity-90">
@@ -414,11 +488,11 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Logo Column */}
           <div className="flex flex-col gap-6">
-            <Image 
-              src="/Logo.webp" 
-              alt="STEVRON" 
-              width={220} 
-              height={48} 
+            <Image
+              src="/Logo.webp"
+              alt="STEVRON"
+              width={220}
+              height={48}
               className="h-auto w-[180px]"
             />
             <p className="font-sans text-[14px] text-gray-400 leading-relaxed max-w-[300px]">
@@ -458,7 +532,7 @@ function Footer() {
           </div>
 
           {/* Support Column */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 h-full">
             <h3 className="font-orbitron text-[18px] font-bold tracking-wider relative inline-block w-fit">
               Support
               <div className="absolute bottom-[-10px] left-0 w-1/2 h-[2px] bg-[#94A034]" />
@@ -468,11 +542,17 @@ function Footer() {
               <li><Link href="/" className="hover:text-white transition-colors">Warranty</Link></li>
             </ul>
 
-            {/* Social Icons Placeholder */}
-            <div className="flex gap-4 mt-6">
-              <div className="h-2.5 w-2.5 rounded-full bg-[#94A034]" />
-              <div className="h-2.5 w-2.5 rounded-full bg-white" />
-              <div className="h-2.5 w-2.5 rounded-full bg-white" />
+            {/* Social Icons */}
+            <div className="flex items-center gap-6 mt-auto pt-10 justify-start">
+              <Link href="#" className="flex h-8 w-8 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 shadow-sm">
+                <Image src="/msg.png" alt="Message" width={20} height={20} className="object-contain" />
+              </Link>
+              <Link href="#" className="flex h-8 w-8 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 shadow-sm">
+                <Image src="/insta.png" alt="Instagram" width={20} height={20} className="object-contain" />
+              </Link>
+              <Link href="#" className="flex h-8 w-8 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 shadow-sm">
+                <Image src="/face.png" alt="Facebook" width={20} height={20} className="object-contain" />
+              </Link>
             </div>
           </div>
         </div>

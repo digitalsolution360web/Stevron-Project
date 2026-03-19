@@ -41,6 +41,18 @@ export default function Navbar() {
             Products
           </Link>
           <Link
+            href="/ac-products"
+            className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
+          >
+            AC Product
+          </Link>
+          <Link
+            href="/dc-products"
+            className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
+          >
+            DC Product
+          </Link>
+          <Link
             href="/about"
             className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
           >
@@ -104,6 +116,20 @@ export default function Navbar() {
             className="py-4 font-orbitron text-[18px] text-white transition-opacity hover:opacity-80"
           >
             Products
+          </Link>
+          <Link
+            href="/ac-products"
+            onClick={toggleMenu}
+            className="py-4 font-orbitron text-[18px] text-white transition-opacity hover:opacity-80"
+          >
+            AC Product
+          </Link>
+          <Link
+            href="/dc-products"
+            onClick={toggleMenu}
+            className="py-4 font-orbitron text-[18px] text-white transition-opacity hover:opacity-80"
+          >
+            DC Product
           </Link>
           <Link
             href="/about"
