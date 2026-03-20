@@ -163,7 +163,7 @@ export default function ACProducts() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-[1100px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-[1100px]">
             {[
               { title: "DC TOOLS", image: "/7.webp" },
               { title: "ACCESSORIES", image: "/5.webp" },
@@ -192,7 +192,7 @@ export default function ACProducts() {
           </div>
 
           {/* Line below range cards before CTA */}
-          <div className="w-full max-w-[1440px] mt-12">
+          <div className="w-full max-w-[1440px] mt-16">
             <div className="w-full h-px bg-gray-200" />
           </div>
         </div>
