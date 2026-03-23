@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 flex flex-col">
         {/* Newsletter Section - Narrower width as per Figma */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-12 items-center mb-12">
-          <h2 className="lg:col-span-2 font-['Antenna',sans-serif] text-[20px] font-normal leading-tight text-white lg:text-left">
+          <h2 className="lg:col-span-2 font-orbitron text-[20px] font-normal leading-tight text-white lg:text-left">
             Subscribe to Our Newsletter
           </h2>
 
