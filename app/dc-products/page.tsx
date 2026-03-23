@@ -126,7 +126,7 @@ export default function DCProducts() {
                 </div>
 
                 {/* Product Info (Black Section) - Exactly 61px as per Figma */}
-                <div className="flex h-[61px] w-full flex-col justify-center gap-0.5 border-t border-black/5 bg-[#171717] px-2 py-1.5">
+                <div className="flex h-[78px] w-full flex-col justify-center gap-0.5 border-t border-black/5 bg-[#171717] px-2 py-1.5">
                    <h3 className="px-1 font-['Eurostile_Extended',sans-serif] text-[14px] font-bold leading-[100%] uppercase text-white">
                     {spec}
                   </h3>
