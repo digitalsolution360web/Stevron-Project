@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 flex flex-col">
         {/* Newsletter Section - Narrower width as per Figma */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-12 items-center mb-12">
-          <h2 className="lg:col-span-2 font-Orbitron text-[20px] font-normal leading-tight text-white lg:text-left">
+          <h2 className="lg:col-span-2 font-Antenna text-[20px] font-normal leading-tight text-white lg:text-left">
             Subscribe to Our Newsletter
           </h2>
 
@@ -18,9 +18,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your Email Address"
-                className="flex-1 px-6 outline-none text-[#A3A3A3] font-sans text-[13px]"
+                className="flex-1 px-6 outline-none text-[#A3A3A3] font-Antenna text-[13px]"
               />
-              <button className="bg-[#94A034] h-full px-8 rounded-full text-white font-sans text-[14px] font-bold transition-opacity hover:opacity-90">
+              <button className="bg-[#94A034] h-full px-8 rounded-full text-white font-Antenna text-[14px] font-bold transition-opacity hover:opacity-90">
                 Get Started
               </button>
             </div>

@@ -23,8 +23,8 @@ export default function ACProducts() {
   ];
 
   const products = [
-    { id: "BNDR45", subtitle: "45NM - Taladro Percutor", image: "/59.png" },
     { id: "BNDR75", subtitle: "75NM - Taladro Percutor Compacto", image: "/60.png" },
+    { id: "BNDR45", subtitle: "45NM - Taladro Percutor", image: "/59.png" },
     { id: "BNIW4002B2", subtitle: "400NM - Llave de Impacto", image: "/37.png" },
     { id: "BNIW6004B2", subtitle: "600NM - Llave de Impacto", image: "/24.png" },
     { id: "BNIW8004B2", subtitle: "800NM - Llave de Impacto", image: "/38.png" },
