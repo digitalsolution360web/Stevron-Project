@@ -23,22 +23,22 @@ export default function DCProducts() {
   ];
 
   const products = [
-    { id: "BNED650", subtitle: "650W - Impact Drill", image: "/33.png" },
-    { id: "BNID710", subtitle: "710W - Impact Drill", image: "/34.png" },
-    { id: "BNID850", subtitle: "850W - Impact Drill", image: "/36.png" },
-    { id: "BNID1100", subtitle: "1100W - Industrial Hammer Drill", image: "/52.png" },
-    { id: "BNAG750", subtitle: "750W - Angle Grinder", image: "/55.png" },
-    { id: "BNAG950", subtitle: "950W - Professional Grinder", image: "/29.png" },
-    { id: "BNAG2200", subtitle: "2200W - Industrial Grinder", image: "/30.png" },
-    { id: "BNAG2400", subtitle: "2400W - Heavy Duty Grinder", image: "/54.png" },
-    { id: "BNPL1400", subtitle: "1400W - Sander Polisher", image: "/47.png" },
-    { id: "BNJS600", subtitle: "600W - Jig Saw Professional", image: "/44.png" },
-    { id: "BNSL240", subtitle: "240W - Orbital Sander", image: "/46.png" },
-    { id: "BNCS1100", subtitle: "1100W - Circular Saw", image: "/35.png" },
-    { id: "BNCC2400", subtitle: "2400W - Cut-off Machine", image: "/51.png" },
-    { id: "BNRO1600", subtitle: "1600W - Router Professional", image: "/56.png" },
-    { id: "BNRHM2000B", subtitle: "20J - Rotary Hammer Heavy", image: "/57.png" },
-    { id: "BNRHM2600B", subtitle: "26J - Rotary Hammer Industrial", image: "/58.png" },
+    { id: "BNEDR500", subtitle: "650W - Impact Drill", image: "/BNEDR500.webp" },
+    { id: "BNIMD750", subtitle: "710W - Impact Drill", image: "/BNIMD750.webp" },
+    { id: "BNIMD850", subtitle: "850W - Impact Drill", image: "/BNIMD850 .webp" },
+    { id: "BNIMD1100", subtitle: "1100W - Industrial Hammer Drill", image: "/BNIMD1100_NEW.webp" },
+    { id: "BNANG750", subtitle: "750W - Angle Grinder", image: "/BNANG750.webp" },
+    { id: "BNANG950", subtitle: "950W - Professional Grinder", image: "/BNANG950.webp" },
+    { id: "BNANG2200", subtitle: "2200W - Industrial Grinder", image: "/BNANG2200.webp" },
+    { id: "BNANG2400", subtitle: "2400W - Heavy Duty Grinder", image: "/BNANG2400.webp" },
+    { id: "BNPOL1400", subtitle: "1400W - Sander Polisher", image: "/BNPOL1400.webp" },
+    { id: "BNJSA600", subtitle: "600W - Jig Saw Professional", image: "/BNJSA600.webp" },
+    { id: "BNPLS240", subtitle: "240W - Orbital Sander", image: "/BNPLS240.webp" },
+    { id: "BNCSA1400", subtitle: "1100W - Circular Saw", image: "/BNCSA1400.webp" },
+    { id: "BNCOS2400", subtitle: "2400W - Cut-off Machine", image: "/BNCOS2400.webp" },
+    { id: "BNROU1600", subtitle: "1600W - Router Professional", image: "/BNROU1600.webp" },
+    { id: "BNRHM800SDS", subtitle: "20J - Rotary Hammer Heavy", image: "/BNRHM800SDS.webp" },
+    { id: "BNRHM1500SDS", subtitle: "26J - Rotary Hammer Industrial", image: "/BNRHM1500SDS.webp" },
   ];
 
   return (
@@ -83,22 +83,20 @@ export default function DCProducts() {
 
           {/* Sidebar Categories */}
           <div className="w-full shrink-0 lg:w-[260px]">
-            <h2 className="mb-6 font-orbitron text-[18px] font-bold uppercase tracking-tight text-black flex items-center gap-2">
-              <span className="h-[2px] w-4 bg-black" />
-              Product Category
-            </h2>
+            <div className="w-[200px] mb-6">
+              <h2 className="font-orbitron text-[16px] font-bold uppercase tracking-tight text-black text-left">
+                Product Category
+              </h2>
+              <div className="h-[1px] w-full bg-black mt-1" />
+            </div>
             <div className="flex flex-col gap-1.5 pt-2">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`flex h-[36px] items-center justify-between px-4 font-orbitron text-[13px] font-medium tracking-wide transition-all border border-black/5 rounded-[4px] ${activeCategory === cat
-                    ? "bg-black text-white"
-                    : "bg-[#171717] text-white hover:bg-black/90"
-                    }`}
+                  className="flex h-[22px] w-[200px] items-center justify-start px-3 font-orbitron text-[11px] font-bold tracking-tight transition-all rounded-[2px] cursor-pointer bg-[#282828] text-white hover:bg-black/90"
                 >
                   {cat}
-                  {activeCategory === cat && <ChevronRight size={14} className="ml-2" />}
                 </button>
               ))}
             </div>
@@ -107,43 +105,42 @@ export default function DCProducts() {
           {/* Products Grid - Using Figma Measurements: Cards are 207x261px */}
           <div className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
             {products.map((product) => {
-              const [spec = product.id, ...restSubtitle] = product.subtitle.split(" - ");
-              const productSubtitle = restSubtitle.join(" - ") || product.subtitle;
               return (
-              <div
-                key={product.id}
-                className="group flex flex-col w-full max-w-[207px] h-[300px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
-              >
-                {/* Product Image Container - Exactly 200px (261 - 61) */}
-                <div className="flex h-[222px] w-full shrink-0 items-center justify-center p-4 bg-white">
-                  <Image
-                    src={product.image}
-                    alt={product.id}
-                    width={160}
-                    height={160}
-                    className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
+                <div
+                  key={product.id}
+                  className="group flex flex-col w-full max-w-[207px] h-[300px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
+                >
+                  {/* Product Image Container - Exactly 200px (261 - 61) */}
+                  <div className="flex h-[222px] w-full shrink-0 items-center justify-center p-4 bg-white">
+                    <Image
+                      src={product.image}
+                      alt={product.id}
+                      width={160}
+                      height={160}
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
 
-                {/* Product Info (Black Section) - Exactly 61px as per Figma */}
-                <div className="flex h-[78px] w-full flex-col justify-center gap-0.5 border-t border-black/5 bg-[#171717] px-2 py-1.5">
-                   <h3 className="px-1 font-['Eurostile_Extended',sans-serif] text-[14px] font-bold leading-[100%] uppercase text-white">
-                    {spec}
-                  </h3>
-                  <p className="px-1 font-[Antenna] text-[11px] font-normal leading-[100%] text-[#A7A7A7]">
-                    {productSubtitle}
-                  </p>
+                  {/* Product Info (Black Section) - Exactly 61px as per Figma */}
+                  <div className="flex h-[78px] w-full flex-col justify-center gap-0.5 border-t border-black/5 bg-[#171717] px-2 py-1.5">
+                    <h3 className="px-1 font-['Eurostile_Extended',sans-serif] text-[14px] font-bold leading-[100%] uppercase text-white">
+                      {product.id}
+                    </h3>
+                    <p className="px-1 font-[Antenna] text-[11px] font-medium leading-[110%] text-[#D4D4D4] mt-0.5">
+                      {product.subtitle}
+                    </p>
 
-                  {/* View Details Button - Very tight for 61px container */}
-                  <div className="px-1 mt-1">
-                    <button className="flex h-[14px] w-[67px] items-center justify-center gap-1 rounded-[6.5px] border border-[#D9D9D9] bg-white px-1.5 font-orbitron text-[6px] font-medium leading-none text-[#171717] transition-all hover:bg-gray-100">
-                      View Details
-                      <ArrowRight size={7} className="stroke-[2.5]" />
-                    </button>
+                    {/* View Details Button - Very tight for 61px container */}
+                    <div className="px-1 mt-1.5">
+                      <button className="flex h-[20px] w-auto min-w-[90px] items-center justify-center gap-1 rounded-full bg-white px-3 font-orbitron text-[8px] font-bold uppercase leading-none text-[#444444] transition-all hover:bg-gray-200 shadow-sm cursor-pointer whitespace-nowrap">
+                        VIEW DETAILS
+                        <ArrowRight size={9} className="stroke-[2.5] text-[#444444]" />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )})}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -191,7 +188,7 @@ export default function DCProducts() {
               </Link>
             ))}
           </div>
-          
+
           {/* Line below range cards before CTA */}
           <div className="w-full max-w-[1440px] mt-16">
             <div className="w-full h-px bg-gray-200" />

@@ -23,23 +23,23 @@ export default function ACProducts() {
   ];
 
   const products = [
-    { id: "BNDR75", subtitle: "75NM - Taladro Percutor Compacto", image: "/60.png" },
-    { id: "BNDR45", subtitle: "45NM - Taladro Percutor", image: "/59.png" },
-    { id: "BNIW4002B2", subtitle: "400NM - Llave de Impacto", image: "/37.png" },
-    { id: "BNIW6004B2", subtitle: "600NM - Llave de Impacto", image: "/24.png" },
-    { id: "BNIW8004B2", subtitle: "800NM - Llave de Impacto", image: "/38.png" },
-    { id: "BNCAG8504B1", subtitle: "4-1/2\" - Amoladora Angular", image: "/21.png" },
-    { id: "BNCRH20J4B", subtitle: "2.0J - Rotomartillo Inalámbrico", image: "/67.png" },
-    { id: "BNCRH25J4B2", subtitle: "2.6J - Rotomartillo Inalámbrico", image: "/64.png" },
-    { id: "BNCRH4.5J", subtitle: "4.5J - Rotomartillo Profesional", image: "/65.png" },
-    { id: "BNCS190", subtitle: "190mm - Sierra Circular", image: "/23.png" },
-    { id: "BNOS5", subtitle: "Lijadora Orbital", image: "/50.png" },
-    { id: "BNBL261", subtitle: "Soplador Inalámbrico", image: "/40.png" },
-    { id: "BNLB20", subtitle: "2Ah - Batería Li-Ion", image: "/68.png" },
-    { id: "BNLB40", subtitle: "4Ah - Batería Li-Ion", image: "/70.png" },
-    { id: "BNLB50", subtitle: "5Ah - Batería Li-Ion", image: "/69.png" },
-    { id: "BNBC33A", subtitle: "Cargador de Batería", image: "/71.png" },
-    { id: "BNBC3A", subtitle: "Cargador de Batería", image: "/72.png" },
+    { id: "BNDR45", subtitle: "75N.M - Taladro Percutor Compacto", image: "/BNCID75K.webp" },
+    { id: "BNDR75", subtitle: "45N.M - Taladro Percutor", image: "/BNCID75K.webp" },
+    { id: "BNIW4002B2", subtitle: "400N.M - Llave de Impacto", image: "/BNIW4002B2.webp" },
+    { id: "BNIW6004B2", subtitle: "600N.M - Llave de Impacto", image: "/BNIW6004B2.webp" },
+    { id: "BNIW8004B2", subtitle: "800N.M - Llave de Impacto", image: "/BNIW8002B2.webp" },
+    { id: "BNCAG8504B1", subtitle: "4-1/2\" - Amoladora Angular", image: "/BNCAG8504B1.webp" },
+    { id: "BNCRH20J4B", subtitle: "2.0J - Rotomartillo Inalámbrico", image: "/BNCRH20J4B.webp" },
+    { id: "BNCRH25J4B2", subtitle: "2.6J - Rotomartillo Inalámbrico", image: "/BNCRH25J4B2.webp" },
+    { id: "BNCRH45J", subtitle: "4.5J - Rotomartillo Inalámbrico", image: "/BNCRH45J.webp" },
+    { id: "BNCS190", subtitle: "190mm - Sierra Circular", image: "/BNCCS190.webp" },
+    { id: "BNCSS", subtitle: "Lijadora Orbital", image: "/BNCSS.webp" },
+    { id: "BNCBL2B1", subtitle: "Soplador y Aspiradora", image: "/BNCBL2B1.webp" },
+    { id: "BNLB20", subtitle: "2Ah - Batería Li-Ion", image: "/BNLB20.webp" },
+    { id: "BNLB40", subtitle: "4Ah - Batería Li-Ion", image: "/BNLB40.webp" },
+    { id: "BNLB50", subtitle: "5Ah - Batería Li-Ion", image: "/BNLB50_v2.webp" },
+    { id: "BNBC35A", subtitle: "Cargador de Batería", image: "/BNBC35A.webp" },
+    { id: "BNDBC3A", subtitle: "Cargador de Batería", image: "/BNDBC3A.webp" },
   ];
 
   return (
@@ -86,22 +86,20 @@ export default function ACProducts() {
 
           {/* Sidebar Categories */}
           <div className="w-full shrink-0 lg:w-[260px]">
-            <h2 className="mb-6 font-sans text-[18px] font-bold uppercase tracking-tight text-black flex items-center gap-2">
-              <span className="h-[2px] w-4 bg-black" />
-              Product Category
-            </h2>
+            <div className="w-[200px] mb-6">
+              <h2 className="font-orbitron text-[16px] font-bold uppercase tracking-tight text-black text-left">
+                Product Category
+              </h2>
+              <div className="h-[1px] w-full bg-black mt-1" />
+            </div>
             <div className="flex flex-col gap-1.5 pt-2">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`flex h-[36px] items-center justify-between px-4 font-sans text-[13px] font-medium tracking-wide transition-all border border-black/5 rounded-[4px] ${activeCategory === cat
-                    ? "bg-black text-white"
-                    : "bg-[#171717] text-white hover:bg-black/90"
-                    }`}
+                  className="flex h-[22px] w-[200px] items-center justify-start px-3 font-orbitron text-[11px] font-bold tracking-tight transition-all rounded-[2px] cursor-pointer bg-[#282828] text-white hover:bg-black/90"
                 >
                   {cat}
-                  {activeCategory === cat && <ChevronRight size={14} className="ml-2" />}
                 </button>
               ))}
             </div>
@@ -110,43 +108,42 @@ export default function ACProducts() {
           {/* Products Grid - Using Figma Measurements: Cards are 207x261px */}
           <div className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
             {products.map((product) => {
-              const [spec = product.id, ...restSubtitle] = product.subtitle.split(" - ");
-              const productSubtitle = restSubtitle.join(" - ") || product.subtitle;
               return (
-              <div
-                key={product.id}
-                className="group flex flex-col w-full max-w-[207px] h-[300px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
-              >
-                {/* Product Image Container - Exactly 200px (261 - 61) */}
-                <div className="flex h-[222px] w-full shrink-0 items-center justify-center p-4 bg-white">
-                  <Image
-                    src={product.image}
-                    alt={product.id}
-                    width={160}
-                    height={160}
-                    className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
+                <div
+                  key={product.id}
+                  className="group flex flex-col w-full max-w-[207px] h-[300px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
+                >
+                  {/* Product Image Container - Exactly 200px (261 - 61) */}
+                  <div className="flex h-[222px] w-full shrink-0 items-center justify-center p-4 bg-white">
+                    <Image
+                      src={product.image}
+                      alt={product.id}
+                      width={160}
+                      height={160}
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
 
-                {/* Product Info (Black Section) - Exactly 61px as per Figma */}
-                <div className="flex h-[78px] w-full flex-col justify-center gap-0.5 border-t border-black/5 bg-[#171717] px-2 py-1.5">
-                  <h3 className="px-1  font-['Eurostile_Extended',sans-serif] text-[14px] font-bold leading-[100%] uppercase text-white">
-                    {spec}
-                  </h3>
-                  <p className="px-1 font-[Antenna] text-[11px] font-normal leading-[100%]  text-[#A7A7A7]">
-                    {productSubtitle}
-                  </p>
+                  {/* Product Info (Black Section) - Exactly 61px as per Figma */}
+                  <div className="flex h-[78px] w-full flex-col justify-center gap-0.5 border-t border-black/5 bg-[#171717] px-2 py-1.5">
+                    <h3 className="px-1  font-['Eurostile_Extended',sans-serif] text-[14px] font-bold leading-[100%] uppercase text-white">
+                      {product.id}
+                    </h3>
+                    <p className="px-1 font-[Antenna] text-[11px] font-medium leading-[110%] text-[#D4D4D4] mt-0.5">
+                      {product.subtitle}
+                    </p>
 
-                  {/* View Details Button */}
-                  <div className="px-1 mt-1">
-                    <button className="flex h-[14px] w-[67px] items-center justify-center gap-1 rounded-[6.5px] border border-[#D9D9D9] bg-white px-1.5 font-orbitron text-[6px] font-medium leading-none text-[#171717] transition-all hover:bg-gray-100">
-                      View Details
-                      <ArrowRight size={7} className="stroke-[2.5]" />
-                    </button>
+                    {/* View Details Button */}
+                    <div className="px-1 mt-1.5">
+                      <button className="flex h-[20px] w-auto min-w-[90px] items-center justify-center gap-1 rounded-full bg-white px-3 font-orbitron text-[8px] font-bold uppercase leading-none text-[#444444] transition-all hover:bg-gray-200 shadow-sm cursor-pointer whitespace-nowrap">
+                        VIEW DETAILS
+                        <ArrowRight size={9} className="stroke-[2.5] text-[#444444]" />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )})}
+              )
+            })}
           </div>
         </div>
       </section>

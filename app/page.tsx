@@ -220,8 +220,8 @@ export default function Home() {
                       <div className="h-px flex-1 bg-[#FFFFFF]" />
                     </div>
 
-                    {/* Description left-aligned (Figma: 14px, Weight 400, White) */}
-                    <p className="text-left font-['Antenna',sans-serif] text-[12px] font-extralight leading-[100%] tracking-[3%] text-[#FFFFFF]">
+                    {/* Description left-aligned (Figma: 12px, Weight 200, White) */}
+                    <p className="text-left font-inter text-[12px] font-extralight leading-[1.6] tracking-[0.03em] text-[#FFFFFF]">
                       {item.description}
                     </p>
                   </div>
