@@ -41,22 +41,22 @@ export default function Navbar() {
               className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80 flex items-center gap-1"
             >
               Products
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5"><path d="m6 9 6 6 6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5"><path d="m6 9 6 6 6-6" /></svg>
             </Link>
-            
+
             {/* Dropdown Menu */}
             <div className="absolute top-[80px] left-[-20px] hidden w-[220px] flex-col rounded-b-[5px] border-t-[3px] border-[#94A034] bg-[#050505] shadow-2xl group-hover:flex">
               <Link
                 href="/ac-products"
                 className="px-6 py-4 font-orbitron text-[15px] font-normal tracking-wide text-white transition-colors hover:bg-[#1a1a1a]"
               >
-                AC Product
+                DC Product
               </Link>
               <Link
                 href="/dc-products"
                 className="px-6 py-4 font-orbitron text-[15px] font-normal tracking-wide text-white transition-colors hover:bg-[#1a1a1a]"
               >
-                DC Product
+                AC Product
               </Link>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Navbar() {
           >
             Contact Us
           </Link>
-          
+
           {/* Globe Icon */}
           <button className="ml-2 text-white hover:opacity-80">
             <svg
@@ -95,7 +95,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="ml-auto flex text-white md:hidden"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
