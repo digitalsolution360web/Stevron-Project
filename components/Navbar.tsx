@@ -47,13 +47,13 @@ export default function Navbar() {
             {/* Dropdown Menu */}
             <div className="absolute top-[80px] left-[-20px] hidden w-[220px] flex-col rounded-b-[5px] border-t-[3px] border-[#94A034] bg-[#050505] shadow-2xl group-hover:flex">
               <Link
-                href="/ac-products"
+                href="/dc-products"
                 className="px-6 py-4 font-orbitron text-[15px] font-normal tracking-wide text-white transition-colors hover:bg-[#1a1a1a]"
               >
                 DC Product
               </Link>
               <Link
-                href="/dc-products"
+                href="/ac-products"
                 className="px-6 py-4 font-orbitron text-[15px] font-normal tracking-wide text-white transition-colors hover:bg-[#1a1a1a]"
               >
                 AC Product
