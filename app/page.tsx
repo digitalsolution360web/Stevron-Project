@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section - Professional Slider with Crossfade Effect */}
-      <section className="relative w-full h-[500px] md:h-[650px] lg:h-[750px] xl:h-[850px] overflow-hidden bg-[#050505]">
+      <section className="relative w-full aspect-[16/9] sm:aspect-[16/7] md:aspect-[16/6] lg:aspect-[16/5.3] xl:aspect-[16/5] overflow-hidden bg-[#050505]">
         {/* Background Images Slider */}
         <div className="absolute inset-0 z-0">
           {heroImages.map((src, index) => (
