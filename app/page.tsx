@@ -264,9 +264,9 @@ export default function Home() {
                 { name: "BNIW4002B2", subtitle: "350 N.M - LLAVE DE IMPACTO", image: "/dc/BNIW4002B2.webp" },
                 { name: "BNCAG8504B1", subtitle: "8500 - 10000 RPM - AMOLADORA ANGULAR", image: "/dc/BNCAG8504B1.webp" },
                 { name: "BNCRH20J4B", subtitle: "20V - ROTOMARTILLO INALÁMBRICO", image: "/dc/BNCRH20J4B.webp" },
-                { name: "BNAG950", subtitle: "950W - Professional Grinder", image: "/6.webp" },
-                { name: "BNAG2200", subtitle: "2200W - Industrial Grinder", image: "/6.webp" },
-                { name: "BNAG2400", subtitle: "2400W - Heavy Duty Grinder", image: "/6.webp" },
+                { name: "BNIMD750", subtitle: "950W - TALADRO PERCUTOR", image: "/ac/BNIMD750.webp" },
+                { name: "BNIMD850", subtitle: "2200W - TALADRO PERCUTOR", image: "/ac/BNIMD850.webp" },
+                { name: "BNIMD1100", subtitle: "2400W - TALADRO PERCUTOR", image: "/ac/BNIMD1100.webp" },
               ].map((product, idx) => (
                 <div key={idx} className="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E5E5] shadow-sm transition-all hover:shadow-md min-w-[280px] sm:min-w-[calc(50%-8px)] lg:min-w-[calc(25%-12px)] snap-start">
                   {/* Top: Image (White BG) */}
