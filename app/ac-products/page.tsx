@@ -36,7 +36,7 @@ export default function ACProducts() {
     { id: "BNCSS", subtitle: "Lijadora de Hoja", image: "/dc/BNCSS.webp" },
     { id: "BNCBL2B1", subtitle: "Soplador y Aspiradora", image: "/dc/BNCBL2B1.webp" },
     { id: "BNLB20", subtitle: "2AH - Baterías ion-litio", image: "/dc/BNLB20.webp" },
-    { id: "BNLB40", subtitle: "4AH - Baterías ion-litio", image: "/dc/dc/BNLB40.webp" },
+    { id: "BNLB40", subtitle: "4AH - Baterías ion-litio", image: "/dc/BNLB40.webp" },
     { id: "BNLB50", subtitle: "5AH - Baterías ion-litio", image: "/dc/BNLB50.webp" },
     { id: "BNBC35A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
     { id: "BNDBC3A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
