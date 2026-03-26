@@ -259,11 +259,11 @@ export default function Home() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {[
-                { name: "BNED650", subtitle: "650W - Impact Drill", image: "/6.webp" },
-                { name: "BNID710", subtitle: "710W - Impact Drill", image: "/6.webp" },
-                { name: "BNID850", subtitle: "850W - Impact Drill", image: "/6.webp" },
-                { name: "BNID1100", subtitle: "1100W - Industrial Hammer Drill", image: "/6.webp" },
-                { name: "BNAG750", subtitle: "750W - Angle Grinder", image: "/6.webp" },
+                { name: "BNID452B2", subtitle: "45Nm - TALADRO PERCUTOR", image: "/dc/BNID452B2.webp" },
+                { name: "BNCID75K", subtitle: "75Nm - TALADRO PERCUTOR COMPACTO", image: "/dc/BNCID75K.webp" },
+                { name: "BNIW4002B2", subtitle: "350 N.M - LLAVE DE IMPACTO", image: "/dc/BNIW4002B2.webp" },
+                { name: "BNCAG8504B1", subtitle: "8500 - 10000 RPM - AMOLADORA ANGULAR", image: "/dc/BNCAG8504B1.webp" },
+                { name: "BNCRH20J4B", subtitle: "20V - ROTOMARTILLO INALÁMBRICO", image: "/dc/BNCRH20J4B.webp" },
                 { name: "BNAG950", subtitle: "950W - Professional Grinder", image: "/6.webp" },
                 { name: "BNAG2200", subtitle: "2200W - Industrial Grinder", image: "/6.webp" },
                 { name: "BNAG2400", subtitle: "2400W - Heavy Duty Grinder", image: "/6.webp" },
