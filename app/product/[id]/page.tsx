@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 
 const allProducts = [
-  // DC Products (AC powered)
+  // AC Products (Corded)
   { id: "BNEDR500", subtitle: "500 W - Taladro Eléctrico", image: "/BNEDR500.webp" },
   { id: "BNIMD750", subtitle: "750 W - Taladro Percutor", image: "/ac/BNIMD750.webp" },
   { id: "BNIMD850", subtitle: "850 W - Taladro Percutor", image: "/ac/BNIMD850.webp" },
@@ -27,7 +27,7 @@ const allProducts = [
   { id: "BNRHM800SDS", subtitle: "3,0J - Martillo Perforador", image: "/ac/BNRHM800SDS.webp" },
   { id: "BNRHM1500SDS", subtitle: "5,5J - Martillo Perforador", image: "/ac/BNRHM1500SDS.webp" },
 
-  // AC Products (DC powered)
+  // DC Products (Cordless)
   { id: "BNDR45", subtitle: "45N.M - Taladro Percutor", image: "/dc/BNID452B2.webp" },
   { id: "BNDR75", subtitle: "75N.M - Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
   { id: "BNIW4002B2", subtitle: "400N.M - Llave de Impacto", image: "/dc/BNIW4002B2.webp" },
@@ -64,7 +64,7 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="flex flex-col bg-white pt-24 min-h-screen">
+    <div className="flex flex-col bg-white min-h-screen">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 pb-16">
         
         {/* Breadcrumb */}

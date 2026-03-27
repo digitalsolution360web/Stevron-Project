@@ -41,7 +41,7 @@ export default function RootLayout({
         className={`${orbitron.variable} ${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <main className="pt-[80px]">
+        <main className="pt-[70px] lg:pt-[80px]">
           {children}
         </main>
       </body>
