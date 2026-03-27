@@ -31,12 +31,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav 
-      className={`fixed top-0 z-[100] flex h-[70px] lg:h-[80px] w-full items-center justify-center transition-all duration-300 border-b ${
-        isScrolled 
-          ? "bg-[#050505]/95 backdrop-blur-md border-white/10 shadow-lg h-[65px] lg:h-[75px]" 
-          : "bg-[#050505] border-white/5"
-      }`}
+    <nav
+      className={`fixed top-0 z-[100] flex h-[70px] lg:h-[80px] w-full items-center justify-center transition-all duration-300 border-b ${isScrolled
+        ? "bg-[#050505]/95 backdrop-blur-md border-white/10 shadow-lg h-[65px] lg:h-[75px]"
+        : "bg-[#050505] border-white/5"
+        }`}
     >
       <div className="flex w-full max-w-[1440px] items-center px-4 sm:px-6 lg:px-16">
         {/* Logo */}
@@ -61,7 +60,7 @@ export default function Navbar() {
           >
             Home
           </Link>
-          
+
           {/* Products Dropdown */}
           <div className="relative group flex items-center h-[80px]">
             <Link
@@ -119,13 +118,11 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Drawer */}
-      <div className={`fixed inset-0 z-[90] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-        isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-      }`} onClick={toggleMenu} />
+      <div className={`fixed inset-0 z-[90] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`} onClick={toggleMenu} />
 
-      <div className={`fixed top-0 right-0 z-[100] h-full w-[280px] bg-[#050505] p-8 shadow-2xl transition-transform duration-300 ease-in-out md:hidden border-l border-white/10 ${
-        isMenuOpen ? "translate-x-0" : "translate-x-full"
-      }`}>
+      <div className={`fixed top-0 right-0 z-[100] h-full w-[280px] bg-[#050505] p-8 shadow-2xl transition-transform duration-300 ease-in-out md:hidden border-l border-white/10 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}>
         <div className="flex flex-col gap-8 h-full">
           {/* Mobile Drawer Header */}
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
@@ -143,7 +140,7 @@ export default function Navbar() {
             >
               Home
             </Link>
-            
+
             <div className="flex flex-col">
               <button
                 onClick={toggleProducts}
@@ -152,7 +149,7 @@ export default function Navbar() {
                 Products
                 <ChevronDown size={18} className={`transition-transform duration-300 ${isProductsOpen ? "rotate-180" : ""}`} />
               </button>
-              
+
               <div className={`pl-4 flex flex-col gap-1 overflow-hidden transition-all duration-300 ${isProductsOpen ? "max-h-[200px] mt-2 pb-2" : "max-h-0"}`}>
                 <Link
                   href="/ac-products"
@@ -190,10 +187,10 @@ export default function Navbar() {
           </div>
 
           <div className="mt-auto flex items-center justify-between pt-6 border-t border-white/10">
-             <div className="flex items-center gap-4">
-               <Globe size={18} className="text-white/40" />
-               <span className="font-orbitron text-[12px] text-white/40 uppercase tracking-widest">Global Range</span>
-             </div>
+            <div className="flex items-center gap-4">
+              <Globe size={18} className="text-white/40" />
+              <span className="font-orbitron text-[12px] text-white/40 uppercase tracking-widest">Global Range</span>
+            </div>
           </div>
         </div>
       </div>
