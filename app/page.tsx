@@ -315,8 +315,8 @@ export default function Home() {
                   </div>
                   {/* Bottom: Info (Black BG) */}
                   <div className="flex flex-col flex-1 bg-[#171717] px-5 py-4 justify-center">
-                    <h3 className="mb-1 font-sans text-[14px] font-bold text-[#FFFFFF] tracking-wide uppercase">{product.name}</h3>
-                    <p className="mb-3 font-sans text-[12px] font-extralight text-[#A3A3A3] tracking-[0.03em] leading-tight">{product.subtitle}</p>
+                    <h3 className="mb-1 font-sans text-[16px] font-bold text-[#FFFFFF] tracking-wide uppercase">{product.name}</h3>
+                    <p className="mb-3 font-sans text-[14px] font-extralight text-[#ffffff] tracking-[0.03em] leading-tight">{product.subtitle}</p>
                     {/* View Details Button */}
                     <button className="mt-auto flex h-[28px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[12px] font-bold text-[#171717] font-sans transition-all hover:bg-gray-100 uppercase">
                       View Details
