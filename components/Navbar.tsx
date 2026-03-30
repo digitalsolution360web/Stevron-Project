@@ -100,19 +100,6 @@ export default function Navbar() {
           >
             Contact Us
           </Link>
-          <Link
-            href="/warranty-registration"
-            className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
-          >
-            Warranty
-          </Link>
-          <Link
-            href="/become-a-dealer"
-            className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-[#94A034] transition-opacity hover:opacity-80"
-          >
-            Become a Dealer
-          </Link>
-
           {/* Globe Icon */}
           <button className="ml-2 text-white hover:opacity-80">
             <Globe size={20} strokeWidth={1.5} />
