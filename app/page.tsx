@@ -293,14 +293,14 @@ export default function Home() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {[
-                { name: "BNID452B2", subtitle: "45Nm - TALADRO PERCUTOR", image: "/dc/BNID452B2.webp" },
-                { name: "BNCID75K", subtitle: "75Nm - TALADRO PERCUTOR COMPACTO", image: "/dc/BNCID75K.webp" },
-                { name: "BNIW4002B2", subtitle: "350 N.M - LLAVE DE IMPACTO", image: "/dc/BNIW4002B2.webp" },
-                { name: "BNCAG8504B1", subtitle: "8500 - 10000 RPM - AMOLADORA ANGULAR", image: "/dc/BNCAG8504B1.webp" },
-                { name: "BNCRH20J4B", subtitle: "20V - ROTOMARTILLO INALÁMBRICO", image: "/dc/BNCRH20J4B.webp" },
-                { name: "BNIMD750", subtitle: "950W - TALADRO PERCUTOR", image: "/ac/BNIMD750.webp" },
-                { name: "BNIMD850", subtitle: "2200W - TALADRO PERCUTOR", image: "/ac/BNIMD850.webp" },
-                { name: "BNIMD1100", subtitle: "2400W - TALADRO PERCUTOR", image: "/ac/BNIMD1100.webp" },
+                { name: "45NM", subtitle: "Taladro Percutor Inalámbrico", image: "/dc/BNID452B2.webp" },
+                { name: "75NM", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
+                { name: "400NM", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
+                { name: "600NM", subtitle: "Llave de Impacto batería", image: "/dc/BNCAG8504B1.webp" },
+                { name: "750W", subtitle: "Taladro de impacto", image: "/ac/BNIMD750.webp" },
+                { name: "850W", subtitle: "Taladro de impacto", image: "/ac/BNIMD850.webp" },
+                { name: "1100W", subtitle: "Taladro de impacto", image: "/ac/BNIMD1100.webp" },
+                { name: "240W", subtitle: "Lijadora de palma", image: "/ac/BNPLS240.webp" },
               ].map((product, idx) => (
                 <div key={idx} className="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E5E5] shadow-sm transition-all hover:shadow-md min-w-[280px] sm:min-w-[calc(50%-8px)] lg:min-w-[calc(25%-12px)] snap-start">
                   {/* Top: Image (White BG) */}
@@ -355,7 +355,7 @@ export default function Home() {
           {/* Top Label - Figma: 373x38px, White BG, Black Text */}
           <div className="mb-12 flex h-[38px] w-full max-w-[443px] items-center justify-center rounded-[5px] bg-white shadow-lg border border-black/10">
             <span className="font-orbitron  text-[14px] font-bold tracking-widest text-black ">
-              POWERING AGRICULTURE & FORESTRY
+              Parte de un Grupo Industrial Global
             </span>
           </div>
 
