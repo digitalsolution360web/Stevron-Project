@@ -579,14 +579,12 @@ export default function ProductDetail() {
             </h1>
 
             {/* Bullets */}
-            <ul className="mb-8 space-y-2.5">
-              <li className="flex items-center gap-2 font-[Antenna] text-[15px] font-normal text-[#565656]">
-                <div className="w-1.5 h-1.5 bg-[#565656] rounded-full shrink-0" />
-                Motor sin escobillas de alto rendimiento
+            <ul className="mb-8 space-y-1">
+              <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                &#x2022; Motor sin escobillas de alto rendimiento
               </li>
-              <li className="flex items-center gap-2 font-[Antenna] text-[15px] font-normal text-[#565656]">
-                <div className="w-1.5 h-1.5 bg-[#565656] rounded-full shrink-0" />
-                Sistema de batería Li-Ion
+              <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                &#x2022; Sistema de batería Li-Ion
               </li>
             </ul>
 
@@ -597,16 +595,16 @@ export default function ProductDetail() {
               <div className="flex flex-col bg-white">
                 <button
                   onClick={() => toggleSection('specifications')}
-                  className="w-full bg-[#E5E5E5] uppercase font-[Antenna] text-[12px] font-bold text-black py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-300"
+                  className="w-full bg-[#E5E5E5] uppercase font-orbitron text-[14px] font-medium leading-[121%] text-black py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-300"
                 >
                   TECHNICAL SPECIFICATIONS
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.specifications ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`overflow-hidden transition-all duration-300 ${openSections.specifications ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                  <div className="p-4 flex flex-col gap-2.5 text-[12px] font-[Antenna] text-[#565656]">
+                  <div className="p-4 flex flex-col gap-2.5 font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
                     {Object.entries(specs).map(([key, value]) => (
                       <div key={key} className="flex justify-between border-b border-[#E5E5E5] pb-1">
-                        <span>{key}</span><span className="font-bold text-black">{value as string}</span>
+                        <span>{key}</span><span className="font-[400] text-black">{value as string}</span>
                       </div>
                     ))}
                   </div>
@@ -617,16 +615,16 @@ export default function ProductDetail() {
               <div className="flex flex-col bg-white">
                 <button
                   onClick={() => toggleSection('included')}
-                  className="w-full bg-black uppercase font-[Antenna] text-[12px] font-bold text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
+                  className="w-full bg-black uppercase font-orbitron text-[14px] font-medium leading-[121%] text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
                 >
                   INCLUIDOS
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.included ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`overflow-hidden transition-all duration-300 ${openSections.included ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                  <div className="p-4 flex flex-col gap-2.5 text-[12px] font-[Antenna] text-[#565656]">
+                  <div className="p-4 flex flex-col gap-2.5 font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
                     {Object.entries(included).map(([key, value]) => (
                       <div key={key} className="flex justify-between border-b border-[#E5E5E5] pb-1">
-                        <span>{key}</span><span className="font-bold text-black">{value as string}</span>
+                        <span>{key}</span><span className="font-[400] text-black">{value as string}</span>
                       </div>
                     ))}
                   </div>
@@ -637,15 +635,15 @@ export default function ProductDetail() {
               <div className="flex flex-col bg-white">
                 <button
                   onClick={() => toggleSection('features')}
-                  className="w-full bg-black uppercase font-[Antenna] text-[12px] font-bold text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
+                  className="w-full bg-black uppercase font-orbitron text-[14px] font-medium leading-[121%] text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
                 >
                   FEATURES
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.features ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`overflow-hidden transition-all duration-300 ${openSections.features ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                  <div className="p-4 flex flex-col gap-2.5 text-[12px] font-[Antenna] text-[#565656]">
+                  <div className="p-4 flex flex-col gap-2.5 font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
                     {features.map((f: string, i: number) => (
-                      <p key={i}>- {f}</p>
+                      <p key={i}>&#x2022; {f}</p>
                     ))}
                   </div>
                 </div>
@@ -655,16 +653,16 @@ export default function ProductDetail() {
               <div className="flex flex-col bg-white">
                 <button
                   onClick={() => toggleSection('warranty')}
-                  className="w-full bg-black uppercase font-[Antenna] text-[12px] font-bold text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
+                  className="w-full bg-black uppercase font-orbitron text-[14px] font-medium leading-[121%] text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
                 >
                   WARRANTY
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.warranty ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`overflow-hidden transition-all duration-300 ${openSections.warranty ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                  <div className="p-4 flex flex-row items-center justify-between gap-2.5 text-[12px] font-[Antenna] text-[#565656]">
+                  <div className="p-4 flex flex-row items-center justify-between gap-2.5 font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
                     <div className="flex flex-col gap-1.5">
-                      <p>- Garantía de 2 años asegurada</p>
-                      <p>- Se ofrecerá 1 año adicional de garantía tras el registro</p>
+                      <p>&#x2022; Garantía de 2 años asegurada</p>
+                      <p>&#x2022; Se ofrecerá 1 año adicional de garantía tras el registro</p>
                     </div>
                     <div className="flex items-center justify-center p-2 rounded border border-[#E5E5E5]">
                       <span className="text-[20px] font-bold font-orbitron">2+1</span>
