@@ -20,7 +20,7 @@ export default function WarrantyRegistration() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white">
+    <div className="flex flex-col min-h-screen bg-white text-white">
       {/* Hero Banner — offset for fixed navbar */}
       <section className="relative w-full mt-[70px] lg:mt-[80px] aspect-[16/7] sm:aspect-[16/6] lg:aspect-[16/4.5] overflow-hidden">
         <Image
@@ -33,7 +33,7 @@ export default function WarrantyRegistration() {
       </section>
 
       {/* Form Section */}
-      <main className="flex-grow bg-[#050505] py-10 sm:py-14 lg:py-16 px-4 sm:px-6 flex justify-center">
+      <main className="flex-grow bg-white py-10 sm:py-14 lg:py-16 px-4 sm:px-6 flex justify-center">
         {/* Outer form card */}
         <div className="w-full max-w-[764px] bg-black border border-[#FFFFFF]/10 rounded-[4px] shadow-2xl">
 

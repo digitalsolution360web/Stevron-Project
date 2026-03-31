@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 
 export default function BecomeADealer() {
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white">
+    <div className="flex flex-col min-h-screen bg-white text-white">
       {/* Hero Section — offset for fixed navbar */}
       <section className="relative w-full mt-[70px] lg:mt-[80px] aspect-[16/7] sm:aspect-[16/6] lg:aspect-[16/4.5] overflow-hidden">
         <Image
@@ -20,7 +20,7 @@ export default function BecomeADealer() {
       </section>
 
       {/* Form Section */}
-      <main className="flex-grow py-10 sm:py-14 lg:py-16 px-4 sm:px-6 flex justify-center bg-[#050505]">
+      <main className="flex-grow py-10 sm:py-14 lg:py-16 px-4 sm:px-6 flex justify-center bg-white">
         <div
           className="w-full bg-black shadow-2xl"
           style={{

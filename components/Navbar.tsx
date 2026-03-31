@@ -95,6 +95,12 @@ export default function Navbar() {
             About Us
           </Link>
           <Link
+            href="/warranty-registration"
+            className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
+          >
+            Warranty
+          </Link>
+          <Link
             href="/contact"
             className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
           >
@@ -175,6 +181,13 @@ export default function Navbar() {
               className="font-orbitron text-[18px] text-white py-2"
             >
               About Us
+            </Link>
+            <Link
+              href="/warranty-registration"
+              onClick={toggleMenu}
+              className="font-orbitron text-[18px] text-white py-2"
+            >
+              Warranty
             </Link>
             <Link
               href="/contact"

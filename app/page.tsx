@@ -119,8 +119,8 @@ export default function Home() {
       <section className="bg-white pt-4 sm:pt-6 pb-12">
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Section Title Label - as per Figma */}
-          <div className="mb-12 flex h-[35px] items-center justify-center rounded-[5px] bg-black px-8">
-            <span className="font-orbitron text-[14px] font-normal tracking-wider text-white">
+          <div className="mb-12 flex h-[40px] items-center justify-center rounded-[5px] bg-black px-8">
+            <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-white">
               Explore Our Full Range
             </span>
           </div>
@@ -139,8 +139,8 @@ export default function Home() {
                 className="flex h-[360px] w-full flex-col overflow-hidden border border-[#A7A7A7] rounded-[12px] shadow-[5px_5px_10px_0px_rgba(0,0,0,0.4)] transition-transform hover:scale-[1.02]"
               >
                 {/* Header Box - Restored: White bg, Black text */}
-                <div className="flex h-[42px] w-full items-center justify-center bg-white border-b border-[#A7A7A7]">
-                  <span className="font-orbitron text-[14px] font-bold tracking-wider text-black">
+                <div className="flex h-[46px] w-full items-center justify-center bg-white border-b border-[#A7A7A7]">
+                  <span className="font-orbitron text-[15px] sm:text-[16px] font-bold tracking-wider text-black">
                     {item.title}
                   </span>
                 </div>
@@ -176,8 +176,8 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Logo + Section Title (navbar width) */}
           <div className="mb-10 flex flex-col items-center gap-4">
-            <div className="flex h-[35px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
-              <span className="font-orbitron text-[14px] font-normal tracking-wider text-[#FFFFFF]">
+            <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
+              <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF]">
                 Our Core Values
               </span>
             </div>
@@ -213,15 +213,15 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex h-[305px] w-full max-w-[242px] flex-col overflow-hidden rounded-[12px] shadow-lg"
+                className="flex h-[340px] w-full flex-col overflow-hidden rounded-[12px] shadow-lg"
               >
                 {/* Header: Layered Design (Figma) */}
                 <div className="flex flex-col">
                   {/* Black top strip (Increased height to shift white bar down) */}
                   <div className="h-[18px] w-full bg-[#171717]" />
                   {/* White title strip (Figma: 18px Bold) */}
-                  <div className="flex h-[28px] items-center justify-center bg-[#FFFFFF]">
-                    <span className="font-orbitron text-[13px] font-bold uppercase tracking-[0.02em] text-[#565656]">
+                  <div className="flex h-[32px] items-center justify-center bg-[#FFFFFF]">
+                    <span className="font-orbitron text-[16px] sm:text-[18px] font-bold uppercase tracking-[0.02em] text-[#565656]">
                       {item.title}
                     </span>
                   </div>
@@ -244,14 +244,14 @@ export default function Home() {
                     {/* Subtitle with side lines (Figma style) */}
                     <div className="mb-2 flex w-full items-center gap-2">
                       <div className="h-px flex-1 bg-[#FFFFFF]" />
-                      <p className="whitespace-nowrap font-['Antenna',sans-serif] text-[14px] font-normal leading-[100%] tracking-[0%] text-[#FFFFFF]">
+                      <p className="whitespace-nowrap font-['Antenna',sans-serif] text-[16px] sm:text-[18px] font-normal leading-[100%] tracking-[0%] text-[#FFFFFF]">
                         {item.subtitle}
                       </p>
                       <div className="h-px flex-1 bg-[#FFFFFF]" />
                     </div>
 
                     {/* Description left-aligned (Figma: 12px, Weight 200, White) */}
-                    <p className="text-left font-inter text-[12px] font-extralight leading-[1.6] tracking-[0.03em] text-[#FFFFFF]">
+                    <p className="text-left font-inter text-[14px] sm:text-[15px] font-extralight leading-[1.6] tracking-[0.03em] text-[#FFFFFF]">
                       {item.description}
                     </p>
                   </div>
@@ -266,8 +266,8 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Section Label */}
           <div className="mb-12 flex flex-col items-center gap-4">
-            <div className="flex h-[35px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
-              <span className="font-orbitron text-[14px] font-normal tracking-wider text-[#FFFFFF]">
+            <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
+              <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF]">
                 Our Professional Tools
               </span>
             </div>
@@ -311,10 +311,10 @@ export default function Home() {
                   </div>
                   {/* Bottom: Info (Black BG) */}
                   <div className="flex flex-col flex-1 bg-[#171717] px-5 py-4 justify-center">
-                    <h3 className="mb-1 font-sans text-[16px] font-bold text-[#FFFFFF] tracking-wide uppercase">{product.name}</h3>
-                    <p className="mb-3 font-sans text-[14px] font-extralight text-[#ffffff] tracking-[0.03em] leading-tight">{product.subtitle}</p>
+                    <h3 className="mb-1 font-sans text-[18px] sm:text-[20px] font-bold text-[#FFFFFF] tracking-wide uppercase">{product.name}</h3>
+                    <p className="mb-3 font-sans text-[15px] font-extralight text-[#ffffff] tracking-[0.03em] leading-tight">{product.subtitle}</p>
                     {/* View Details Button */}
-                    <button className="mt-auto flex h-[28px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[12px] font-bold text-[#171717] font-sans transition-all hover:bg-gray-100 uppercase">
+                    <button className="mt-auto flex h-[32px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[13px] font-bold text-[#171717] font-sans transition-all hover:bg-gray-100 uppercase">
                       View Details
                       <ArrowRight size={16} strokeWidth={2} className="text-[#171717]" />
                     </button>
@@ -349,8 +349,8 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Top Label - Figma: 373x38px, White BG, Black Text */}
-          <div className="mb-12 flex h-[38px] w-full max-w-[443px] items-center justify-center rounded-[5px] bg-white shadow-lg border border-black/10">
-            <span className="font-orbitron  text-[14px] font-bold tracking-widest text-black ">
+          <div className="mb-14 flex h-[50px] w-full max-w-[520px] items-center justify-center rounded-[5px] bg-white shadow-lg border border-black/10">
+            <span className="font-orbitron text-[18px] sm:text-[20px] font-bold tracking-[0.1em] text-black">
               Parte de un Grupo Industrial Global
             </span>
           </div>
@@ -385,29 +385,29 @@ export default function Home() {
                 href={brand.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[190px] w-full flex-col items-center justify-center rounded-[12px] bg-white p-6 lg:p-8 shadow-[1px_2px_10.6px_1px_rgba(0,0,0,0.15)] border border-black/5 transition-all hover:scale-[1.03] hover:shadow-xl block"
+                className="flex min-h-[220px] w-full flex-col items-center justify-center rounded-[12px] bg-white p-6 lg:p-10 shadow-[1px_2px_10.6px_1px_rgba(0,0,0,0.15)] border border-black/5 transition-all hover:scale-[1.03] hover:shadow-xl block"
               >
                 {/* Brand Logo/Text - Figma: Eurostile Extended 32px Bold */}
                 <h2
-                  className="mb-1 font-['Eurostile_Extended',_sans-serif] text-[28px] lg:text-[32px] xl:text-[34px] font-bold tracking-tighter w-full text-center"
+                  className="mb-1 font-['Eurostile_Extended',_sans-serif] text-[34px] lg:text-[38px] xl:text-[42px] font-bold tracking-tighter w-full text-center"
                   style={{ color: brand.color }}
                 >
                   {brand.name}
                 </h2>
 
                 {/* Subtitle with Side Lines */}
-                <div className="mb-5 flex w-full items-center gap-2 px-2">
+                <div className="mb-7 flex w-full items-center gap-3 px-2">
                   <div className="h-[1px] flex-1 bg-[#A7A7A7]" />
-                  <span className="whitespace-nowrap font-sans text-[9px] lg:text-[10px] xl:text-[11px] font-bold text-[#565656]">
+                  <span className="whitespace-nowrap font-sans text-[12px] lg:text-[14px] xl:text-[15px] font-bold text-[#565656]">
                     {brand.subtitle}
                   </span>
                   <div className="h-[1px] flex-1 bg-[#A7A7A7]" />
                 </div>
 
                 {/* Website Link Pill */}
-                <div className="mt-auto flex h-[32px] lg:h-[36px] w-full max-w-[280px] items-center justify-center rounded-full bg-black px-4 transition-colors hover:bg-gray-800">
+                <div className="mt-auto flex h-[42px] lg:h-[46px] w-full max-w-[340px] items-center justify-center rounded-full bg-black px-6 transition-colors hover:bg-gray-800 shadow-md">
                   <span
-                    className="font-sans text-[12px] lg:text-[14px] font-extralight tracking-tight whitespace-nowrap"
+                    className="font-sans text-[15px] lg:text-[17px] font-medium tracking-tight whitespace-nowrap"
                     style={{ color: brand.color }}
                   >
                     {brand.website}
@@ -423,14 +423,14 @@ export default function Home() {
       <section className="bg-white py-12">
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Section Label */}
-          <div className="mb-4 flex h-[35px] items-center justify-center rounded-[5px] bg-[#000000] px-8 shadow-sm">
-            <span className="font-orbitron text-[14px] font-normal tracking-wider text-[#FFFFFF]">
+          <div className="mb-6 flex h-[40px] sm:h-[45px] items-center justify-center rounded-[5px] bg-[#000000] px-8 shadow-sm">
+            <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF]">
               Frequently Asked Questions
             </span>
           </div>
 
           {/* Subtitle */}
-          <p className="mb-6 max-w-[631px] text-center font-[Antenna] text-[16px] leading-[100%] font-extralight text-[#565656]">
+          <p className="mb-8 max-w-[760px] text-center font-[Antenna] text-[18px] sm:text-[20px] leading-[140%] font-extralight text-[#565656]">
             Find answers to common questions about our products, services, and partnerships.<br className="hidden sm:block" />
             Can&apos;t find what you&apos;re looking for? Contact our support team.
           </p>
@@ -453,7 +453,7 @@ export default function Home() {
                   onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
                   className="group flex w-full items-center justify-between px-6 py-[16px] text-left cursor-pointer"
                 >
-                  <span className="font-[Antenna] text-[16px] leading-[100%] font-normal text-[#000000]">
+                  <span className="font-[Antenna] text-[18px] sm:text-[20px] leading-[120%] font-normal text-[#000000]">
                     {question}
                   </span>
                   <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#94A034] shadow-sm transition-transform group-hover:scale-110">
@@ -467,7 +467,7 @@ export default function Home() {
 
                 {openFaqIndex === idx && (
                   <div className="px-6 pb-4">
-                    <p className="font-[Antenna] text-[14px] leading-[140%] text-[#565656]">
+                    <p className="font-[Antenna] text-[16px] sm:text-[17px] leading-[150%] text-[#565656]">
                       Stevron manufactures AC and DC power tools, hand tools, and heavy-duty industrial equipment.
                       These products are designed for durability, efficiency, and reliable performance in demanding environments.
                     </p>

@@ -51,7 +51,7 @@ export default function ACProducts() {
             alt="STEVRON AC Product Hero"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-top"
           />
         </div>
       </section>
@@ -107,33 +107,33 @@ export default function ACProducts() {
 
           {/* Sidebar Categories */}
           <div className="w-full shrink-0 lg:w-[260px] flex flex-col items-center sm:items-start">
-            <div className="w-full sm:w-[200px] mb-4 lg:mb-6">
-              <h2 className="font-orbitron text-[14px] lg:text-[16px] font-bold uppercase tracking-tight text-black text-center sm:text-left">
+            <div className="w-full sm:w-[250px] mb-4 lg:mb-6">
+              <h2 className="font-orbitron text-[16px] lg:text-[18px] font-bold uppercase tracking-tight text-black text-center sm:text-left">
                 Product Category
               </h2>
               <div className="h-[1px] w-full bg-black mt-1" />
             </div>
             <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 scrollbar-hide flex-nowrap w-full pl-2 sm:pl-0">
               {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className="flex shrink-0 h-[28px] lg:h-[22px] min-w-max lg:w-[200px] items-center justify-center lg:justify-start px-4 lg:px-3 font-orbitron text-[10px] lg:text-[11px] font-bold tracking-tight transition-all rounded-[14px] lg:rounded-[2px] cursor-pointer bg-[#282828] text-white hover:bg-black/90"
-                >
-                  {cat}
-                </button>
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className="flex shrink-0 h-[34px] lg:h-[30px] min-w-max lg:w-[250px] items-center justify-center lg:justify-start px-5 lg:px-4 font-orbitron text-[11px] lg:text-[13px] font-bold tracking-tight transition-all rounded-[17px] lg:rounded-[2px] cursor-pointer bg-[#282828] text-white hover:bg-black/90 shadow-sm"
+                  >
+                    {cat}
+                  </button>
               ))}
             </div>
           </div>
 
           {/* Products Grid */}
-          <div className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+          <div className="grid flex-1 grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
             {products.map((product) => {
               return (
                 <Link
                   href={`/product/${product.id}`}
                   key={product.id}
-                  className="group flex flex-col w-full max-w-[400px] sm:max-w-[207px] h-[300px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
+                  className="group flex flex-col w-full max-w-[400px] sm:max-w-[250px] min-h-[320px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
                 >
                   <div className="flex h-[222px] w-full shrink-0 items-center justify-center p-4 bg-white">
                     <Image
@@ -145,18 +145,18 @@ export default function ACProducts() {
                     />
                   </div>
 
-                  <div className="flex h-[78px] w-full flex-col justify-center gap-0.5 border-t border-black/5 bg-[#171717] px-2 py-1.5">
-                    <h3 className="px-1 font-['Eurostile_Extended',sans-serif] text-[14px] font-bold leading-[100%] uppercase text-white">
+                  <div className="flex flex-1 w-full flex-col justify-center gap-1 border-t border-black/5 bg-[#171717] px-2 py-3">
+                    <h3 className="px-1 font-['Eurostile_Extended',sans-serif] text-[16px] font-bold leading-[100%] uppercase text-white">
                       {product.id}
                     </h3>
-                    <p className="px-1 font-[Antenna] text-[11px] font-medium leading-[110%] text-[#D4D4D4] mt-0.5">
+                    <p className="px-1 font-[Antenna] text-[12px] font-medium leading-[120%] text-[#D4D4D4] mt-0.5">
                       {product.subtitle}
                     </p>
 
-                    <div className="px-1 mt-1.5">
-                      <button className="flex h-[20px] w-auto min-w-[90px] items-center justify-center gap-1 rounded-full bg-white px-3 font-orbitron text-[8px] font-bold uppercase leading-none text-[#444444] transition-all hover:bg-gray-200 shadow-sm cursor-pointer whitespace-nowrap">
+                    <div className="px-1 mt-2">
+                      <button className="flex h-[24px] w-auto min-w-[100px] items-center justify-center gap-1.5 rounded-full bg-white px-3.5 font-orbitron text-[10px] font-bold uppercase leading-none text-[#444444] transition-all hover:bg-gray-200 shadow-sm cursor-pointer whitespace-nowrap">
                         VIEW DETAILS
-                        <ArrowRight size={9} className="stroke-[2.5] text-[#444444]" />
+                        <ArrowRight size={11} className="stroke-[2.5] text-[#444444]" />
                       </button>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function ACProducts() {
                 className="bg-white rounded-[15px] shadow-lg overflow-hidden flex flex-col border border-gray-100 transition-transform hover:scale-[1.02] group"
               >
                 <div className="bg-white px-4 py-3 border-b border-gray-50 text-center">
-                  <span className="font-orbitron text-[14px] font-bold tracking-widest text-black uppercase">
+                  <span className="font-orbitron text-[19px] font-bold tracking-widest text-black uppercase">
                     {item.title}
                   </span>
                 </div>
