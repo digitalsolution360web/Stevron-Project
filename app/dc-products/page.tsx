@@ -23,23 +23,23 @@ export default function DCProducts() {
   ];
 
   const products = [
-    { id: "BNID452B2", subtitle: "Taladro Percutor Inalámbrico 45Nm", image: "/dc/BNID452B2.webp" },
+    { id: "BNID452B2", subtitle: "45Nm Taladro Percutor Inalámbrico ", image: "/dc/BNID452B2.webp" },
     { id: "BNDR75", subtitle: "75N.M - Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
-    { id: "BNIW4002B2", subtitle: "Llave de Impacto batería 400Nm (2 Bat 2.0Ah y 1 ch.)", image: "/dc/BNIW4002B2.webp" },
-    { id: "BNIW6004B2", subtitle: "Llave de Impacto batería 600Nm (2 Bat 4.0Ah y 1 ch.)", image: "/dc/BNIW6004B2.webp" },
-    { id: "BNIW8004B2", subtitle: "Llave de Impacto batería 850Nm (2 Bat 4.0Ah y 1 ch.)", image: "/dc/BNIW8004B2.webp" },
-    { id: "BNCAG8504B1", subtitle: "Amoladora Angular batería 850W (1 Bat 4.0Ah y 1 ch.)", image: "/dc/BNCAG8504B1.webp" },
+    { id: "BNIW4002B2", subtitle: "400Nm Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
+    { id: "BNIW6004B2", subtitle: "600Nm Llave de Impacto batería", image: "/dc/BNIW6004B2.webp" },
+    { id: "BNIW8004B2", subtitle: "800Nm Llave de Impacto batería", image: "/dc/BNIW8004B2.webp" },
+    { id: "BNCAG8504B1", subtitle: "4-1/2” Amoladora Angular batería", image: "/dc/BNCAG8504B1.webp" },
     { id: "BNCRH20J4B", subtitle: "2.0J - Rotomartillo Inalámbrico", image: "/dc/BNCRH20J4B.webp" },
     { id: "BNCRH25J4B2", subtitle: "2.6J - Rotomartillo Inalámbrico", image: "/dc/BNCRH25J4B2.webp" },
     { id: "BNCRH45J", subtitle: "4.5J - Rotomartillo Inalámbrico", image: "/dc/BNCRH45J.webp" },
     { id: "BNCCS190", subtitle: "185MM - Sierra circular", image: "/dc/BNCCS190.webp" },
-    { id: "BNCSS", subtitle: "Lijadora Orbital Aleatoria", image: "/dc/BNCSS.webp" },
+    { id: "BNCSS", subtitle: "Lijadora de Hoja", image: "/dc/BNCSS.webp" },
     { id: "BNCBL2B1", subtitle: "Soplador y Aspiradora", image: "/dc/BNCBL2B1.webp" },
     { id: "BNLB20", subtitle: "Batería de Litio 2.0Ah", image: "/dc/BNLB20.webp" },
-    { id: "BNLB40", subtitle: "Batería de Litio 4.0Ah", image: "/dc/BNLB40.webp" },
-    { id: "BNLB50", subtitle: "Batería de Litio 5.0Ah", image: "/dc/BNLB50.webp" },
-    { id: "BNBC35A", subtitle: "Cargador de Batería 3.5A", image: "/dc/BNBC35A.webp" },
-    { id: "BNDBC3A", subtitle: "Cargador de Batería Doble Puerto 3A", image: "/dc/BNDBC3A.webp" },
+    { id: "BNLB40", subtitle: "4.0Ah Batería de Litio ", image: "/dc/BNLB40.webp" },
+    { id: "BNLB50", subtitle: "5.0Ah Batería de Litio ", image: "/dc/BNLB50.webp" },
+    { id: "BNBC35A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
+    { id: "BNDBC3A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
   ];
 
   return (
