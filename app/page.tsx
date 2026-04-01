@@ -213,7 +213,7 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex h-[340px] w-full flex-col overflow-hidden rounded-[12px] shadow-lg"
+                className="flex h-full min-h-[360px] w-full flex-col overflow-hidden rounded-[12px] shadow-lg"
               >
                 {/* Header: Layered Design (Figma) */}
                 <div className="flex flex-col">
@@ -228,21 +228,21 @@ export default function Home() {
                 </div>
 
                 {/* Body: #171717 with icon image, line, subtitle, description */}
-                <div className="relative flex flex-1 flex-col bg-[#171717] px-3 py-3">
+                <div className="relative flex flex-1 flex-col bg-[#171717] px-4 pt-6 pb-8">
                   <div className="relative z-10 flex flex-col items-center">
-                    {/* Icon Image centered (Figma: 34.31x40px) */}
-                    <div className="mb-2 flex h-[30px] w-[26px] items-center justify-center">
+                    {/* Icon Image - Big, Professional with Glowing Circle */}
+                    <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full bg-white/10 shadow-[0_0_24px_6px_rgba(255,255,255,0.12)] border border-white/20 backdrop-blur-sm">
                       <Image
                         src={item.iconPath}
                         alt=""
-                        width={26}
-                        height={30}
-                        className="h-full w-full object-contain"
+                        width={52}
+                        height={60}
+                        className="h-[60px] w-[52px] object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
                       />
                     </div>
 
                     {/* Subtitle with side lines (Figma style) */}
-                    <div className="mb-2 flex w-full items-center gap-2">
+                    <div className="mb-3 flex w-full items-center gap-2">
                       <div className="h-px flex-1 bg-[#FFFFFF]" />
                       <p className="whitespace-nowrap font-['Antenna',sans-serif] text-[16px] sm:text-[18px] font-normal leading-[100%] tracking-[0%] text-[#FFFFFF]">
                         {item.subtitle}

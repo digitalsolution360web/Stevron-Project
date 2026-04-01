@@ -507,7 +507,7 @@ export default function ProductDetail() {
   const id = params.id as string;
 
   // Determine if it's an AC product based on ID or index
-  const acProductIds = allProducts.slice(0, 18).map(p => p.id);
+  const acProductIds = allProducts.slice(0, 16).map(p => p.id);
   const isAC = acProductIds.includes(id);
   const product = allProducts.find((p) => p.id === id) || allProducts[1]; // fallback
 
@@ -574,7 +574,7 @@ export default function ProductDetail() {
           {/* Right Side: Product Details */}
           <div className="w-full lg:w-1/2 flex flex-col pt-2 lg:pt-0">
             {/* Title */}
-            <h1 className="font-['Eurostile_Extended',sans-serif] text-[17px] sm:text-[21px] lg:text-[24px] font-bold uppercase text-black mb-6 leading-none tracking-normal whitespace-nowrap overflow-visible pr-6">
+            <h1 className="font-orbitron text-[17px] sm:text-[21px] lg:text-[24px] font-bold uppercase text-black mb-6 leading-none tracking-normal whitespace-nowrap overflow-visible pr-6">
               {product.id}<span className="text-[#94A034]"> - {product.subtitle.split(' - ')[1] || product.subtitle}</span>
             </h1>
             {/* Bullets */}
