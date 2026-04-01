@@ -11,15 +11,15 @@ export default function ACProducts() {
   const [activeCategory, setActiveCategory] = useState("All Products");
 
   const categories = [
-    "All Products",
-    "Drill",
-    "Wrench",
-    "Angular Grinder",
-    "Rotary Hammer Drill",
-    "Circular Saw",
-    "Blower & Vaccum",
-    "Battery",
-    "Charger",
+    "Todos los productos",
+    "Taladro",
+    "Amoladora angular",
+    "Pulidora",
+    "Sierra de calar",
+    "Sierra circular",
+    "Sierra de mesa",
+    "Tupí",
+    "Martillo perforador",
   ];
 
   const products = [
