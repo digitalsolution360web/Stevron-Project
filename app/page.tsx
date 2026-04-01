@@ -189,25 +189,25 @@ export default function Home() {
               {
                 title: "INNOVACIÓN",
                 subtitle: "Diseñando el futuro",
-                description: "En STEVRON, la innovación es el motor de todo lo que creamos. Combinamos ingeniería avanzada con un diseño práctico para desarrollar herramientas que ofrecen potencia, precisión y confiabilidad. Al mejorar continuamente nuestra tecnología, nos aseguramos de que cada producto satisfaga las necesidades cambiantes de los profesionales.",
+                description: "En STEVRON, la innovación impulsa todo lo que creamos. Combinamos ingeniería avanzada y diseño práctico para desarrollar herramientas potentes, precisas y confiables, adaptadas a las necesidades cambiantes de los profesionales modernos.",
                 iconPath: "/innovation.png"
               },
               {
                 title: "CALIDAD",
                 subtitle: "Hecho para durar",
-                description: "Desde los materiales cuidadosamente seleccionados hasta la fabricación de precisión, cada detalle está diseñado para garantizar la durabilidad y un rendimiento constante. Gracias a estrictos controles de calidad y pruebas, nos aseguramos de ofrecer herramientas en las que los profesionales puedan confiar cada día.",
+                description: "Desde materiales cuidadosamente seleccionados hasta fabricación de precisión, cada detalle garantiza durabilidad y rendimiento constante. Controles estrictos y pruebas aseguran herramientas confiables que los profesionales pueden usar diariamente.",
                 iconPath: "/Group.png"
               },
               {
                 title: "FIABILIDAD",
-                subtitle: "Rendimiento en el que puedes confiar",
-                description: "Ofrecemos herramientas que rinden de manera constante en condiciones reales de trabajo. Cada producto está diseñado con componentes duraderos y se somete a pruebas para garantizar un funcionamiento confiable. Nuestro enfoque en la ingeniería de precisión asegura que los profesionales puedan confiar en las herramientas STEVRON día tras día.",
+                subtitle: "Confianza en rendimiento",
+                description: "Ofrecemos herramientas de rendimiento constante en condiciones reales. Cada producto cuenta con componentes duraderos y pruebas rigurosas, garantizando funcionamiento confiable. Nuestra ingeniería de precisión asegura confianza diaria en herramientas STEVRON.",
                 iconPath: "/Group (1).png"
               },
               {
                 title: "SOSTENIBILIDAD",
-                subtitle: "Construyendo un futuro más verde",
-                description: "Desarrollamos productos teniendo en cuenta la responsabilidad medioambiental. Mediante un diseño más inteligente, una producción eficiente y un rendimiento duradero, trabajamos para reducir nuestra huella ecológica al tiempo que ofrecemos soluciones fiables para el futuro.",
+                subtitle: "Futuro más verde",
+                description: "Desarrollamos productos con responsabilidad medioambiental. Mediante diseño inteligente, producción eficiente y rendimiento duradero, reducimos nuestra huella ecológica mientras ofrecemos soluciones fiables y sostenibles para el futuro.",
                 iconPath: "/innovation.png"
               },
             ].map((item, index) => (
