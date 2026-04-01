@@ -11,15 +11,15 @@ export default function DCProducts() {
   const [activeCategory, setActiveCategory] = useState("All Products");
 
   const categories = [
-    "All Products",
-    "Drill",
-    "Wrench",
-    "Angular Grinder",
-    "Rotary Hammer Drill",
-    "Circular Saw",
-    "Blower & Vaccum",
-    "Battery",
-    "Charger",
+    "Todos los productos",
+    "Taladro",
+    "Llave inglesa",
+    "Amoladora angular",
+    "Taladro percutor",
+    "Sierra circular",
+    "Sopladores y aspiradoras",
+    "Batería",
+    "Cargador",
   ];
 
   const products = [
