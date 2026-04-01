@@ -288,9 +288,9 @@ const allProducts = [
   },
 
   // DC Products (Cordless)
-  { 
-    id: "BNID452B2", 
-    subtitle: "Taladro Percutor Inalámbrico 45Nm", 
+  {
+    id: "BNID452B2",
+    subtitle: "Taladro Percutor Inalámbrico 45Nm",
     image: "/dc/BNID452B2.webp",
     specs: {
       "Tensió": "20V",
@@ -324,9 +324,9 @@ const allProducts = [
       "Par máx": "75 Nm"
     }
   },
-  { 
-    id: "BNIW4002B2", 
-    subtitle: "Llave de Impacto batería 400Nm (2 Bat 2.0Ah y 1 ch.)", 
+  {
+    id: "BNIW4002B2",
+    subtitle: "Llave de Impacto batería 400Nm (2 Bat 2.0Ah y 1 ch.)",
     image: "/dc/BNIW4002B2.webp",
     specs: {
       "Tensió": "20V",
@@ -347,9 +347,9 @@ const allProducts = [
       "Luz de trabajo LED"
     ]
   },
-  { 
-    id: "BNIW6004B2", 
-    subtitle: "Llave de Impacto batería 600Nm (2 Bat 4.0Ah y 1 ch.)", 
+  {
+    id: "BNIW6004B2",
+    subtitle: "Llave de Impacto batería 600Nm (2 Bat 4.0Ah y 1 ch.)",
     image: "/dc/BNIW6004B2.webp",
     specs: {
       "Tensió": "20V",
@@ -370,9 +370,9 @@ const allProducts = [
       "Luz de trabajo LED"
     ]
   },
-  { 
-    id: "BNIW8004B2", 
-    subtitle: "Llave de Impacto batería 850Nm (2 Bat 4.0Ah y 1 ch.)", 
+  {
+    id: "BNIW8004B2",
+    subtitle: "Llave de Impacto batería 850Nm (2 Bat 4.0Ah y 1 ch.)",
     image: "/dc/BNIW8004B2.webp",
     specs: {
       "Tensió": "20V",
@@ -393,9 +393,9 @@ const allProducts = [
       "Luz de trabajo LED"
     ]
   },
-  { 
-    id: "BNCAG8504B1", 
-    subtitle: "Amoladora Angular batería 850W (1 Bat 4.0Ah y 1 ch.)", 
+  {
+    id: "BNCAG8504B1",
+    subtitle: "Amoladora Angular batería 850W (1 Bat 4.0Ah y 1 ch.)",
     image: "/dc/BNCAG8504B1.webp",
     specs: {
       "Tensió": "20V",
@@ -418,9 +418,9 @@ const allProducts = [
   { id: "BNCRH25J4B2", subtitle: "2.6J - Rotomartillo Inalámbrico", image: "/dc/BNCRH25J4B2.webp" },
   { id: "BNCRH45J", subtitle: "4.5J - Rotomartillo Inalámbrico", image: "/dc/BNCRH45J.webp" },
   { id: "BNCCS190", subtitle: "185MM - Sierra circular", image: "/dc/BNCCS190.webp" },
-  { 
-    id: "BNCSS", 
-    subtitle: "Lijadora Orbital Aleatoria", 
+  {
+    id: "BNCSS",
+    subtitle: "Lijadora Orbital Aleatoria",
     image: "/dc/BNCSS.webp",
     specs: {
       "Tensión": "20V",
@@ -433,9 +433,9 @@ const allProducts = [
       "Papel de lija": "x 5"
     }
   },
-  { 
-    id: "BNCBL2B1", 
-    subtitle: "Soplador y Aspiradora", 
+  {
+    id: "BNCBL2B1",
+    subtitle: "Soplador y Aspiradora",
     image: "/dc/BNCBL2B1.webp",
     specs: {
       "Tensión": "20V",
@@ -445,9 +445,9 @@ const allProducts = [
     }
   },
   { id: "BNLB20", subtitle: "Batería de Litio 2.0Ah", image: "/dc/BNLB20.webp" },
-  { 
-    id: "BNLB40", 
-    subtitle: "Batería de Litio 4.0Ah", 
+  {
+    id: "BNLB40",
+    subtitle: "Batería de Litio 4.0Ah",
     image: "/dc/BNLB40.webp",
     specs: {
       "Tipo de batería": "Ion-Litio",
@@ -455,9 +455,9 @@ const allProducts = [
       "Amperaje": "4Ah"
     }
   },
-  { 
-    id: "BNLB50", 
-    subtitle: "Batería de Litio 5.0Ah", 
+  {
+    id: "BNLB50",
+    subtitle: "Batería de Litio 5.0Ah",
     image: "/dc/BNLB50.webp",
     specs: {
       "Tipo de batería": "Ion-Litio",
@@ -465,9 +465,9 @@ const allProducts = [
       "Amperaje": "5Ah"
     }
   },
-  { 
-    id: "BNBC35A", 
-    subtitle: "Cargador de Batería 3.5A", 
+  {
+    id: "BNBC35A",
+    subtitle: "Cargador de Batería 3.5A",
     image: "/dc/BNBC35A.webp",
     specs: {
       "Voltaje de entrada": "110-120 V ~ 50/60 Hz",
@@ -476,9 +476,9 @@ const allProducts = [
       "Tipo de enchufe": "VDE"
     }
   },
-  { 
-    id: "BNDBC3A", 
-    subtitle: "Cargador de Batería Doble Puerto 3A", 
+  {
+    id: "BNDBC3A",
+    subtitle: "Cargador de Batería Doble Puerto 3A",
     image: "/dc/BNDBC3A.webp",
     specs: {
       "Voltaje de entrada": "110-120 V ~ 50/60 Hz",
@@ -574,10 +574,9 @@ export default function ProductDetail() {
           {/* Right Side: Product Details */}
           <div className="w-full lg:w-1/2 flex flex-col pt-2 lg:pt-0">
             {/* Title */}
-            <h1 className="font-['Eurostile_Extended',sans-serif] text-[24px] sm:text-[32px] font-bold uppercase text-black mb-6 leading-tight">
-              {product.id} <span className="text-[#94A034]">- {product.subtitle.split(' - ')[1] || product.subtitle}</span>
+            <h1 className="font-['Eurostile_Extended',sans-serif] text-[17px] sm:text-[21px] lg:text-[24px] font-bold uppercase text-black mb-6 leading-none tracking-normal whitespace-nowrap overflow-visible pr-6">
+              {product.id}<span className="text-[#94A034]"> - {product.subtitle.split(' - ')[1] || product.subtitle}</span>
             </h1>
-
             {/* Bullets */}
             <ul className="mb-8 space-y-1">
               <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
