@@ -180,9 +180,9 @@ export default function ACProducts() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-[1100px]">
             {[
-              { title: "DC TOOLS", image: "/7.webp", href: "/dc-products" },
-              { title: "ACCESSORIES", image: "/5.webp", href: "#" },
-              { title: "HAND TOOLS", image: "/9.webp", href: "#" },
+              { title: "Herramientas DC", image: "/7.webp", href: "/dc-products" },
+              { title: "Accesorios", image: "/5.webp", href: "#" },
+              { title: "Herramientas manuales", image: "/9.webp", href: "#" },
             ].map((item, index) => (
               <Link
                 key={index}
