@@ -322,7 +322,23 @@ const allProducts = [
       "Velocidad en vacío": "0-500 / 0-2000 RPM",
       "Velocidad máxima de impacto": "0-8000 / 0-32000 BPM",
       "Par máx": "75 Nm"
-    }
+    },
+    included: {
+      "Batería Ion-Litio": "2 x 2.0Ah",
+      "Cargador rápido": "1",
+      "Clip para cinturón": "1"
+    },
+    topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
+    features: [
+      "SEGURIDAD INTELIGENTE, MAYOR PROTECCIÓN",
+      "ON : Se detiene ante movimiento brusco o caída.",
+      "OFF : Funciona incluso con movimientos fuertes.",
+      "PORTABROCAS AUTOBLOQUEANTE",
+      "Luz de trabajo LED"
+    ]
   },
   {
     id: "BNIW4002B2",
@@ -342,6 +358,10 @@ const allProducts = [
       "Clip para cinturón": "1",
       "Llave": "17 , 19 , 21 MM"
     },
+    topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
     features: [
       "Alto par para trabajos exigentes",
       "Luz de trabajo LED"
@@ -360,11 +380,15 @@ const allProducts = [
       "Par de aflojamiento": "600 N.M"
     },
     included: {
-      "Batería Ion-Litio": "2 x 4.0Ah",
+      "Batería Ion-Litio": "2 x 2.0Ah",
       "Cargador rápido": "1",
       "Clip para cinturón": "1",
       "Llave": "17 , 19 , 21 MM"
     },
+    topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
     features: [
       "Alto par para trabajos exigentes",
       "Luz de trabajo LED"
@@ -383,11 +407,15 @@ const allProducts = [
       "Par de aflojamiento": "800 N.M"
     },
     included: {
-      "Batería Ion-Litio": "2 x 4.0Ah",
+      "Batería Ion-Litio": "2 x 2.0Ah",
       "Cargador rápido": "1",
       "Clip para cinturón": "1",
       "Llave": "17 , 19 , 21 MM"
     },
+    topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
     features: [
       "Alto par para trabajos exigentes",
       "Luz de trabajo LED"
@@ -409,15 +437,102 @@ const allProducts = [
       "Cargador rápido": "1",
       "Disco": "10 x 4-1/2”"
     },
+    topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
     features: [
       "Ideal para cortar, esmerilar y pulir.",
       "Husillo de alta resistencia (5/8\"-11 UNC)"
     ]
   },
-  { id: "BNCRH20J4B", subtitle: "2.0J - Rotomartillo Inalámbrico", image: "/dc/BNCRH20J4B.webp" },
-  { id: "BNCRH25J4B2", subtitle: "2.6J - Rotomartillo Inalámbrico", image: "/dc/BNCRH25J4B2.webp" },
-  { id: "BNCRH45J", subtitle: "4.5J - Rotomartillo Inalámbrico", image: "/dc/BNCRH45J.webp" },
-  { id: "BNCCS190", subtitle: "185MM - Sierra circular", image: "/dc/BNCCS190.webp" },
+  {
+    id: "BNCRH20J4B",
+    subtitle: "2.0J - Rotomartillo Inalámbrico",
+    image: "/dc/BNCRH20J4B.webp",
+    specs: {
+      "Tensión": "20V",
+      "Energía de impacto": "2.0J",
+      "Velocidad en vacío": "0-1100 RPM",
+      "Tasa de impacto": "0-4500 BPM",
+      "Sistema de mandril": "SDS Plus"
+    },
+    included: {
+      "Batería Ion-Litio": "1 x 4.0Ah",
+      "Cargador rápido": "1"
+    },
+    topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
+    features: [
+      "Sistema de mandril SDS plus",
+      "Luz de trabajo LED"
+    ]
+  },
+  {
+    id: "BNCRH25J4B2",
+    subtitle: "2.6J - Rotomartillo Inalámbrico",
+    image: "/dc/BNCRH25J4B2.webp",
+    specs: {
+      "Tensión": "20V",
+      "Energía de impacto": "2.6J",
+      "Velocidad en vacío": "0-1100 RPM",
+      "Tasa de impacto": "0-4500 BPM",
+      "Sistema de mandril": "SDS Plus"
+    },
+    included: {
+      "Batería Ion-Litio": "2 x 4.0Ah",
+      "Cargador rápido": "1"
+    },
+    topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
+    features: [
+      "Sistema de mandril SDS plus",
+      "Luz de trabajo LED"
+    ]
+  },
+  {
+    id: "BNCRH45J",
+    subtitle: "4.5J - Rotomartillo Inalámbrico",
+    image: "/dc/BNCRH45J.webp",
+    specs: {
+      "Tensión": "20V",
+      "Energía de impacto": "4.5J",
+      "Velocidad en vacío": "0-1100 RPM",
+      "Tasa de impacto": "0-4500 BPM",
+      "Sistema de mandril": "SDS Plus"
+    },
+    included: {
+      "Tubo de grasa": "1",
+      "Llave inglesa": "1"
+    },
+    topBullets: [
+      "Sistema de mandril SDS plus",
+      "Luz de trabajo LED"
+    ]
+  },
+  {
+    id: "BNCCS190",
+    subtitle: "185MM - Sierra circular",
+    image: "/dc/BNCCS190.webp",
+    specs: {
+      "Tensión": "20V",
+      "Velocidad en vacío": "3800 RPM",
+      "Diámetro de la hoja": "190MM",
+      "Profundidad máx. de corte": "65MM",
+      "Ajuste de bisel": "0-45°"
+    },
+    included: {
+      "Hoja de sierra": "1 x 190MM"
+    },
+    topBullets: [
+      "Profundidad de corte ajustable.",
+      "Corte en bisel ajustable."
+    ]
+  },
   {
     id: "BNCSS",
     subtitle: "Lijadora Orbital Aleatoria",
@@ -430,8 +545,12 @@ const allProducts = [
       "Velocidad sin carga": "2000 / 3500 / 5000 / 6500 / 8000 / 10000 RPM"
     },
     included: {
-      "Papel de lija": "x 5"
-    }
+      "Papel de lija": "5"
+    },
+    topBullets: [
+      "Lijado orbital aleatorio de alta velocidad.",
+      "Perfecto para madera, metal y acabado de superficies."
+    ]
   },
   {
     id: "BNCBL2B1",
@@ -442,9 +561,33 @@ const allProducts = [
       "Velocidad sin carga": "0-6000 / 0-12000 / 0-18000 RPM",
       "Ajuste del volumen de aire": "3",
       "Velocidad del aire": "144 / 190.8 / 252 Km/H"
-    }
+    },
+    included: {
+      "Batería Ion-Litio": "2 x 2.0Ah",
+      "Cargador rápido": "1"
+    },
+    topBullets: [
+      "Función 2 en 1: soplador y aspirador.",
+      "Control de flujo de aire de 3 velocidades."
+    ]
   },
-  { id: "BNLB20", subtitle: "Batería de Litio 2.0Ah", image: "/dc/BNLB20.webp" },
+  {
+    id: "BNLB20",
+    subtitle: "Batería de Litio 2.0Ah",
+    image: "/dc/BNLB20.webp",
+    specs: {
+      "Tipo de batería": "Ion-Litio",
+      "Tensión de la batería": "20V",
+      "Amperaje": "2Ah"
+    },
+    included: {
+      "Solo batería": "1"
+    },
+    topBullets: [
+      "Compatible con todas las herramientas STEVRON",
+      "Diseñado para ofrecer un rendimiento superior"
+    ]
+  },
   {
     id: "BNLB40",
     subtitle: "Batería de Litio 4.0Ah",
@@ -453,7 +596,14 @@ const allProducts = [
       "Tipo de batería": "Ion-Litio",
       "Tensión de la batería": "20V",
       "Amperaje": "4Ah"
-    }
+    },
+    included: {
+      "Solo batería": "1"
+    },
+    topBullets: [
+      "Compatible con todas las herramientas STEVRON",
+      "Diseñado para ofrecer un rendimiento superior"
+    ]
   },
   {
     id: "BNLB50",
@@ -463,7 +613,14 @@ const allProducts = [
       "Tipo de batería": "Ion-Litio",
       "Tensión de la batería": "20V",
       "Amperaje": "5Ah"
-    }
+    },
+    included: {
+      "Solo batería": "1"
+    },
+    topBullets: [
+      "Compatible con todas las herramientas STEVRON",
+      "Diseñado para ofrecer un rendimiento superior"
+    ]
   },
   {
     id: "BNBC35A",
@@ -474,7 +631,14 @@ const allProducts = [
       "Voltaje de salida": "21V",
       "Corriente de salida": "3A",
       "Tipo de enchufe": "VDE"
-    }
+    },
+    included: {
+      "Cargador individual": "1"
+    },
+    topBullets: [
+      "Compatible con baterías STEVRON de 2 Ah, 4 Ah y 5 Ah.",
+      "Salida: 21V - 3 A"
+    ]
   },
   {
     id: "BNDBC3A",
@@ -485,7 +649,14 @@ const allProducts = [
       "Voltaje de salida": "20 V",
       "Corriente de salida": "3 A",
       "Tipo de enchufe": "VDE"
-    }
+    },
+    included: {
+      "Cargador individual": "1"
+    },
+    topBullets: [
+      "Compatible con baterías STEVRON de 2 Ah, 4 Ah y 5 Ah.",
+      "Salida: 21V - 3 A"
+    ]
   },
 ];
 
@@ -579,12 +750,22 @@ export default function ProductDetail() {
             </h1>
             {/* Bullets */}
             <ul className="mb-8 space-y-1">
-              <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
-                &#x2022; Motor sin escobillas de alto rendimiento
-              </li>
-              <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
-                &#x2022; Sistema de batería Li-Ion
-              </li>
+              {(product as any).topBullets ? (
+                (product as any).topBullets.map((bullet: string, i: number) => (
+                  <li key={i} className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                    &#x2022; {bullet}
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                    &#x2022; Motor sin escobillas de alto rendimiento
+                  </li>
+                  <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                    &#x2022; Sistema de batería Li-Ion
+                  </li>
+                </>
+              )}
             </ul>
 
             {/* Accordions */}

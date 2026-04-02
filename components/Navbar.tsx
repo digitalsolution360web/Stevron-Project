@@ -63,13 +63,12 @@ export default function Navbar() {
 
           {/* Products Dropdown */}
           <div className="relative group flex items-center h-[80px]">
-            <Link
-              href="/products"
-              className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80 flex items-center gap-1.5"
+            <div
+              className="font-orbitron cursor-default text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80 flex items-center gap-1.5"
             >
               Products
               <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
-            </Link>
+            </div>
 
             {/* Dropdown Menu */}
             <div className="absolute top-[80%] left-[-20px] invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 w-[220px] flex flex-col rounded-[5px] border-t-[3px] border-[#94A034] bg-[#050505] shadow-2xl transition-all duration-300 overflow-hidden">
