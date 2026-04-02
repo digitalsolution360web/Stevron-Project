@@ -13,7 +13,7 @@ export default function Home() {
 
   // Hero Slider State
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
-  const heroImages = ["banner/banner-1.webp", "/banner1.webp", "/banner.webp", "banner/banner-4.webp"];
+  const heroImages = ["banner/banner-1.webp", "/banner.webp", "/banner1.webp", "banner/banner-4.webp"];
 
   useEffect(() => {
     const heroInterval = setInterval(() => {
