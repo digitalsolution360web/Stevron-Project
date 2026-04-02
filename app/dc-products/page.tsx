@@ -84,20 +84,16 @@ export default function DCProducts() {
             className="mb-4 font-['Antenna',sans-serif] text-[10px] sm:text-[12px] font-normal tracking-[0.05em] text-black uppercase whitespace-nowrap overflow-hidden text-ellipsis w-full"
             style={{ maxWidth: '350px' }}
           >
-            ONE BATTERY, ENDLESS POSSIBILITIES
+            Una batería, infinitas posibilidades
+ 
           </p>
 
           {/* Description */}
           <p
             className="font-['Antenna',sans-serif] text-[12px] sm:text-[13px] font-light leading-[1.6] text-black text-center w-full"
             style={{ maxWidth: '676px' }}
-          >
-            Experience true cordless freedom with STEVRON&apos;S 1NE platform, designed around one battery for all your tools.
-            Our DC power tools deliver consistent performance, flexibility, and convenience across multiple applications.
-            With a single battery system, you can switch between tools effortlessly and keep your work moving without
-            interruption. Engineered for efficiency and reliability, STEVRON DC tools combine advanced battery technology
-            with ergonomic design. Whether it&apos;s precision work or demanding tasks, the 1NE platform ensures you get the
-            power you need with the confidence to do more with less.
+          >Disfruta la verdadera libertad inalámbrica con la plataforma 1NE de STEVRON: una batería para todas tus herramientas. Nuestras herramientas DC ofrecen potencia constante, versatilidad y comodidad en todo tipo de aplicaciones. Con un solo sistema de batería, puedes cambiar de herramienta rápidamente y seguir trabajando sin paradas.
+Diseñadas para alto rendimiento y durabilidad, combinan tecnología avanzada de batería con construcción robusta. Ya sea para trabajos de precisión o tareas exigentes, 1NE te da potencia y control para hacer más con menos.
           </p>
         </div>
       </section>
