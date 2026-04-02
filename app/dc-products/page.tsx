@@ -13,11 +13,12 @@ export default function DCProducts() {
   const categories = [
     "Todos los productos",
     "Taladro",
-    "Llave inglesa",
+    "Llave de impacto",
     "Amoladora angular",
-    "Taladro percutor",
+    "Rotomartillo",
     "Sierra circular",
-    "Sopladores y aspiradoras",
+    "Lijadora de Hoja",
+    "Aspiradora",
     "Batería",
     "Cargador",
   ];
