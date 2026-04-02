@@ -24,25 +24,6 @@ export default function DCProducts() {
   ];
 
   const products = [
-<<<<<<< HEAD
-    { id: "45Nm", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
-    { id: "75Nm ", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
-    { id: "400Nm", subtitle: "Llave de Impacto", image: "/dc/BNIW4002B2.webp" },
-    { id: "600Nm", subtitle: "Llave de Impacto", image: "/dc/BNIW6004B2.webp" },
-    { id: "800Nm", subtitle: "Llave de Impacto ", image: "/dc/BNIW8004B2.webp" },
-    { id: "4-1/2” (115mm)", subtitle: "Amoladora angular", image: "/dc/BNCAG8504B1.webp" },
-    { id: "2,0J", subtitle: "Rotomartillo", image: "/dc/BNRH20J4B1.webp" },
-    { id: "2,5J", subtitle: "Rotomartillo", image: "/dc/BNRH25J4B2.webp" },
-    { id: "4,5J", subtitle: "Rotomartillo", image: "/dc/BNRH45JSDS.webp" },
-    { id: "1800W", subtitle: "Sierra Circular", image: "/dc/BNCS190.webp" },
-    { id: "125MM", subtitle: "Lijadora de Hoja", image: "/dc/BNCSS.webp" },
-    { id: "0-18000", subtitle: "Soplador", image: "/dc/BNBL2B1.webp" },
-    { id: "2,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB20.webp" },
-    { id: "4,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB40.webp" },
-    { id: "5,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
-    { id: "3,5A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
-    { id: "3,0A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
-=======
     { id: "BNID452B2", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
     { id: "BNDR75", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
     { id: "BNIW4002B2", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
@@ -60,7 +41,6 @@ export default function DCProducts() {
     { id: "BNLB50", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
     { id: "BNBC35A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
     { id: "BNDBC3A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
->>>>>>> c6bfa4b (new updated)
   ];
 
   return (
