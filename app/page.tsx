@@ -438,13 +438,31 @@ export default function Home() {
           {/* FAQ list */}
           <div className="flex w-full max-w-[920px] flex-col gap-2.5">
             {[
-              "What types of industrial equipment does Stevron manufacture?",
-              "Do you offer warranty on your products?",
-              "How can I become a distributor for Stevron products?",
-              "Do you provide international shipping and support?",
-              "How do I find the right product for my specific needs?",
-              "What kind of technical support and training do you provide?",
-            ].map((question, idx) => (
+              {
+                question: "¿Qué tipos de equipos industriales fabrica Stevron?",
+                answer: "Stevron se especializa en una amplia gama de equipos industriales, entre los que se incluyen maquinaria agrícola, herramientas eléctricas, equipos de jardinería, motores marinos, sistemas de limpieza, generadores y herramientas de construcción. Nuestra cartera de productos abarca más de 500 modelos diferentes diseñados para uso profesional y comercial."
+              },
+              {
+                question: "¿Ofrecen garantía para sus productos?",
+                answer: "Sí, todos los productos Stevron cuentan con una cobertura de garantía completa. Nuestra garantía estándar tiene una duración de entre 1 y 3 años, dependiendo de la categoría del producto. También ofrecemos opciones de garantía extendida y un servicio posventa integral a través de nuestra red de servicio global."
+              },
+              {
+                question: "¿Cómo puedo convertirme en distribuidor de los productos Stevron?",
+                answer: "Buscamos oportunidades de colaboración con distribuidores cualificados de todo el mundo. Para convertirse en distribuidor de Stevron, deberá cumplir ciertos criterios, entre los que se incluyen la presencia en el mercado, los conocimientos técnicos y la capacidad de prestar servicios. Póngase en contacto con nuestro equipo de colaboraciones a través de nuestra página «Conviértase en distribuidor» para conocer los requisitos detallados y el proceso de solicitud."
+              },
+              {
+                question: "¿Ofrecen envíos internacionales y atención al cliente?",
+                answer: "Sí, prestamos servicio a clientes en más de 50 países de todo el mundo. Hemos establecido alianzas de transporte y redes de servicio a nivel mundial para garantizar entregas puntuales y asistencia local. Nuestro equipo internacional puede ayudarle con la logística y el despacho de aduanas, además de ofrecerle asistencia técnica en varios idiomas."
+              },
+              {
+                question: "¿Cómo encuentro el producto adecuado para mis necesidades específicas?",
+                answer: "Nuestro equipo de expertos puede ayudarte a elegir el equipo ideal para tus necesidades. Puedes explorar nuestras categorías de productos en línea, utilizar nuestra herramienta de búsqueda de productos o ponerte en contacto con nuestros asesores técnicos, quienes evaluarán tus necesidades y te recomendarán las soluciones más adecuadas. También ofrecemos demostraciones de productos y programas de prueba para los clientes que cumplan los requisitos."
+              },
+              {
+                question: "¿Qué tipo de asistencia técnica y capacitación ofrecen?",
+                answer: "Ofrecemos un servicio de asistencia técnica integral que incluye orientación para la instalación, capacitación en el manejo, talleres de mantenimiento y ayuda para la resolución de problemas. Nuestros técnicos certificados brindan capacitación in situ, tutoriales en video, manuales detallados y asistencia técnica telefónica las 24 horas del día, los 7 días de la semana, para garantizar el rendimiento óptimo de su equipo."
+              }
+            ].map((faq, idx) => (
               <div
                 key={idx}
                 className="rounded-[8px] border border-[#E5E5E5] bg-[#FFFFFF] shadow-[0_4px_12px_-2px_rgba(0,0,0,0.06)] transition-all hover:shadow-md"
@@ -454,7 +472,7 @@ export default function Home() {
                   className="group flex w-full items-center justify-between px-6 py-[16px] text-left cursor-pointer"
                 >
                   <span className="font-[Antenna] text-[18px] sm:text-[20px] leading-[120%] font-normal text-[#000000]">
-                    {question}
+                    {faq.question}
                   </span>
                   <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#94A034] shadow-sm transition-transform group-hover:scale-110">
                     <ChevronDown
@@ -468,7 +486,7 @@ export default function Home() {
                 {openFaqIndex === idx && (
                   <div className="px-6 pb-4">
                     <p className="font-[Antenna] text-[16px] sm:text-[17px] leading-[150%] text-[#565656]">
-                      Stevron fabrica herramientas eléctricas de CA y CC, herramientas manuales y equipos industriales de alta resistencia. Estos productos están diseñados para ofrecer durabilidad, eficiencia y un rendimiento fiable en entornos exigentes.
+                      {faq.answer}
                     </p>
                   </div>
                 )}

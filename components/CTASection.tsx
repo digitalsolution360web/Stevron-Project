@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function CTASection() {
   return (
     <section className="bg-white py-8">
@@ -16,15 +18,16 @@ export default function CTASection() {
           {/* Description */}
           <p className="font-Antenna text-[15px] sm:text-[16px] text-[#565656] leading-relaxed">
             Join thousands of satisfied customers who trust Stevron for their industrial equipment needs.
-
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-2">
-            <button className="bg-[#94A034] text-white font-orbitron text-[13px] sm:text-[14px] font-bold px-8 sm:px-10 py-3 rounded-[5px] shadow-md transition-opacity hover:opacity-90 uppercase tracking-wider">
-              Explore Products
-            </button>
-
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-2">
+            {/* The single Explore Products button that links to Contact Us */}
+            <Link href="/contact">
+              <button className="bg-[#94A034] text-white font-orbitron cursor-pointer text-[13px] sm:text-[14px] font-bold px-8 sm:px-12 py-4 rounded-[5px] shadow-md transition-opacity hover:opacity-90 uppercase tracking-wider">
+                Explore Products
+              </button>
+            </Link>
           </div>
         </div>
 
