@@ -178,7 +178,7 @@ export default function Home() {
           <div className="mb-10 flex flex-col items-center gap-4">
             <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
               <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF]">
-                Our Core Values
+               Nuestros valores fundamentales
               </span>
             </div>
           </div>
@@ -431,9 +431,10 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="mb-8 max-w-[760px] text-center font-[Antenna] text-[18px] sm:text-[20px] leading-[140%] font-extralight text-[#565656]">
-            Find answers to common questions about our products, services, and partnerships.<br className="hidden sm:block" />
-            Can&apos;t find what you&apos;re looking for? Contact our support team.
-          </p>
+            Encuentra respuestas a preguntas frecuentes sobre nuestros productos, servicios y colaboraciones.
+             <br className="hidden sm:block" />
+            ¿No encuentras lo que buscas? Ponte en contacto con nuestro equipo de soporte.
+                     </p>
 
           {/* FAQ list */}
           <div className="flex w-full max-w-[920px] flex-col gap-2.5">
