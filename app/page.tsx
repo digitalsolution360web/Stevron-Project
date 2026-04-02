@@ -88,7 +88,7 @@ export default function Home() {
           {/* Buttons Aligned to the Center */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-2">
             <button className="flex h-[45px] sm:h-[38px] px-8 items-center justify-center rounded-[5px] bg-[#000000] font-orbitron text-[14px] font-normal text-white transition-opacity hover:opacity-90 w-full sm:w-auto">
-              Explore Our Range
+             Explora nuestro catálogo
             </button>
 
           </div>
