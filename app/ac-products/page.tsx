@@ -73,7 +73,7 @@ export default function ACProducts() {
             <span
               className="font-['Eurostile_Extended',sans-serif] text-[18px] sm:text-[22px] font-bold tracking-normal text-white uppercase leading-none whitespace-nowrap overflow-hidden text-ellipsis"
             >
-              UNSTOPPABLE POWER
+              Un poder imparable
             </span>
           </div>
 
@@ -82,7 +82,7 @@ export default function ACProducts() {
             className="mb-4 font-['Antenna',sans-serif] text-[10px] sm:text-[12px] font-normal tracking-[0.05em] text-black uppercase whitespace-nowrap overflow-hidden text-ellipsis w-full"
             style={{ maxWidth: '325px' }}
           >
-            CONTINUOUS POWER, UNMATCHED PERFORMANCE
+            Potencia continua, rendimiento inigualable
           </p>
 
           {/* Description */}
@@ -90,11 +90,8 @@ export default function ACProducts() {
             className="font-['Antenna',sans-serif] text-[12px] sm:text-[13px] font-light leading-[1.6] text-black text-center w-full"
             style={{ maxWidth: '676px', minHeight: '83px' }}
           >
-            TEVRON AC power tools are built to deliver consistent high-performance with a reliable 220V–60Hz power supply.
-            Designed for demanding applications, these tools provide uninterrupted power, making them ideal for continuous
-            and heavy-duty work environments. With robust construction and precision engineering, our corded tools ensure
-            stability, durability, and efficient output in every task. Whether on-site or in the workshop, STEVRON AC tools offer
-            the strength and control professionals need to get the job done right.
+            Las herramientas eléctricas AC de STEVRON están diseñadas para ofrecer alto rendimiento continuo con alimentación confiable 220V–60Hz. Ideales para trabajos exigentes, brindan potencia constante para aplicaciones intensivas y uso prolongado. Con construcción robusta e ingeniería de precisión, garantizan durabilidad, control y eficiencia tanto en obra como en el taller.
+ 
           </p>
         </div>
       </section>
