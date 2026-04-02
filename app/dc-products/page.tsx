@@ -37,7 +37,7 @@ export default function DCProducts() {
     { id: "0-18000", subtitle: "Soplador", image: "/dc/BNBL2B1.webp" },
     { id: "2,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB20.webp" },
     { id: "4,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB40.webp" },
-    { id: "4,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
+    { id: "5,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
     { id: "3,5A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
     { id: "3,0A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
   ];
