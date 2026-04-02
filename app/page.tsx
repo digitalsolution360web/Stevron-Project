@@ -289,14 +289,14 @@ export default function Home() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {[
-                { name: "45NM", subtitle: "Taladro Percutor Inalámbrico", image: "/dc/BNID452B2.webp" },
+                { name: "45NM", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
                 { name: "75NM", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
                 { name: "400NM", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
-                { name: "600NM", subtitle: "Llave de Impacto batería", image: "/dc/BNCAG8504B1.webp" },
-                { name: "750W", subtitle: "Taladro de impacto", image: "/ac/BNIMD750.webp" },
-                { name: "850W", subtitle: "Taladro de impacto", image: "/ac/BNIMD850.webp" },
-                { name: "1100W", subtitle: "Taladro de impacto", image: "/ac/BNIMD1100.webp" },
-                { name: "240W", subtitle: "Lijadora de palma", image: "/ac/BNPLS240.webp" },
+                { name: "800NM", subtitle: "Llave de Impacto batería", image: "/dc/BNIW8004B2.webp" },
+                { name: "750W", subtitle: "Taladro percutor", image: "/ac/BNIMD750.webp" },
+                { name: "1100W", subtitle: "Taladro percutor", image: "/ac/BNIMD1100.webp" },
+                { name: "750W", subtitle: "Amoladora angular", image: "/ac/BNANG750.webp" },
+                { name: "2200W", subtitle: "Amoladora angular", image: "/ac/BNANG2200.webp" },
               ].map((product, idx) => (
                 <div key={idx} className="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E5E5] shadow-sm transition-all hover:shadow-md min-w-[280px] sm:min-w-[calc(50%-8px)] lg:min-w-[calc(25%-12px)] snap-start">
                   {/* Top: Image (White BG) */}
@@ -431,9 +431,8 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="mb-8 max-w-[760px] text-center font-[Antenna] text-[18px] sm:text-[20px] leading-[140%] font-extralight text-[#565656]">
-            Encuentra respuestas a preguntas frecuentes sobre nuestros productos, servicios y colaboraciones.
-            ¿No encuentras lo que buscas? Ponte en contacto con nuestro equipo de soporte.
-                     </p>
+            Encuentra respuestas a preguntas frecuentes sobre nuestros productos, servicios y colaboraciones. ¿No encuentras lo que buscas? Ponte en contacto con nuestro equipo de soporte.
+          </p>
 
           {/* FAQ list */}
           <div className="flex w-full max-w-[920px] flex-col gap-2.5">
