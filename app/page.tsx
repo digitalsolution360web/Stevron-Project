@@ -88,7 +88,7 @@ export default function Home() {
           {/* Buttons Aligned to the Center */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-2">
             <button className="flex h-[45px] sm:h-[38px] px-8 items-center justify-center rounded-[5px] bg-[#000000] font-orbitron text-[14px] font-normal text-white transition-opacity hover:opacity-90 w-full sm:w-auto">
-             Explora nuestro catálogo
+             Explore Our Catalog
             </button>
 
           </div>
@@ -121,17 +121,17 @@ export default function Home() {
           {/* Section Title Label - as per Figma */}
           <div className="mb-12 flex h-[40px] items-center justify-center rounded-[5px] bg-black px-8">
             <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-white">
-              Descubre toda nuestra gama
+              Explore Our Full Range
             </span>
           </div>
 
           {/* Categories Grid - alignment same as navbar, increased gapping as per user request */}
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-20">
             {[
-              { title: "Herramientas DC", image: "/7.webp", href: "/dc-products" },
-              { title: "Herramientas AC", image: "/8.webp", href: "/ac-products" },
-              { title: "Accesorios", image: "/5.webp", href: "#" },
-              { title: "Herramientas manuales", image: "/9.webp", href: "#" },
+              { title: "DC TOOLS", image: "/7.webp", href: "/dc-products" },
+              { title: "AC TOOLS", image: "/8.webp", href: "/ac-products" },
+              { title: "ACCESSORIES", image: "/5.webp", href: "#" },
+              { title: "HAND TOOLS", image: "/9.webp", href: "#" },
             ].map((item, index) => (
               <Link
                 key={index}
@@ -178,7 +178,7 @@ export default function Home() {
           <div className="mb-10 flex flex-col items-center gap-4">
             <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
               <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF]">
-               Nuestros valores fundamentales
+               Our Core Values
               </span>
             </div>
           </div>
@@ -187,27 +187,27 @@ export default function Home() {
           <div className="grid w-full justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "INNOVACIÓN",
-                subtitle: "Diseñando el futuro",
-                description: "En STEVRON, la innovación impulsa todo lo que creamos. Combinamos ingeniería avanzada y diseño práctico para desarrollar herramientas potentes, precisas y confiables, adaptadas a las necesidades cambiantes de los profesionales modernos.",
+                title: "INNOVATION",
+                subtitle: "Designing the future",
+                description: "At STEVRON, innovation drives everything we create. We combine advanced engineering with practical design to develop powerful, precise, and reliable tools tailored to the changing needs of modern professionals.",
                 iconPath: "/innovation.png"
               },
               {
-                title: "CALIDAD",
-                subtitle: "Hecho para durar",
-                description: "Desde materiales cuidadosamente seleccionados hasta fabricación de precisión, cada detalle garantiza durabilidad y rendimiento constante. Controles estrictos y pruebas aseguran herramientas confiables que los profesionales pueden usar diariamente.",
+                title: "QUALITY",
+                subtitle: "Built to last",
+                description: "From carefully selected materials to precision manufacturing, every detail ensures durability and consistent performance. Strict controls and testing ensure reliable tools that professionals can use daily.",
                 iconPath: "/Group.png"
               },
               {
-                title: "FIABILIDAD",
-                subtitle: "Confianza en rendimiento",
-                description: "Ofrecemos herramientas de rendimiento constante en condiciones reales. Cada producto cuenta con componentes duraderos y pruebas rigurosas, garantizando funcionamiento confiable. Nuestra ingeniería de precisión asegura confianza diaria en herramientas STEVRON.",
+                title: "RELIABILITY",
+                subtitle: "Confidence in performance",
+                description: "We offer tools with consistent performance in real-world conditions. Each product features durable components and rigorous testing, ensuring reliable operation. Our precision engineering ensures daily confidence in STEVRON tools.",
                 iconPath: "/Group (1).png"
               },
               {
-                title: "SOSTENIBILIDAD",
-                subtitle: "Futuro más verde",
-                description: "Desarrollamos productos con responsabilidad medioambiental. Mediante diseño inteligente, producción eficiente y rendimiento duradero, reducimos nuestra huella ecológica mientras ofrecemos soluciones fiables y sostenibles para el futuro.",
+                title: "SUSTAINABILITY",
+                subtitle: "Greener future",
+                description: "We develop products with environmental responsibility. Through smart design, efficient production, and long-lasting performance, we reduce our ecological footprint while offering reliable and sustainable solutions for the future.",
                 iconPath: "/innovation.png"
               },
             ].map((item, index) => (
@@ -268,7 +268,7 @@ export default function Home() {
           <div className="mb-12 flex flex-col items-center gap-4">
             <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
               <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF]">
-                Nuestras herramientas profesionales
+                Our Professional Tools
               </span>
             </div>
           </div>
@@ -319,7 +319,7 @@ export default function Home() {
                     <p className="mb-3 font-sans text-[15px] font-extralight text-[#ffffff] tracking-[0.03em] leading-tight">{product.subtitle}</p>
                     {/* View Details Button */}
                     <div className="mt-auto flex h-[32px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[13px] font-bold text-[#171717] font-sans transition-all hover:bg-gray-100 uppercase">
-                      Ver detalles
+                      View Details
                       <ArrowRight size={16} strokeWidth={2} className="text-[#171717]" />
                     </div>
                   </div>
@@ -355,7 +355,7 @@ export default function Home() {
           {/* Top Label - Figma: 373x38px, White BG, Black Text */}
           <div className="mb-14 flex h-[50px] w-full max-w-[520px] items-center justify-center rounded-[5px] bg-white shadow-lg border border-black/10">
             <span className="font-orbitron text-[18px] sm:text-[20px] font-bold tracking-[0.1em] text-black">
-              Parte de un Grupo Industrial Global
+              Part of a Global Industrial Group
             </span>
           </div>
 
@@ -429,41 +429,41 @@ export default function Home() {
           {/* Section Label */}
           <div className="mb-6 flex h-[40px] sm:h-[45px] items-center justify-center rounded-[5px] bg-[#000000] px-8 shadow-sm">
             <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF]">
-              Preguntas frecuentes
+              Frequently Asked Questions
             </span>
           </div>
 
           {/* Subtitle */}
           <p className="mb-8 max-w-[760px] text-center font-[Antenna] text-[18px] sm:text-[20px] leading-[140%] font-extralight text-[#565656]">
-            Encuentra respuestas a preguntas frecuentes sobre nuestros productos, servicios y colaboraciones. ¿No encuentras lo que buscas? Ponte en contacto con nuestro equipo de soporte.
+            Find answers to frequently asked questions about our products, services, and partnerships. Can&apos;t find what you&apos;re looking for? Reach out to our support team.
           </p>
 
           {/* FAQ list */}
           <div className="flex w-full max-w-[920px] flex-col gap-2.5">
             {[
               {
-                question: "¿Qué tipos de equipos industriales fabrica Stevron?",
-                answer: "Stevron se especializa en una amplia gama de equipos industriales, entre los que se incluyen maquinaria agrícola, herramientas eléctricas, equipos de jardinería, motores marinos, sistemas de limpieza, generadores y herramientas de construcción. Nuestra cartera de productos abarca más de 500 modelos diferentes diseñados para uso profesional y comercial."
+                question: "What types of industrial equipment does Stevron manufacture?",
+                answer: "Stevron specializes in a wide range of industrial equipment including agricultural machinery, power tools, gardening equipment, marine engines, cleaning systems, generators, and construction tools. Our product portfolio covers over 500 different models designed for professional and commercial use."
               },
               {
-                question: "¿Ofrecen garantía para sus productos?",
-                answer: "Sí, todos los productos Stevron cuentan con una cobertura de garantía completa. Nuestra garantía estándar tiene una duración de entre 1 y 3 años, dependiendo de la categoría del producto. También ofrecemos opciones de garantía extendida y un servicio posventa integral a través de nuestra red de servicio global."
+                question: "Do you offer warranty on your products?",
+                answer: "Yes, all Stevron products come with comprehensive warranty coverage. Our standard warranty typically ranges from 1 to 3 years depending on the product category. We also provide extended warranty options and full after-sales service through our global service network."
               },
               {
-                question: "¿Cómo puedo convertirme en distribuidor de los productos Stevron?",
-                answer: "Buscamos oportunidades de colaboración con distribuidores cualificados de todo el mundo. Para convertirse en distribuidor de Stevron, deberá cumplir ciertos criterios, entre los que se incluyen la presencia en el mercado, los conocimientos técnicos y la capacidad de prestar servicios. Póngase en contacto con nuestro equipo de colaboraciones a través de nuestra página «Conviértase en distribuidor» para conocer los requisitos detallados y el proceso de solicitud."
+                question: "How can I become a dealer for Stevron products?",
+                answer: "We are looking for partnership opportunities with qualified dealers worldwide. To become a Stevron dealer, you will need to meet certain criteria including market presence, technical expertise, and service capabilities. Contact our partnership team through our 'Become a Dealer' page for detailed requirements and application process."
               },
               {
-                question: "¿Ofrecen envíos internacionales y atención al cliente?",
-                answer: "Sí, prestamos servicio a clientes en más de 50 países de todo el mundo. Hemos establecido alianzas de transporte y redes de servicio a nivel mundial para garantizar entregas puntuales y asistencia local. Nuestro equipo internacional puede ayudarle con la logística y el despacho de aduanas, además de ofrecerle asistencia técnica en varios idiomas."
+                question: "Do you provide international shipping and support?",
+                answer: "Yes, we serve customers in over 50 countries globally. We have established global shipping partnerships and service networks to ensure timely delivery and local support. Our international team can assist with logistics, customs clearance, and provide technical support in multiple languages."
               },
               {
-                question: "¿Cómo encuentro el producto adecuado para mis necesidades específicas?",
-                answer: "Nuestro equipo de expertos puede ayudarte a elegir el equipo ideal para tus necesidades. Puedes explorar nuestras categorías de productos en línea, utilizar nuestra herramienta de búsqueda de productos o ponerte en contacto con nuestros asesores técnicos, quienes evaluarán tus necesidades y te recomendarán las soluciones más adecuadas. También ofrecemos demostraciones de productos y programas de prueba para los clientes que cumplan los requisitos."
+                question: "How do I find the right product for my specific needs?",
+                answer: "Our team of experts can help you choose the ideal equipment for your requirements. You can explore our product categories online, use our product selector tool, or get in touch with our technical consultants who will evaluate your needs and recommend the most suitable solutions. We also offer product demonstrations and trial programs for qualified customers."
               },
               {
-                question: "¿Qué tipo de asistencia técnica y capacitación ofrecen?",
-                answer: "Ofrecemos un servicio de asistencia técnica integral que incluye orientación para la instalación, capacitación en el manejo, talleres de mantenimiento y ayuda para la resolución de problemas. Nuestros técnicos certificados brindan capacitación in situ, tutoriales en video, manuales detallados y asistencia técnica telefónica las 24 horas del día, los 7 días de la semana, para garantizar el rendimiento óptimo de su equipo."
+                question: "What kind of technical support and training do you offer?",
+                answer: "We provide comprehensive technical support including installation guidance, operational training, maintenance workshops, and troubleshooting assistance. Our certified technicians provide on-site training, video tutorials, detailed manuals, and 24/7 phone support to ensure your equipment performs optimally."
               }
             ].map((faq, idx) => (
               <div
