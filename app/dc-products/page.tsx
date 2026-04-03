@@ -24,6 +24,7 @@ export default function DCProducts() {
   ];
 
   const products = [
+<<<<<<< HEAD
     { id: "BNID452B2", Highlight: "45Nm", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
     { id: "BNDR75", Highlight: "75Nm", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
     { id: "BNIW4002B2", Highlight: "400Nm", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
@@ -41,6 +42,25 @@ export default function DCProducts() {
     { id: "BNLB50", Highlight: "5,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
     { id: "BNBC35A", Highlight: "3,5A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
     { id: "BNDBC3A", Highlight: "3,0A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
+=======
+    { id: "BNID452B2", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
+    { id: "BNCID75K", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
+    { id: "BNIW4002B2", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
+    { id: "BNIW6004B2", subtitle: "Llave de Impacto batería", image: "/dc/BNIW6004B2.webp" },
+    { id: "BNIW8004B2", subtitle: "Llave de Impacto batería ", image: "/dc/BNIW8004B2.webp" },
+    { id: "BNCAG8504B1", subtitle: "Amoladora angular", image: "/dc/BNCAG8504B1.webp" },
+    { id: "BNCRH20J4B", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH20J4B1.webp" },
+    { id: "BNCRH25J4B2", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH25J4B2.webp" },
+    { id: "BNCRH45J", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH45JSDS.webp" },
+    { id: "BNCCS190", subtitle: "Sierra Circular", image: "/dc/BNCS190.webp" },
+    { id: "BNCSS", subtitle: "Lijadora de Hoja", image: "/dc/BNCSS.webp" },
+    { id: "BNCBL2B1", subtitle: "Soplador", image: "/dc/BNBL2B1.webp" },
+    { id: "BNLB20", subtitle: "Batería de Litio", image: "/dc/BNLB20.webp" },
+    { id: "BNLB40", subtitle: "Batería de Litio", image: "/dc/BNLB40.webp" },
+    { id: "BNLB50", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
+    { id: "BNBC35A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
+    { id: "BNDBC3A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
+>>>>>>> 08501e5c0e4ed405acb1d9ab9c84b792a2cdab2d
   ];
 
   return (
