@@ -36,7 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
+      <head>
+        <link rel="icon" href="/Logo.webp" />
+      </head>
       <body
         className={`${orbitron.variable} ${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >

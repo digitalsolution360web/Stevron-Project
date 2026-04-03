@@ -58,7 +58,7 @@ export default function Navbar() {
             href="/"
             className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
           >
-            Home
+            Inicio
           </Link>
 
           {/* Products Dropdown */}
@@ -66,7 +66,7 @@ export default function Navbar() {
             <div
               className="font-orbitron cursor-default text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80 flex items-center gap-1.5"
             >
-              Products
+              Productos
               <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
             </div>
 
@@ -76,13 +76,13 @@ export default function Navbar() {
                 href="/dc-products"
                 className="px-6 py-4 font-orbitron text-[15px] font-normal tracking-wide text-white transition-colors hover:bg-[#1a1a1a]"
               >
-                DC Product
+                Herramientas DC
               </Link>
               <Link
                 href="/ac-products"
                 className="px-6 py-4 font-orbitron text-[15px] font-normal tracking-wide text-white transition-colors hover:bg-[#1a1a1a]"
               >
-                AC Product
+                Herramientas AC
               </Link>
             </div>
           </div>
@@ -91,19 +91,19 @@ export default function Navbar() {
             href="/about"
             className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
           >
-            About Us
+            Sobre nosotros
           </Link>
           <Link
             href="/warranty-registration"
             className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
           >
-            Warranty
+            Garantía
           </Link>
           <Link
             href="/contact"
             className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
           >
-            Contact Us
+            Contáctanos
           </Link>
           {/* Globe Icon */}
           <button className="ml-2 text-white hover:opacity-80">
@@ -142,7 +142,7 @@ export default function Navbar() {
               onClick={toggleMenu}
               className="font-orbitron text-[18px] text-white py-2"
             >
-              Home
+              Inicio
             </Link>
 
             <div className="flex flex-col">
@@ -150,7 +150,7 @@ export default function Navbar() {
                 onClick={toggleProducts}
                 className="flex items-center justify-between w-full font-orbitron text-[18px] text-white py-2 text-left"
               >
-                Products
+                Productos
                 <ChevronDown size={18} className={`transition-transform duration-300 ${isProductsOpen ? "rotate-180" : ""}`} />
               </button>
 
@@ -161,7 +161,7 @@ export default function Navbar() {
                   className="py-2.5 font-orbitron text-[16px] text-gray-400 hover:text-[#94A034] flex items-center gap-2"
                 >
                   <div className="w-1.5 h-1.5 rounded-full bg-[#94A034]" />
-                  AC Product
+                  Herramientas AC
                 </Link>
                 <Link
                   href="/dc-products"
@@ -169,7 +169,7 @@ export default function Navbar() {
                   className="py-2.5 font-orbitron text-[16px] text-gray-400 hover:text-[#94A034] flex items-center gap-2"
                 >
                   <div className="w-1.5 h-1.5 rounded-full bg-[#94A034]" />
-                  DC Product
+                  Herramientas DC
                 </Link>
               </div>
             </div>
@@ -179,21 +179,21 @@ export default function Navbar() {
               onClick={toggleMenu}
               className="font-orbitron text-[18px] text-white py-2"
             >
-              About Us
+              Sobre nosotros
             </Link>
             <Link
               href="/warranty-registration"
               onClick={toggleMenu}
               className="font-orbitron text-[18px] text-white py-2"
             >
-              Warranty
+              Garantía
             </Link>
             <Link
               href="/contact"
               onClick={toggleMenu}
               className="font-orbitron text-[18px] text-white py-2"
             >
-              Contact Us
+              Contáctanos
             </Link>
       
           

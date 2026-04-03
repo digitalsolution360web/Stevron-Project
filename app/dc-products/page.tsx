@@ -24,23 +24,23 @@ export default function DCProducts() {
   ];
 
   const products = [
-    { id: "BNID452B2", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
-    { id: "BNDR75", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
-    { id: "BNIW4002B2", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
-    { id: "BNIW6004B2", subtitle: "Llave de Impacto batería", image: "/dc/BNIW6004B2.webp" },
-    { id: "BNIW8004B2", subtitle: "Llave de Impacto batería ", image: "/dc/BNIW8004B2.webp" },
-    { id: "BNCAG8504B1", subtitle: "Amoladora angular", image: "/dc/BNCAG8504B1.webp" },
-    { id: "BNCRH20J4B", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH20J4B1.webp" },
-    { id: "BNCRH25J4B2", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH25J4B2.webp" },
-    { id: "BNCRH45J", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH45JSDS.webp" },
-    { id: "BNCCS190", subtitle: "Sierra Circular", image: "/dc/BNCS190.webp" },
-    { id: "BNCSS", subtitle: "Lijadora de Hoja", image: "/dc/BNCSS.webp" },
-    { id: "BNCBL2B1", subtitle: "Soplador", image: "/dc/BNBL2B1.webp" },
-    { id: "BNLB20", subtitle: "Batería de Litio", image: "/dc/BNLB20.webp" },
-    { id: "BNLB40", subtitle: "Batería de Litio", image: "/dc/BNLB40.webp" },
-    { id: "BNLB50", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
-    { id: "BNBC35A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
-    { id: "BNDBC3A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
+    { id: "BNID452B2", Highlight: "45Nm", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
+    { id: "BNDR75", Highlight: "75Nm", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
+    { id: "BNIW4002B2", Highlight: "400Nm", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
+    { id: "BNIW6004B2", Highlight: "600Nm", subtitle: "Llave de Impacto batería", image: "/dc/BNIW6004B2.webp" },
+    { id: "BNIW8004B2", Highlight: "800Nm", subtitle: "Llave de Impacto batería ", image: "/dc/BNIW8004B2.webp" },
+    { id: "BNCAG8504B1", Highlight: "4-1/2”(115mm)", subtitle: "Amoladora angular", image: "/dc/BNCAG8504B1.webp" },
+    { id: "BNCRH20J4B", Highlight: "2,0J", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH20J4B1.webp" },
+    { id: "BNCRH25J4B2", Highlight: "2,5J", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH25J4B2.webp" },
+    { id: "BNCRH45J", Highlight: "4,5J", subtitle: "Rotomartillo Inalámbrico", image: "/dc/BNRH45JSDS.webp" },
+    { id: "BNCCS190", Highlight: "1800W", subtitle: "Sierra Circular", image: "/dc/BNCS190.webp" },
+    { id: "BNCSS", Highlight: "125MM", subtitle: "Lijadora de Hoja", image: "/dc/BNCSS.webp" },
+    { id: "BNCBL2B1", Highlight: "0-18000", subtitle: "Soplador", image: "/dc/BNBL2B1.webp" },
+    { id: "BNLB20", Highlight: "2,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB20.webp" },
+    { id: "BNLB40", Highlight: "4,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB40.webp" },
+    { id: "BNLB50", Highlight: "5,0AH", subtitle: "Batería de Litio", image: "/dc/BNLB50.webp" },
+    { id: "BNBC35A", Highlight: "3,5A", subtitle: "Cargador de Batería", image: "/dc/BNBC35A.webp" },
+    { id: "BNDBC3A", Highlight: "3,0A", subtitle: "Cargador de Batería", image: "/dc/BNDBC3A.webp" },
   ];
 
   return (
@@ -49,7 +49,7 @@ export default function DCProducts() {
       <section className="relative w-full aspect-[16/6] lg:aspect-[16/5.5]  overflow-hidden bg-[#050505]">
         <div className="absolute inset-0 z-0">
           <Image
-            src="banner/dc-banner.webp"
+            src="/banner/dc-banner.webp"
             alt="STEVRON DC Hero Banner"
             fill
             priority
@@ -85,7 +85,7 @@ export default function DCProducts() {
             style={{ maxWidth: '350px' }}
           >
             Una batería, infinitas posibilidades
- 
+
           </p>
 
           {/* Description */}
@@ -93,7 +93,7 @@ export default function DCProducts() {
             className="font-['Antenna',sans-serif] text-[12px] sm:text-[13px] font-light leading-[1.6] text-black text-center w-full"
             style={{ maxWidth: '676px' }}
           >Disfruta la verdadera libertad inalámbrica con la plataforma 1NE de STEVRON: una batería para todas tus herramientas. Nuestras herramientas DC ofrecen potencia constante, versatilidad y comodidad en todo tipo de aplicaciones. Con un solo sistema de batería, puedes cambiar de herramienta rápidamente y seguir trabajando sin paradas.
-Diseñadas para alto rendimiento y durabilidad, combinan tecnología avanzada de batería con construcción robusta. Ya sea para trabajos de precisión o tareas exigentes, 1NE te da potencia y control para hacer más con menos.
+            Diseñadas para alto rendimiento y durabilidad, combinan tecnología avanzada de batería con construcción robusta. Ya sea para trabajos de precisión o tareas exigentes, 1NE te da potencia y control para hacer más con menos.
           </p>
         </div>
       </section>
@@ -114,13 +114,13 @@ Diseñadas para alto rendimiento y durabilidad, combinan tecnología avanzada de
             </div>
             <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 scrollbar-hide flex-nowrap w-full pl-2 sm:pl-0">
               {categories.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setActiveCategory(cat)}
-                    className="flex shrink-0 h-[38px] lg:h-[32px] w-[200px] lg:w-[250px] items-center justify-center lg:justify-start px-4 font-orbitron text-[10px] lg:text-[12px] font-bold tracking-tight transition-all rounded-[2px] cursor-pointer bg-[#282828] text-white hover:bg-black/90 shadow-sm uppercase text-center lg:text-left break-words"
-                  >
-                    <span className="w-full">{cat}</span>
-                  </button>
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className="flex shrink-0 h-[38px] lg:h-[32px] w-[200px] lg:w-[250px] items-center justify-center lg:justify-start px-4 font-orbitron text-[10px] lg:text-[12px] font-bold tracking-tight transition-all rounded-[2px] cursor-pointer bg-[#282828] text-white hover:bg-black/90 shadow-sm uppercase text-center lg:text-left break-words"
+                >
+                  <span className="w-full">{cat}</span>
+                </button>
               ))}
             </div>
           </div>
@@ -130,7 +130,7 @@ Diseñadas para alto rendimiento y durabilidad, combinan tecnología avanzada de
             {products.map((product) => {
               return (
                 <Link
-                  href={`/product/${product.id}`}
+                  href={`/dc-product/${product.id}`}
                   key={product.id}
                   className="group flex flex-col w-full max-w-[400px] sm:max-w-[250px] min-h-[320px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
                 >
@@ -146,7 +146,7 @@ Diseñadas para alto rendimiento y durabilidad, combinan tecnología avanzada de
 
                   <div className="flex flex-1 w-full flex-col justify-center gap-1 border-t border-black/5 bg-[#171717] px-2 py-3">
                     <h3 className="px-1 font-['Eurostile_Extended',sans-serif] text-[16px] font-bold leading-[100%] uppercase text-white">
-                      {product.id}
+                      {product.Highlight}
                     </h3>
                     <p className="px-1 font-[Antenna] text-[12px] font-medium leading-[120%] text-[#D4D4D4] mt-0.5">
                       {product.subtitle}
@@ -154,7 +154,7 @@ Diseñadas para alto rendimiento y durabilidad, combinan tecnología avanzada de
 
                     <div className="px-1 mt-2">
                       <button className="flex h-[24px] w-auto min-w-[100px] items-center justify-center gap-1.5 rounded-full bg-white px-3.5 font-orbitron text-[10px] font-bold uppercase leading-none text-[#444444] transition-all hover:bg-gray-200 shadow-sm cursor-pointer whitespace-nowrap">
-                       VER DETALLES
+                        VER DETALLES
                         <ArrowRight size={11} className="stroke-[2.5] text-[#444444]" />
                       </button>
                     </div>

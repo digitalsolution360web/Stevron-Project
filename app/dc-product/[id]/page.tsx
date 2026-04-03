@@ -8,35 +8,18 @@ import { ChevronDown, ChevronRight, ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { acProducts } from "@/data/acProducts";
 import { dcProducts } from "@/data/dcProducts";
 
-const allProducts = [...acProducts, ...dcProducts];
-
-const defaultSpecs = {
-  "Tensión": "20V",
-  "Velocidad en vacío": "0-500/0-2000RPM",
-  "Velocidad máxima de impacto": "0-8000 BPM / 0-32000BPM",
-  "Par máx": "75Nm",
-};
-
-const defaultIncluded = {
-  "Batería": "1 x 20V 2.0Ah",
-  "Cargador": "1 x Cargador Rápido",
-};
-
-export default function ProductDetail() {
+export default function DCProductDetail() {
   const router = useRouter();
   const params = useParams();
   const id = (params.id as string)?.toUpperCase();
 
-  // Determine if it's an AC product
-  const product = allProducts.find((p) => p.id.toUpperCase() === id) || allProducts[1]; // fallback
-  const isAC = acProducts.some((p) => p.id.toUpperCase() === id);
+  const product = dcProducts.find((p) => p.id.toUpperCase() === id) || dcProducts[0];
 
-  const specs = (product as any).specs || defaultSpecs;
-  const included = (product as any).included || defaultIncluded;
-  const features = (product as any).features || ["Diseño compacto y ligero", "Luz LED integrada", "Empuñadura ergonómica"];
+  const specs = (product as any).specs || {};
+  const included = (product as any).included || {};
+  const features = (product as any).features || ["Tecnología Brushless", "Diseño ergonómico", "Sistema de batería 1NE"];
 
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({
     specifications: true,
@@ -58,17 +41,8 @@ export default function ProductDetail() {
           <div className="flex items-center text-[12px] font-[Antenna] uppercase text-[#565656] gap-2">
             <Link href="/" className="hover:text-black transition-colors">Home</Link>
             <ChevronRight size={12} />
-            {isAC ? (
-              <>
-                <Link href="/ac-products" className="hover:text-black transition-colors font-bold text-black border-b-2 border-[#94A034] px-1 rounded-sm">AC Products</Link>
-                <ChevronRight size={12} />
-              </>
-            ) : (
-              <>
-                <Link href="/dc-products" className="hover:text-black transition-colors font-bold text-black border-b-2 border-[#94A034] px-1 bg-[#94A034]/10 rounded-sm">DC Products</Link>
-                <ChevronRight size={12} />
-              </>
-            )}
+            <Link href="/dc-products" className="hover:text-black transition-colors font-bold text-black border-b-2 border-[#94A034] px-1 bg-[#94A034]/10 rounded-sm">DC Products</Link>
+            <ChevronRight size={12} />
             <span className="text-[#94A034] font-bold">{product.id}</span>
           </div>
 
@@ -100,6 +74,7 @@ export default function ProductDetail() {
             <h1 className="font-orbitron text-[17px] sm:text-[21px] lg:text-[28px] font-bold uppercase text-black mb-6 leading-[1.2] tracking-tight max-w-full break-words">
               {product.id}<span className="text-[#94A034]"> - {product.subtitle.split(' - ')[1] || product.subtitle}</span>
             </h1>
+
             {/* Bullets */}
             <ul className="mb-8 space-y-1">
               {(product as any).topBullets ? (
@@ -111,10 +86,10 @@ export default function ProductDetail() {
               ) : (
                 <>
                   <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
-                    &#x2022; Control de velocidad variable
+                    &#x2022; Motor sin escobillas de alto rendimiento
                   </li>
                   <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
-                    &#x2022; Interruptor de avance/retroceso
+                    &#x2022; Sistema de batería Li-Ion compatible
                   </li>
                 </>
               )}
@@ -225,7 +200,7 @@ export default function ProductDetail() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-[1100px]">
             {[
-              { title: "DC TOOLS", image: "/7.webp", href: "/dc-products" },
+              { title: "AC TOOLS", image: "/8.webp", href: "/ac-products" },
               { title: "ACCESSORIES", image: "/5.webp", href: "#" },
               { title: "HAND TOOLS", image: "/9.webp", href: "#" },
             ].map((item, index) => (

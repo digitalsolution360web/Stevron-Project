@@ -10,18 +10,18 @@ export default function Footer() {
         {/* Newsletter Section - Narrower width as per Figma */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-12 items-center mb-12">
           <h2 className="lg:col-span-2 font-orbitron text-[20px] font-normal leading-tight text-white lg:text-left">
-            Subscribe to Our Newsletter
+            Suscríbete a nuestro boletín
           </h2>
 
           <div className="lg:col-span-2 relative w-full">
             <div className="flex h-[48px] w-full items-center bg-white rounded-full overflow-hidden p-1 shadow-lg border-2 border-white">
               <input
                 type="email"
-                placeholder="Your Email Address"
+                placeholder="Tu dirección de correo electrónico"
                 className="flex-1 px-6 outline-none text-[#A3A3A3] font-['Antenna',sans-serif] text-[13px]"
               />
               <button className="bg-[#94A034] h-full px-8 rounded-full text-white font-['Antenna',sans-serif] text-[14px] font-bold transition-opacity hover:opacity-90">
-                Get Started
+                Empezar
               </button>
             </div>
           </div>
@@ -42,10 +42,10 @@ export default function Footer() {
               className="h-auto w-[160px]"
             />
             <p className="font-['Antenna',sans-serif] text-[13px] text-gray-400 leading-relaxed font-light max-w-[400px]">
-              Empowering professionals with premium tools and equipment. Building the future of industrial excellence through innovation and quality.
+              Empoderando a los profesionales con herramientas y equipos de primera calidad. Construyendo el futuro de la excelencia industrial a través de la innovación y la calidad.
             </p>
             <p className="font-['Antenna',sans-serif] text-[11px] text-gray-500 mt-4">
-              © 2026 Stevron. All rights reserved.
+              © 2026 Stevron. Todos los derechos reservados.
             </p>
           </div>
 
@@ -54,28 +54,28 @@ export default function Footer() {
             {/* Company Column */}
             <div className="flex flex-col gap-6 lg:items-start">
               <h3 className="font-orbitron text-[18px] font-bold tracking-wider relative inline-block w-fit">
-                Company
+                Empresa
                 <div className="absolute bottom-[-6px] left-0 w-8 h-[2px] bg-[#94A034]" />
               </h3>
               <ul className="flex flex-col gap-3 font-['Antenna',sans-serif] text-[14px] text-gray-400 font-light lg:text-left">
-                <li><Link href="/" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Our Story</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Our Values</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">FAQ&apos;s</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Sobre nosotros</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Nuestra historia</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Nuestros valores</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Preguntas frecuentes</Link></li>
               </ul>
             </div>
 
             {/* Product Column */}
             <div className="flex flex-col gap-6 lg:items-start">
               <h3 className="font-orbitron text-[18px] font-bold tracking-wider relative inline-block w-fit">
-                Product
+                Productos
                 <div className="absolute bottom-[-6px] left-0 w-8 h-[2px] bg-[#94A034]" />
               </h3>
               <ul className="flex flex-col gap-3 font-sans text-[14px] text-gray-400 font-light lg:text-left">
-                <li><Link href="/dc-products" className="hover:text-white transition-colors">DC Tools</Link></li>
-                <li><Link href="/ac-products" className="hover:text-white transition-colors">AC Tools</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Accessories</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Hand Tools</Link></li>
+                <li><Link href="/dc-products" className="hover:text-white transition-colors">Herramientas DC</Link></li>
+                <li><Link href="/ac-products" className="hover:text-white transition-colors">Herramientas AC</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Accesorios</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Herramientas manuales</Link></li>
               </ul>
             </div>
 
@@ -83,13 +83,13 @@ export default function Footer() {
             <div className="flex flex-col gap-6 lg:items-start">
               <div className="flex flex-col gap-6">
                 <h3 className="font-orbitron text-[18px] font-bold tracking-wider relative inline-block w-fit">
-                  Support
+                  Soporte
                   <div className="absolute bottom-[-6px] left-0 w-8 h-[2px] bg-[#94A034]" />
                 </h3>
                 <ul className="flex flex-col gap-3 font-sans text-[14px] text-gray-400 font-light lg:text-left mb-6">
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
-                  <li><Link href="/warranty-registration" className="hover:text-white transition-colors">Warranty</Link></li>
-                  <li><Link href="/become-a-dealer" className="hover:text-white transition-colors">Become a Dealer</Link></li>
+                  <li><Link href="/contact" className="hover:text-white transition-colors">Contáctanos</Link></li>
+                  <li><Link href="/warranty-registration" className="hover:text-white transition-colors">Garantía</Link></li>
+                  <li><Link href="/become-a-dealer" className="hover:text-white transition-colors">Conviértete en distribuidor</Link></li>
                 </ul>
               </div>
 

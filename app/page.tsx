@@ -13,7 +13,7 @@ export default function Home() {
 
   // Hero Slider State
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
-  const heroImages = ["banner/banner-1.webp", "/banner.webp", "/banner1.webp", "banner/banner-4.webp"];
+  const heroImages = ["/banner/banner-1.webp", "/banner.webp", "/banner1.webp", "/banner/banner-4.webp"];
 
   useEffect(() => {
     const heroInterval = setInterval(() => {
@@ -289,16 +289,20 @@ export default function Home() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {[
-                { name: "45NM", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
-                { name: "75NM", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
-                { name: "400NM", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
-                { name: "800NM", subtitle: "Llave de Impacto batería", image: "/dc/BNIW8004B2.webp" },
-                { name: "750W", subtitle: "Taladro percutor", image: "/ac/BNIMD750.webp" },
-                { name: "1100W", subtitle: "Taladro percutor", image: "/ac/BNIMD1100.webp" },
-                { name: "750W", subtitle: "Amoladora angular", image: "/ac/BNANG750.webp" },
-                { name: "2200W", subtitle: "Amoladora angular", image: "/ac/BNANG2200.webp" },
+                { id: "BNID452B2", type: "dc", name: "45NM", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
+                { id: "BNDR75", type: "dc", name: "75NM", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
+                { id: "BNIW4002B2", type: "dc", name: "400NM", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
+                { id: "BNIW8004B2", type: "dc", name: "800NM", subtitle: "Llave de Impacto batería", image: "/dc/BNIW8004B2.webp" },
+                { id: "BNIMD750", type: "ac", name: "750W", subtitle: "Taladro percutor", image: "/ac/BNIMD750.webp" },
+                { id: "BNIMD1100", type: "ac", name: "1100W", subtitle: "Taladro percutor", image: "/ac/BNIMD1100.webp" },
+                { id: "BNANG750", type: "ac", name: "750W", subtitle: "Amoladora angular", image: "/ac/BNANG750.webp" },
+                { id: "BNANG2200", type: "ac", name: "2200W", subtitle: "Amoladora angular", image: "/ac/BNANG2200.webp" },
               ].map((product, idx) => (
-                <div key={idx} className="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E5E5] shadow-sm transition-all hover:shadow-md min-w-[280px] sm:min-w-[calc(50%-8px)] lg:min-w-[calc(25%-12px)] snap-start">
+                <Link 
+                  href={`/${product.type}-product/${product.id}`}
+                  key={idx} 
+                  className="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E5E5] shadow-sm transition-all hover:shadow-md min-w-[280px] sm:min-w-[calc(50%-8px)] lg:min-w-[calc(25%-12px)] snap-start"
+                >
                   {/* Top: Image (White BG) */}
                   <div className="flex aspect-square w-full items-center justify-center bg-[#FFFFFF] p-8">
                     <Image
@@ -314,12 +318,12 @@ export default function Home() {
                     <h3 className="mb-1 font-sans text-[18px] sm:text-[20px] font-bold text-[#FFFFFF] tracking-wide uppercase">{product.name}</h3>
                     <p className="mb-3 font-sans text-[15px] font-extralight text-[#ffffff] tracking-[0.03em] leading-tight">{product.subtitle}</p>
                     {/* View Details Button */}
-                    <button className="mt-auto flex h-[32px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[13px] font-bold text-[#171717] font-sans transition-all hover:bg-gray-100 uppercase">
+                    <div className="mt-auto flex h-[32px] w-fit items-center gap-2 rounded-full bg-[#FFFFFF] pl-4 pr-1 text-[13px] font-bold text-[#171717] font-sans transition-all hover:bg-gray-100 uppercase">
                       Ver detalles
                       <ArrowRight size={16} strokeWidth={2} className="text-[#171717]" />
-                    </button>
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 

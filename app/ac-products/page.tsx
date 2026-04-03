@@ -24,22 +24,22 @@ export default function ACProducts() {
   ];
 
   const products = [
-    { id: "500W", subtitle: "Taladro eléctrico", image: "/BNEDR500.webp" },
-    { id: "750W", subtitle: "Taladro percutor", image: "/ac/BNIMD750.webp" },
-    { id: "850W", subtitle: "Taladro percutor", image: "/ac/BNIMD850.webp" },
-    { id: "1100W", subtitle: "Taladro percutor", image: "/ac/BNIMD1100.webp" },
-    { id: "750W", subtitle: "Amoladora angular", image: "/ac/BNANG750.webp" },
-    { id: "950W", subtitle: "Amoladora angular", image: "/ac/BNANG950.webp" },
-    { id: "2200W", subtitle: "Amoladora angular", image: "/ac/BNANG2200.webp" },
-    { id: "2400W", subtitle: "Amoladora angular", image: "/ac/BNANG2400.webp" },
-    { id: "1400W", subtitle: "Pulidora", image: "/ac/BNPOL1400.webp" },
-    { id: "600W", subtitle: "Sierra De Calar", image: "/ac/BNJSA600.webp" },
-    { id: "240W", subtitle: "Lijadora de palma", image: "/ac/BNPLS240.webp" },
-    { id: "1400W", subtitle: "Sierra Circular", image: "/ac/BNCSA1400.webp" },
-    { id: "2400W", subtitle: "Sierra De Mesa", image: "/ac/BNCOS2400.webp" },
-    { id: "1600W", subtitle: "Router", image: "/ac/BNROU1600.webp" },
-    { id: "800W (SDS)", subtitle: "Rotomartillo", image: "/ac/BNRHM800SDS.webp" },
-    { id: "1500W (SDS)", subtitle: "Rotomartillo", image: "/ac/BNRHM1500SDS.webp" },
+    { id: "BNEDR500", Highlight: "500W", subtitle: "Taladro eléctrico", image: "/BNEDR500.webp" },
+    { id: "BNIMD750", Highlight: "750W", subtitle: "Taladro percutor", image: "/ac/BNIMD750.webp" },
+    { id: "BNIMD850", Highlight: "850W", subtitle: "Taladro percutor", image: "/ac/BNIMD850.webp" },
+    { id: "BNIMD1100", Highlight: "1100W", subtitle: "Taladro percutor", image: "/ac/BNIMD1100.webp" },
+    { id: "BNANG750", Highlight: "750W", subtitle: "Amoladora angular", image: "/ac/BNANG750.webp" },
+    { id: "BNANG950", Highlight: "950W", subtitle: "Amoladora angular", image: "/ac/BNANG950.webp" },
+    { id: "BNANG2200", Highlight: "2200W", subtitle: "Amoladora angular", image: "/ac/BNANG2200.webp" },
+    { id: "BNANG2400", Highlight: "2400W", subtitle: "Amoladora angular", image: "/ac/BNANG2400.webp" },
+    { id: "BNPOL1400", Highlight: "1400W", subtitle: "Pulidora", image: "/ac/BNPOL1400.webp" },
+    { id: "BNJSA600", Highlight: "600W", subtitle: "Sierra De Calar", image: "/ac/BNJSA600.webp" },
+    { id: "BNPLS240", Highlight: "240W", subtitle: "Lijadora de palma", image: "/ac/BNPLS240.webp" },
+    { id: "BNCSA1400", Highlight: "1400W", subtitle: "Sierra Circular", image: "/ac/BNCSA1400.webp" },
+    { id: "BNCOS2400", Highlight: "2400W", subtitle: "Sierra De Mesa", image: "/ac/BNCOS2400.webp" },
+    { id: "BNROU1600", Highlight: "1600W", subtitle: "Router", image: "/ac/BNROU1600.webp" },
+    { id: "BNRHM800SDS", Highlight: "800W (SDS)", subtitle: "Rotomartillo", image: "/ac/BNRHM800SDS.webp" },
+    { id: "BNRHM1500SDS", Highlight: "1500W (SDS)", subtitle: "Rotomartillo", image: "/ac/BNRHM1500SDS.webp" },
   ];
 
   return (
@@ -129,7 +129,7 @@ export default function ACProducts() {
             {products.map((product) => {
               return (
                 <Link
-                  href={`/product/${product.id}`}
+                  href={`/ac-product/${product.id}`}
                   key={product.id}
                   className="group flex flex-col w-full max-w-[400px] sm:max-w-[250px] min-h-[320px] overflow-hidden rounded-[12px] border border-[#171717] bg-white transition-all hover:shadow-xl hover:-translate-y-1"
                 >
@@ -145,7 +145,7 @@ export default function ACProducts() {
 
                   <div className="flex flex-1 w-full flex-col justify-center gap-1 border-t border-black/5 bg-[#171717] px-2 py-3">
                     <h3 className="px-1 font-['Eurostile_Extended',sans-serif] text-[16px] font-bold leading-[100%] uppercase text-white">
-                      {product.id}
+                      {product.Highlight}
                     </h3>
                     <p className="px-1 font-[Antenna] text-[12px] font-medium leading-[120%] text-[#D4D4D4] mt-0.5">
                       {product.subtitle}
