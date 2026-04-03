@@ -25,7 +25,7 @@ export default function DCProducts() {
 
   const products = [
     { id: "BNID452B2", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
-    { id: "BNDR75", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
+    { id: "BNCID75K", subtitle: "Taladro Percutor Compacto", image: "/dc/BNCID75K.webp" },
     { id: "BNIW4002B2", subtitle: "Llave de Impacto batería", image: "/dc/BNIW4002B2.webp" },
     { id: "BNIW6004B2", subtitle: "Llave de Impacto batería", image: "/dc/BNIW6004B2.webp" },
     { id: "BNIW8004B2", subtitle: "Llave de Impacto batería ", image: "/dc/BNIW8004B2.webp" },
