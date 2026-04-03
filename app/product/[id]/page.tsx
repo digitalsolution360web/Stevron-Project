@@ -319,9 +319,14 @@ const allProducts = [
     image: "/dc/BNCID75K.webp",
     specs: {
       "Tensión": "20V",
-      "Velocidad en vacío": "0-500 / 0-2000 RPM",
-      "Velocidad máxima de impacto": "0-8000 / 0-32000 BPM",
-      "Par máx": "75 Nm"
+      "Velocidad en vacío": "0-500/0-2000RPM",
+      "Velocidad máxima de impacto": "0-6000 BPM / 0-21000BPM",
+      "Par máx": " 45Nm",
+      "Portabrocas":"Metálico",
+     "Capacidad del portabrocas":"0,8–10 mm",
+      "Ajustes de par":"21+3",
+     "Engranaje de velocidad mecánico" : "2",
+     "Par máx":"75 Nm"
     },
     included: {
       "Batería Ion-Litio": "2 x 2.0Ah",
