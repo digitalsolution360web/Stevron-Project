@@ -168,7 +168,7 @@ export const dcProducts = [
     specs: {
       "Tensión": "20V",
       "Energía de impacto": "2.0J",
-      "Velocidad en vacío": "0-1100 RPM",
+      "Velocidad en vacío": "0-1420RPM",
       "Tasa de impacto": "0-4500 BPM",
       "Sistema de mandril": "SDS Plus"
     },
