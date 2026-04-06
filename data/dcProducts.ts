@@ -25,7 +25,7 @@ export const dcProducts = [
     ]
   },
   {
-    id: "BNDR75",
+    id: "BNCID75K",
     subtitle: "75N.M - Taladro Percutor Compacto",
     image: "/dc/BNCID75K.webp",
     specs: {
