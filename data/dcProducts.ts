@@ -57,7 +57,7 @@ export const dcProducts = [
   },
   {
     id: "BNIW4002B2",
-    subtitle: "Llave de Impacto batería 400Nm (2 Bat 2.0Ah y 1 ch.)",
+    subtitle: "Llave de Impacto batería",
     image: "/dc/BNIW4002B2.webp",
     specs: {
       "Tensión": "20V",
