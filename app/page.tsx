@@ -290,7 +290,7 @@ export default function Home() {
             >
               {[
                 { id: "BNID452B2", type: "dc", name: "45NM", subtitle: "Taladro percutor", image: "/dc/BNID452B2.webp" },
-                { id: "BNDR75", type: "dc", name: "75NM", subtitle: "Taladro percutor compacto", image: "/dc/BNCID75K.webp" },
+                { id: "BNCID75K", type: "dc", name: "75NM", subtitle: "Taladro percutor compacto", image: "/dc/BNCID75K.webp" },
                 { id: "BNIW4002B2", type: "dc", name: "400NM", subtitle: "Llave de impacto a batería", image: "/dc/BNIW4002B2.webp" },
                 { id: "BNIW8004B2", type: "dc", name: "800NM", subtitle: "Llave de impacto a batería", image: "/dc/BNIW8004B2.webp" },
                 { id: "BNIMD750", type: "ac", name: "750W", subtitle: "Taladro percutor", image: "/ac/BNIMD750.webp" },
