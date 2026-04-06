@@ -344,7 +344,7 @@ export const dcProducts = [
     specs: {
       "Voltaje de entrada": "110-120 V ~ 50/60 Hz",
       "Voltaje de salida": "21V",
-      "Corriente de salida": "3A",
+      "Corriente de salida": "3,5A",
       "Tipo de enchufe": "VDE"
     },
     included: {
