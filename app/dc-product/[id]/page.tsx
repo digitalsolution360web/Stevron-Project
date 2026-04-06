@@ -38,7 +38,7 @@ export default function DCProductDetail() {
 
         {/* Back Button & Breadcrumb Row */}
         <div className="flex flex-col sm:flex-row sm:items-center mt-5 justify-between gap-4 mb-8">
-          <div className="flex items-center text-[12px] font-[Antenna] uppercase text-[#565656] gap-2">
+          <div className="flex items-center text-[11px] sm:text-[12px] font-orbitron uppercase text-[#565656] gap-2">
             <Link href="/" className="hover:text-black transition-colors">Inicio</Link>
             <ChevronRight size={12} />
             <Link href="/dc-products" className="hover:text-black transition-colors font-bold text-black border-b-2 border-[#94A034] px-1 bg-[#94A034]/10 rounded-sm">Productos DC</Link>
@@ -70,33 +70,32 @@ export default function DCProductDetail() {
 
           {/* Right Side: Product Details */}
           <div className="w-full lg:w-1/2 flex flex-col pt-2 lg:pt-0">
-            {/* Title */}
-            <h1 className="font-orbitron text-[17px] sm:text-[21px] lg:text-[28px] font-bold uppercase text-black mb-6 leading-[1.2] tracking-tight max-w-full break-words">
+            <h1 className="font-orbitron text-[17px] sm:text-[21px] lg:text-[28px] font-bold uppercase text-black mb-3 leading-[1.2] tracking-tight max-w-full break-words">
               {product.id}<span className="text-[#94A034]"> - {product.subtitle.split(' - ')[1] || product.subtitle}</span>
             </h1>
 
-            {/* Bullets */}
-            <ul className="mb-8 space-y-1">
+            {/* Bullets - Reduced gapping and professional font */}
+            <ul className="mb-1.8 space-y-1">
               {(product as any).topBullets ? (
                 (product as any).topBullets.map((bullet: string, i: number) => (
-                  <li key={i} className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                  <li key={i} className="font-inter text-[14px] font-[300] leading-[1.4] text-black">
                     &#x2022; {bullet}
                   </li>
                 ))
               ) : (
                 <>
-                  <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                  <li className="font-inter text-[14px] font-[300] leading-[1.4] text-black">
                     &#x2022; Motor sin escobillas de alto rendimiento
                   </li>
-                  <li className="font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                  <li className="font-inter text-[14px] font-[300] leading-[1.4] text-black">
                     &#x2022; Sistema de batería Li-Ion compatible
                   </li>
                 </>
               )}
             </ul>
 
-            {/* Accordions */}
-            <div className="flex flex-col gap-[2px] w-full max-w-[600px] mt-8 mb-auto">
+            {/* Accordions - Reduced top margin */}
+            <div className="flex flex-col gap-[2px] w-full max-w-[600px] mt-4 mb-auto">
 
               {/* Technical Specs */}
               <div className="flex flex-col bg-white">
@@ -108,7 +107,7 @@ export default function DCProductDetail() {
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.specifications ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`overflow-hidden transition-all duration-300 ${openSections.specifications ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                  <div className="p-4 flex flex-col gap-2.5 font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                  <div className="p-4 flex flex-col gap-2.5 font-inter text-[14px] font-[300] leading-[1.4] text-black">
                     {Object.entries(specs).map(([key, value]) => (
                       <div key={key} className="flex justify-between border-b border-[#E5E5E5] pb-1">
                         <span>{key}</span><span className="font-[400] text-black">{value as string}</span>
@@ -128,7 +127,7 @@ export default function DCProductDetail() {
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.included ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`overflow-hidden transition-all duration-300 ${openSections.included ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                  <div className="p-4 flex flex-col gap-2.5 font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
+                  <div className="p-4 flex flex-col gap-2.5 font-inter text-[14px] font-[300] leading-[1.4] text-black">
                     {Object.entries(included).map(([key, value]) => (
                       <div key={key} className="flex justify-between border-b border-[#E5E5E5] pb-1">
                         <span>{key}</span><span className="font-[400] text-black">{value as string}</span>
@@ -139,22 +138,24 @@ export default function DCProductDetail() {
               </div>
 
               {/* Features */}
-              <div className="flex flex-col bg-white">
-                <button
-                  onClick={() => toggleSection('features')}
-                  className="w-full bg-black uppercase font-orbitron text-[14px] font-medium leading-[121%] text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
-                >
-                  CARACTERÍSTICAS
-                  <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.features ? "rotate-180" : ""}`} />
-                </button>
-                <div className={`overflow-hidden transition-all duration-300 ${openSections.features ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                  <div className="p-4 flex flex-col gap-2.5 font-[Antenna] text-[14px] font-[200] leading-[121%] text-black">
-                    {features.map((f: string, i: number) => (
-                      <p key={i}>&#x2022; {f}</p>
-                    ))}
+              {!['BNLB20', 'BNLB40', 'BNLB50', 'BNBC35A', 'BNDBC3A'].includes(product.id) && (
+                <div className="flex flex-col bg-white">
+                  <button
+                    onClick={() => toggleSection('features')}
+                    className="w-full bg-black uppercase font-orbitron text-[14px] font-medium leading-[121%] text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
+                  >
+                    CARACTERÍSTICAS
+                    <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.features ? "rotate-180" : ""}`} />
+                  </button>
+                  <div className={`overflow-hidden transition-all duration-300 ${openSections.features ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
+                    <div className="p-4 flex flex-col gap-2.5 font-inter text-[14px] font-[300] leading-[1.4] text-black">
+                      {features.map((f: string, i: number) => (
+                        <p key={i}>&#x2022; {f}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
 
               {/* Warranty */}
               <div className="flex flex-col bg-white">

@@ -125,8 +125,8 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Categories Grid - alignment same as navbar, increased gapping as per user request */}
-          <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-20">
+          {/* Categories Grid - optimized gap and font size for single-line fit */}
+          <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               { title: "HERRAMIENTAS DC", image: "/7.webp", href: "/dc-products" },
               { title: "HERRAMIENTAS AC", image: "/8.webp", href: "/ac-products" },
@@ -138,9 +138,9 @@ export default function Home() {
                 href={item.href}
                 className="flex h-[360px] w-full flex-col overflow-hidden border border-[#A7A7A7] rounded-[12px] shadow-[5px_5px_10px_0px_rgba(0,0,0,0.4)] transition-transform hover:scale-[1.02]"
               >
-                {/* Header Box - Restored: White bg, Black text */}
-                <div className="flex h-[46px] w-full items-center justify-center bg-white border-b border-[#A7A7A7] px-2">
-                  <span className="font-orbitron text-[13px] sm:text-[14px] lg:text-[15px] font-bold tracking-wider text-black whitespace-nowrap">
+                {/* Header Box - Enforced single line with responsive font sizes */}
+                <div className="flex h-[46px] w-full items-center justify-center bg-white border-b border-[#A7A7A7] px-1 sm:px-2">
+                  <span className="font-orbitron text-[11px] min-[375px]:text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] font-bold tracking-wider text-black whitespace-nowrap text-center">
                     {item.title}
                   </span>
                 </div>
@@ -176,8 +176,8 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Logo + Section Title (navbar width) */}
           <div className="mb-10 flex flex-col items-center gap-4">
-            <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
-              <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF] text-center">
+            <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-4 sm:px-8">
+              <span className="font-orbitron text-[12px] min-[375px]:text-[14px] md:text-[16px] lg:text-[18px] font-normal tracking-wider text-[#FFFFFF] text-center whitespace-nowrap">
                 Nuestros Valores Fundamentales
               </span>
             </div>

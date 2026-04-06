@@ -8,9 +8,9 @@ export default function CTASection() {
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 flex flex-col items-center">
 
         <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-[800px]">
-          {/* Title Pill - "¿Listo para vivir la excelencia?" */}
-          <div className="bg-black text-white px-6 sm:px-8 py-2.5 rounded-[5px] shadow-lg">
-            <span className="font-orbitron text-[15px] sm:text-[17px] font-bold tracking-wider uppercase">
+          {/* Title Pill - Enforced single line on small screens */}
+          <div className="bg-black text-white flex items-center justify-center px-4 sm:px-8 py-2 sm:py-2.5 rounded-[5px] shadow-lg">
+            <span className="font-orbitron text-[11px] min-[350px]:text-[12px] min-[400px]:text-[14px] sm:text-[17px] font-bold tracking-wider uppercase whitespace-nowrap">
               ¿Listo para vivir la excelencia?
             </span>
           </div>
