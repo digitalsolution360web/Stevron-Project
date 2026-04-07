@@ -88,12 +88,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link
-              href="/about"
-              className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
-            >
-              About Us
-            </Link>
+          
             <Link
               href="/warranty-registration"
               className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
