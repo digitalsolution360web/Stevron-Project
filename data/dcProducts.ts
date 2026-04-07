@@ -284,6 +284,10 @@ export const dcProducts = [
     topBullets: [
       "Función 2 en 1: soplador y aspirador.",
       "Control de flujo de aire de 3 velocidades."
+    ],
+    features: [
+      "Función 2 en 1: soplador y aspirador",
+      "Control de flujo de aire de 3 velocidades"
     ]
   },
   {
