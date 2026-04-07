@@ -234,16 +234,22 @@ export const dcProducts = [
     subtitle: "Sierra circular",
     image: "/dc/BNCS190.webp",
     specs: {
-      "Tensión": "20V",
-      "Velocidad en vacío": "3800 RPM",
-      "Diámetro de la hoja": "190MM",
-      "Profundidad máx. de corte": "65MM",
-      "Ajuste de bisel": "0-45°"
+      "Velocidad sin carga": "5200 rpm ±10%",
+      "Engranajes": "Ninguno",
+      "Potencia máxima de entrada": "1800 W",
+      "Corriente sin carga": "≤9,5 A ±10%",
+      "Tiempo de funcionamiento": "≥30 min (batería de 4,0 Ah)",
+      "Tamaño de la hoja": "Φ190 x Φ20 x 1,6 mm, 24 dientes",
+      "Profundidad máx. de corte": "65 mm (90º), 49 mm (45º)"
     },
     included: {
       "Hoja de sierra": "1 x 190MM"
     },
     topBullets: [
+      "Motor sin escobillas de alto rendimiento",
+      "Sistema de batería Li-Ion"
+    ],
+    features: [
       "Profundidad de corte ajustable.",
       "Corte en bisel ajustable."
     ]
@@ -263,6 +269,9 @@ export const dcProducts = [
       "Papel de lija": "5"
     },
     topBullets: [
+      "Sistema de batería Li-Ion"
+    ],
+    features: [
       "Lijado orbital aleatorio de alta velocidad.",
       "Perfecto para madera, metal y acabado de superficies."
     ]
