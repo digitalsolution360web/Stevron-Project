@@ -215,10 +215,10 @@ export const dcProducts = [
     image: "/dc/BNRH45JSDS.webp",
     specs: {
       "Tensión": "20V",
-      "Energía de impacto": "4.5J",
-      "Velocidad en vacío": "0-1100 RPM",
-      "Tasa de impacto": "0-4500 BPM",
-      "Sistema de mandril": "SDS Plus"
+      "Energía de impacto": "4,5 J",
+      "Velocidad en vacío": "0-930 RPM",
+      "Velocidad de impacto": "0-4400 BPM",
+      "Capacidad máxima de perforación": "Hormigón: 28MM, Acero: 13MM, Madera: 40MM"
     },
     included: {
       "Tubo de grasa": "1",
