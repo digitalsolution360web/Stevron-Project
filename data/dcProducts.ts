@@ -282,8 +282,7 @@ export const dcProducts = [
       "Cargador rápido": "1"
     },
     topBullets: [
-      "Función 2 en 1: soplador y aspirador.",
-      "Control de flujo de aire de 3 velocidades."
+      "Sistema de batería Li-Ion"
     ],
     features: [
       "Función 2 en 1: soplador y aspirador",
