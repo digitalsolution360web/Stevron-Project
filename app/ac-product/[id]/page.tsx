@@ -140,13 +140,13 @@ export default function ACProductDetail() {
 
               {/* Features */}
               <div className="flex flex-col bg-white">
-                <button
+                {/* <button
                   onClick={() => toggleSection('features')}
                   className="w-full bg-black uppercase font-orbitron text-[14px] font-medium leading-[121%] text-white py-3 px-4 flex justify-between items-center transition-colors hover:bg-gray-900"
                 >
                   CARACTERÍSTICAS
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openSections.features ? "rotate-180" : ""}`} />
-                </button>
+                </button> */}
                 <div className={`overflow-hidden transition-all duration-300 ${openSections.features ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-4 flex flex-col gap-2.5 font-inter text-[14px] font-[300] leading-[1.4] text-black">
                     {features.map((f: string, i: number) => (
