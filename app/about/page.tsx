@@ -53,7 +53,7 @@ export default function AboutPage() {
           <h1 className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 uppercase tracking-tight">
             Power. <span className="text-[#94A034]">Simplified.</span>
           </h1>
-          <p className="max-w-2xl mx-auto font-inter text-lg md:text-xl text-gray-300 font-light leading-relaxed">
+          <p className="max-w-2xl font-[Antenna] mx-auto font-inter text-lg md:text-xl text-gray-300 font-light leading-relaxed">
             Professional tools should be powerful, reliable, and easy to work with. No unnecessary complexity. Just tools designed for real work.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
               <h2 className="font-orbitron text-3xl md:text-4xl font-bold text-black border-l-4 border-[#94A034] pl-6">
                 Created with a Simple Idea
               </h2>
-              <div className="space-y-6 font-inter text-lg text-gray-600 leading-relaxed">
+              <div className="space-y-6 font-[Antenna] font-inter text-lg text-gray-600 leading-relaxed">
                 <p>
                   Stevron was created with a simple idea: professional tools should be powerful, reliable, and easy to work with. No unnecessary complexity. No inflated pricing. Just tools designed for real work.
                 </p>
@@ -151,7 +151,7 @@ export default function AboutPage() {
               <h2 className="font-orbitron text-3xl md:text-4xl font-bold text-black uppercase">
                 More Than a Product Range
               </h2>
-              <div className="space-y-6 font-inter text-lg text-gray-600 leading-relaxed font-light">
+              <div className="space-y-6 font-[Antenna] font-inter text-lg text-gray-600 leading-relaxed font-light">
                 <p>
                   Stevron is more than a product range. It is a growing network of distributors, professionals, and partners building something strong together. We don’t aim to be everywhere. We focus on building meaningful presence with the right partners in each market.
                 </p>
