@@ -61,6 +61,14 @@ export default function Navbar() {
             >
               Home
             </Link>
+            <Link
+              href="/about"
+              className="font-orbitron text-[15px] lg:text-[17.37px] font-normal tracking-wide text-white transition-opacity hover:opacity-80"
+            >
+              About Us
+            </Link>
+
+
 
             {/* Products Dropdown */}
             <div className="relative group flex items-center h-[80px]">
