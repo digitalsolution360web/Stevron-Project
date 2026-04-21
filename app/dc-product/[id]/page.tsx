@@ -36,7 +36,7 @@ export default function DCProductDetail() {
     <div className="flex flex-col bg-white min-h-screen">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 pb-16">
 
-        {/* Back Button & Breadcrumb Row */}
+        {/* Breadcrumb Row */}
         <div className="flex flex-col sm:flex-row sm:items-center mt-5 justify-between gap-4 mb-8">
           <div className="flex items-center text-[11px] sm:text-[12px] font-orbitron uppercase text-[#565656] gap-2">
             <Link href="/" className="hover:text-black transition-colors">Inicio</Link>
@@ -45,14 +45,6 @@ export default function DCProductDetail() {
             <ChevronRight size={12} />
             <span className="text-[#94A034] font-bold">{product.id}</span>
           </div>
-
-          <button
-            onClick={() => router.back()}
-            className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-[4px] font-[Antenna] text-[12px] font-bold uppercase hover:bg-[#94A034] transition-all w-fit shadow-md group"
-          >
-            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
-            Atrás
-          </button>
         </div>
 
         {/* Responsive Grid */}
