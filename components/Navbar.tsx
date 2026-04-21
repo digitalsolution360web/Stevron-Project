@@ -4,12 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Search } from "lucide-react";
+import { acProducts } from "@/data/acProducts";
+import { dcProducts } from "@/data/dcProducts";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]);
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -29,6 +34,34 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (searchQuery.trim() === "") {
+      setSearchResults([]);
+      return;
+    }
+
+    const query = searchQuery.toLowerCase();
+    const acFiltered = acProducts.map(p => ({ ...p, type: 'ac' })).filter(p =>
+      p.id.toLowerCase().includes(query) ||
+      p.subtitle.toLowerCase().includes(query)
+    );
+    const dcFiltered = dcProducts.map(p => ({ ...p, type: 'dc' })).filter(p =>
+      p.id.toLowerCase().includes(query) ||
+      p.subtitle.toLowerCase().includes(query)
+    );
+
+    setSearchResults([...acFiltered, ...dcFiltered]);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    if (isSearchOpen) {
+      // We don't want to hide overflow if we want to see the background
+      // document.body.style.overflow = 'hidden'; 
+    } else {
+      setSearchQuery("");
+    }
+  }, [isSearchOpen]);
 
   return (
     <>
@@ -109,20 +142,180 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
-            {/* Globe Icon */}
-            <button className="ml-2 text-white hover:opacity-80">
-              <Globe size={20} strokeWidth={1.5} />
-            </button>
+
+            {/* Icons Group */}
+            <div className="ml-4 flex items-center gap-3">
+              {/* Globe Icon */}
+              <button className="text-white hover:opacity-80 transition-all cursor-pointer">
+                <Globe size={20} strokeWidth={1.5} />
+              </button>
+              
+              {/* Search Icon */}
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="text-white hover:opacity-80 transition-all duration-300 hover:scale-110 cursor-pointer"
+                aria-label="Search"
+              >
+                <Search size={20} strokeWidth={1.5} />
+              </button>
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="ml-auto flex p-2 text-white md:hidden transition-colors hover:bg-white/10 rounded-full"
-            onClick={toggleMenu}
-            aria-label="Toggle Menu"
+          {/* Search Bar - Expands in Navbar Center */}
+          <div 
+            className={`absolute inset-0 flex items-center justify-center bg-[#050505] transition-all duration-500 ease-in-out px-4 sm:px-6 lg:px-16 ${
+              isSearchOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"
+            }`}
           >
-            {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
-          </button>
+            <div className="flex w-full max-w-[1440px] items-center gap-4">
+               {/* Logo - Hidden on mobile search to save space */}
+               <div className="hidden sm:flex shrink-0 items-center">
+                <Image
+                  src="/Logo.webp"
+                  alt="STEVRON Logo"
+                  width={220}
+                  height={48}
+                  priority
+                  className="h-auto w-[140px] md:w-[220px]"
+                />
+              </div>
+              
+              <div className="flex-1 flex justify-center">
+                <div className="relative w-full max-w-[800px] flex items-center">
+                  <Search className="text-[#94A034] absolute left-0" size={20} />
+                  <input
+                    autoFocus={isSearchOpen}
+                    type="text"
+                    placeholder="Search for AC or DC products..."
+                    className="w-full bg-transparent font-orbitron text-[14px] sm:text-[16px] md:text-[18px] text-white outline-none border-b border-white/20 pb-1 pl-8 focus:border-[#94A034] transition-colors"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                  {searchQuery && (
+                    <button 
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-10 text-white/40 hover:text-white"
+                    >
+                      <X size={16} />
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setIsSearchOpen(false)}
+                    className="absolute right-0 p-1 text-white/60 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <X size={24} />
+                  </button>
+                </div>
+              </div>
+
+               {/* Results Dropdown (Inside Navbar Context) */}
+              {(searchResults.length > 0 || (searchQuery && searchResults.length === 0)) && isSearchOpen && (
+                <div className="absolute top-[80px] left-0 right-0 mx-auto w-[95%] sm:w-full max-w-[1000px] overflow-hidden bg-[#050505] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] rounded-xl sm:rounded-b-2xl z-[1001] animate-in slide-in-from-top-2 duration-300">
+                  <div className="p-6 max-h-[70vh] overflow-y-auto scrollbar-hide">
+                    {searchResults.length > 0 ? (
+                      <>
+                        <div className="flex items-center justify-between mb-4 px-2">
+                          <span className="font-orbitron text-[12px] text-white/40 uppercase tracking-widest font-bold">Results Found ({searchResults.length})</span>
+                          <div className="h-px flex-1 bg-white/10 ml-4"></div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                          {searchResults.map((product) => (
+                            <Link
+                              key={product.id}
+                              href={`/${product.type}-product/${product.id}`}
+                              onClick={() => setIsSearchOpen(false)}
+                              className="flex items-center gap-4 p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-[#94A034]/40 transition-all group"
+                            >
+                              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-white p-1.5 shadow-inner">
+                                <Image
+                                  src={product.image}
+                                  alt={product.id}
+                                  fill
+                                  className="object-contain"
+                                />
+                              </div>
+                              <div className="flex flex-col min-w-0">
+                                <span className="font-orbitron text-[14px] font-bold text-white group-hover:text-[#94A034] transition-colors truncate">
+                                  {product.id}
+                                </span>
+                                <span className="font-inter text-[11px] text-white/50 truncate">
+                                  {product.subtitle}
+                                </span>
+                                <div className="mt-1 flex items-center gap-1.5">
+                                  <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-bold uppercase ${product.type === 'ac' ? 'bg-blue-500/10 text-blue-400' : 'bg-orange-500/10 text-orange-400'}`}>
+                                    {product.type === 'ac' ? 'AC' : 'DC'}
+                                  </span>
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-center py-12 flex flex-col items-center">
+                        <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                          <Search className="text-white/20" size={32} />
+                        </div>
+                        <p className="font-orbitron text-white/40 text-lg">No products found for "<span className="text-[#94A034]">{searchQuery}</span>"</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Quick Search Tags for Empty Search */}
+              {!searchQuery && isSearchOpen && (
+                 <div className="absolute top-[80px] left-0 right-0 mx-auto w-[95%] sm:w-full max-w-[1000px] bg-[#050505] border border-white/10 shadow-2xl rounded-xl sm:rounded-b-2xl z-[1001] animate-in slide-in-from-top-2 duration-300">
+                    <div className="p-8">
+                       <div className="flex items-center gap-3 mb-6">
+                        <span className="font-orbitron text-[12px] text-white/40 uppercase tracking-widest font-bold">Trending Searches</span>
+                        <div className="h-px flex-1 bg-white/10"></div>
+                      </div>
+                      <div className="flex flex-wrap gap-3">
+                        {["Drill", "Impact", "Grinder", "Hammer", "Saw", "Battery", "AC Tool", "DC Tool"].map((tag) => (
+                          <button
+                            key={tag}
+                            onClick={() => setSearchQuery(tag)}
+                            className="px-6 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white/70 font-orbitron text-[13px] hover:border-[#94A034] hover:text-[#94A034] hover:bg-[#94A034]/10 transition-all cursor-pointer"
+                          >
+                            {tag}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                 </div>
+              )}
+            </div>
+          </div>
+
+          {/* Search Shadow/Backdrop (No blur, just light dimming) */}
+          {isSearchOpen && (
+            <div 
+              className="fixed inset-0 top-[80px] bg-black/40 z-[999]"
+              onClick={() => setIsSearchOpen(false)}
+            />
+          )}
+
+          {/* Mobile Search and Menu Button */}
+          <div className="ml-auto flex items-center gap-2 md:hidden">
+            <button className="p-2 text-white hover:opacity-80 transition-all cursor-pointer">
+              <Globe size={22} />
+            </button>
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="p-2 text-white transition-colors hover:bg-white/10 rounded-full cursor-pointer"
+              aria-label="Search"
+            >
+              <Search size={22} />
+            </button>
+            <button
+              className="flex p-2 text-white transition-colors hover:bg-white/10 rounded-full cursor-pointer"
+              onClick={toggleMenu}
+              aria-label="Toggle Menu"
+            >
+              {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            </button>
+          </div>
         </div>
       </nav>
 
