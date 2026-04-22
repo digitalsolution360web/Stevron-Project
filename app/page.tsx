@@ -118,11 +118,12 @@ export default function Home() {
       {/* Explore Our Full Range Section - Figma: 1139×305px container, same alignment as navbar */}
       <section className="bg-white pt-4 sm:pt-6 pb-12">
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
-          {/* Section Title Label - as per Figma */}
-          <div className="mb-12 flex h-[40px] items-center justify-center rounded-[5px] bg-black px-8">
-            <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-white">
+          {/* Section Title Label - Transparent background, Black text */}
+          <div className="mb-12 flex flex-col items-center">
+            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.2em] text-black uppercase">
               Explora Nuestra Gama Completa
             </span>
+            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
           </div>
 
           {/* Categories Grid - optimized gap and font size for single-line fit */}
@@ -174,13 +175,12 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
-          {/* Logo + Section Title (navbar width) */}
-          <div className="mb-10 flex flex-col items-center gap-4">
-            <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-4 sm:px-8">
-              <span className="font-orbitron text-[12px] min-[375px]:text-[14px] md:text-[16px] lg:text-[18px] font-normal tracking-wider text-[#FFFFFF] text-center whitespace-nowrap">
-                Nuestros Valores Fundamentales
-              </span>
-            </div>
+          {/* Logo + Section Title - Transparent background, White text for dark BG */}
+          <div className="mb-10 flex flex-col items-center">
+            <span className="font-orbitron text-[18px] sm:text-[22px] lg:text-[26px] font-bold tracking-[0.2em] text-black uppercase">
+              Nuestros Valores Fundamentales
+            </span>
+            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
           </div>
 
           {/* Four boxes - Figma: integrated white header strip + body #171717 */}
@@ -190,36 +190,40 @@ export default function Home() {
                 title: "INNOVACIÓN",
                 subtitle: "Diseñando el futuro",
                 description: "Tools that deliver real output and excel in demanding professional environments.",
-                iconPath: "/innovation.png"
+                iconPath: "/innovation.png",
+                imgPath: "/innovation_v.png"
               },
               {
                 title: "CALIDAD",
                 subtitle: "Construidos para durar",
                 description: "Engineering that protects the user without compromising on power or efficiency.",
-                iconPath: "/Group.png"
+                iconPath: "/Group.png",
+                imgPath: "/quality_v.png"
               },
               {
                 title: "CONFIABILIDAD",
                 subtitle: "Confianza en el Rendimiento",
                 description: "Stevron stays intuitive to use, removing unnecessary complexity from professional work.",
-                iconPath: "/Group (1).png"
+                iconPath: "/Group (1).png",
+                imgPath: "/reliability_v.png"
               },
               {
                 title: "SOSTENIBILIDAD",
                 subtitle: "Un Futuro más Verde",
                 description: "Designed to keep work moving forward, ensuring maximum uptime and project flow.",
-                iconPath: "/innovation.png"
+                iconPath: "/innovation.png",
+                imgPath: "/sustainability_v.png"
               },
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex h-full min-h-[360px] w-full flex-col overflow-hidden rounded-[12px] shadow-lg"
+                className="group flex h-full min-h-[400px] w-full flex-col overflow-hidden rounded-[12px] shadow-lg transition-all hover:shadow-2xl"
               >
                 {/* Header: Layered Design (Figma) */}
                 <div className="flex flex-col">
-                  {/* Black top strip (Increased height to shift white bar down) */}
+                  {/* Black top strip */}
                   <div className="h-[18px] w-full bg-[#171717]" />
-                  {/* White title strip (Figma: 18px Bold) */}
+                  {/* White title strip */}
                   <div className="flex h-[32px] items-center justify-center bg-[#FFFFFF]">
                     <span className="font-['Antenna',sans-serif] text-[16px] sm:text-[18px] font-bold uppercase tracking-[0.02em] text-[#565656]">
                       {item.title}
@@ -227,11 +231,22 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Body: #171717 with icon image, line, subtitle, description */}
-                <div className="relative flex flex-1 flex-col bg-[#171717] px-4 pt-6 pb-8">
-                  <div className="relative z-10 flex flex-col items-center">
+                {/* Body: #171717 with background image, icon, subtitle, description */}
+                <div className="relative flex flex-1 flex-col overflow-hidden px-4 pt-6 pb-8">
+                  {/* Background Image with Overlay */}
+                  <div className="absolute inset-0 z-0">
+                    <Image
+                      src={item.imgPath}
+                      alt={item.title}
+                      fill
+                      className="object-cover opacity-20 grayscale transition-all duration-700 group-hover:scale-110 group-hover:opacity-40 group-hover:grayscale-0"
+                    />
+                    <div className="absolute inset-0 bg-[#171717]/80" />
+                  </div>
+
+                  <div className="relative z-10 flex flex-1 flex-col items-center">
                     {/* Icon Image - Big, Professional with Glowing Circle */}
-                    <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full bg-white/10 shadow-[0_0_24px_6px_rgba(255,255,255,0.12)] border border-white/20 backdrop-blur-sm">
+                    <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full bg-white/10 shadow-[0_0_24px_6px_rgba(255,255,255,0.12)] border border-white/20 backdrop-blur-sm transition-transform duration-500 group-hover:scale-110 group-hover:bg-white/20">
                       <Image
                         src={item.iconPath}
                         alt=""
@@ -243,15 +258,15 @@ export default function Home() {
 
                     {/* Subtitle with side lines (Figma style) */}
                     <div className="mb-3 flex w-full items-center gap-2">
-                      <div className="h-px flex-1 bg-[#FFFFFF]" />
+                      <div className="h-px flex-1 bg-white/30" />
                       <p className="font-['Antenna',sans-serif] text-[14px] sm:text-[16px] lg:text-[18px] font-normal leading-[100%] tracking-[0%] text-[#FFFFFF] text-center">
                         {item.subtitle}
                       </p>
-                      <div className="h-px flex-1 bg-[#FFFFFF]" />
+                      <div className="h-px flex-1 bg-white/30" />
                     </div>
 
                     {/* Description left-aligned (Figma: 12px, Weight 200, White) */}
-                    <p className="text-left font-['Antenna',sans-serif] text-[14px] sm:text-[15px] font-light leading-[1.6] tracking-[0.03em] text-[#FFFFFF]">
+                    <p className="text-left font-['Antenna',sans-serif] text-[14px] sm:text-[15px] font-light leading-[1.6] tracking-[0.03em] text-[#FFFFFF]/80 group-hover:text-white transition-colors">
                       {item.description}
                     </p>
                   </div>
@@ -264,13 +279,12 @@ export default function Home() {
       {/* Our Professional Tools Section */}
       <section className="bg-[#FFFFFF] py-20 pb-16">
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
-          {/* Section Label */}
-          <div className="mb-12 flex flex-col items-center gap-4">
-            <div className="flex h-[40px] items-center justify-center rounded-[5px] bg-[#000000] px-8">
-              <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF] text-center">
-                Our Professional Tools
-              </span>
-            </div>
+          {/* Section Label - Transparent background, Black text */}
+          <div className="mb-12 flex flex-col items-center">
+            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.2em] text-black uppercase">
+              Our Professional Tools
+            </span>
+            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
           </div>
           {/* Product Grid with Navigation Arrows (Restored Slider) */}
           <div className="relative w-full">
@@ -352,11 +366,12 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
-          {/* Top Label - Figma: 373x38px, White BG, Black Text */}
-          <div className="mb-14 flex min-h-[50px] w-full max-w-[550px] items-center justify-center rounded-[5px] bg-white shadow-lg border border-black/10 px-4 py-2">
-            <span className="font-orbitron text-[16px] sm:text-[18px] lg:text-[20px] font-bold tracking-[0.1em] text-black text-center">
+          {/* Top Label - Transparent background, Black text */}
+          <div className="mb-14 flex flex-col items-center">
+            <span className="font-orbitron text-[20px] sm:text-[24px] lg:text-[28px] font-bold tracking-[0.1em] text-white uppercase">
               Parte de un Grupo Industrial Global
             </span>
+            <div className="mt-3 h-[3px] w-24 bg-white mx-auto" />
           </div>
 
           {/* Cards Grid - 3 cards, full width to align with other sections */}
@@ -426,11 +441,12 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="bg-white py-12">
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
-          {/* Section Label */}
-          <div className="mb-6 flex min-h-[40px] sm:min-h-[45px] items-center justify-center rounded-[5px] bg-[#000000] px-8 py-2 shadow-sm">
-            <span className="font-orbitron text-[16px] sm:text-[18px] font-normal tracking-wider text-[#FFFFFF] text-center">
+          {/* Section Label - Transparent background, Black text */}
+          <div className="mb-8 flex flex-col items-center">
+            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.2em] text-black uppercase">
               Preguntas Frecuentes
             </span>
+            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
           </div>
 
           {/* Subtitle */}

@@ -9,10 +9,11 @@ export default function CTASection() {
 
         <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-[800px]">
           {/* Title Pill - Enforced single line on small screens */}
-          <div className="bg-black text-white flex items-center justify-center px-4 sm:px-8 py-2 sm:py-2.5 rounded-[5px] shadow-lg">
-            <span className="font-orbitron text-[11px] min-[350px]:text-[12px] min-[400px]:text-[14px] sm:text-[17px] font-bold tracking-wider uppercase whitespace-nowrap">
+          <div>
+            <span className="font-orbitron text-[11px] min-[350px]:text-[12px] min-[400px]:text-[14px] sm:text-[17px] font-black tracking-wider text-black  uppercase whitespace-nowrap">
               ¿Listo para vivir la excelencia?
-            </span>
+            </span> <br />
+            <div className="mt-3 h-[3px] w-24 bg-black m-auto " />
           </div>
 
           {/* Description */}
@@ -25,7 +26,7 @@ export default function CTASection() {
             {/* The single Explore Products button that links to Contact Us */}
             <Link href="/contact" className="w-full sm:w-auto">
               <button className="w-full bg-[#94A034] text-white font-orbitron cursor-pointer text-[14px] sm:text-[15px] font-bold px-8 sm:px-12 py-4 rounded-[5px] shadow-md transition-all hover:opacity-90 hover:scale-[1.02] uppercase tracking-wider">
-               EXPLORA NUESTROS PRODUCTOS
+                EXPLORA NUESTROS PRODUCTOS
               </button>
             </Link>
           </div>

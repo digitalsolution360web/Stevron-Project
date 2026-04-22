@@ -89,9 +89,19 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-4 mt-4">
                 <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
-                      <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500" />
+                  {[
+                    { src: "/23.png", alt: "Professional 1" },
+                    { src: "/24.png", alt: "Professional 2" },
+                    { src: "/25.png", alt: "Professional 3" },
+                    { src: "/27.png", alt: "Professional 4" },
+                  ].map((img, i) => (
+                    <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative shadow-sm">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   ))}
                 </div>
