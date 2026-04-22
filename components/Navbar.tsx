@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ChevronDown, Globe, Search, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Search, ArrowRight, ArrowLeft } from "lucide-react";
 import { acProducts } from "@/data/acProducts";
 import { dcProducts } from "@/data/dcProducts";
 
@@ -193,12 +193,19 @@ export default function Navbar() {
                   <div className={`absolute -inset-1 bg-gradient-to-r from-[#94A034]/20 via-[#94A034]/10 to-[#94A034]/20 rounded-full blur-xl transition-opacity duration-500 ${searchQuery ? 'opacity-100' : 'opacity-0'}`}></div>
                   
                   <div className="relative flex items-center">
+                    <button 
+                      onClick={() => setIsSearchOpen(false)}
+                      className="mr-4 p-2 text-white/40 hover:text-[#94A034] transition-all hover:scale-110 cursor-pointer z-30"
+                      aria-label="Go back"
+                    >
+                      <ArrowLeft size={24} />
+                    </button>
                     <Search className={`transition-all duration-500 ${searchQuery ? 'text-[#94A034] scale-110' : 'text-white/30'}`} size={24} />
                     <input
                       autoFocus={isSearchOpen}
                       type="text"
                       placeholder="Search for premium AC or DC products..."
-                      className="w-full bg-transparent font-orbitron text-[16px] sm:text-[20px] md:text-[24px] text-white outline-none border-b-2 border-white/10 pb-2 pl-6 focus:border-[#94A034] transition-all duration-500 placeholder:text-white/10 relative z-10"
+                      className="w-full bg-transparent font-orbitron text-[16px] sm:text-[20px] md:text-[24px] text-white outline-none border-b-2 border-white/10 pb-2 pl-6 pr-12 focus:border-[#94A034] transition-all duration-500 placeholder:text-white/10 relative z-10"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       onKeyDown={(e) => {
@@ -215,20 +222,16 @@ export default function Navbar() {
                       <div className="absolute bottom-[-2px] left-0 h-[2px] bg-[#94A034] shadow-[0_0_15px_#94A034] animate-scan z-20"></div>
                     )}
                     
-                    {searchQuery && (
-                      <button 
-                        onClick={() => setSearchQuery("")}
-                        className="absolute right-12 text-white/40 hover:text-white p-2 transition-all hover:scale-110 cursor-pointer"
-                        aria-label="Clear search"
-                      >
-                        <X size={18} />
-                      </button>
-                    )}
-                    
                     <button
-                      onClick={() => setIsSearchOpen(false)}
-                      className="absolute right-0 p-2 text-white/40 hover:text-[#94A034] transition-all hover:scale-110 cursor-pointer"
-                      aria-label="Close search"
+                      onClick={() => {
+                        if (searchQuery) {
+                          setSearchQuery("");
+                        } else {
+                          setIsSearchOpen(false);
+                        }
+                      }}
+                      className="absolute right-0 p-2 text-white/40 hover:text-[#94A034] transition-all hover:scale-110 cursor-pointer z-30"
+                      aria-label={searchQuery ? "Clear search" : "Close search"}
                     >
                       <X size={28} />
                     </button>
