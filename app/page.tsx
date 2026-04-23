@@ -120,10 +120,10 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Section Title Label - Transparent background, Black text */}
           <div className="mb-12 flex flex-col items-center">
-            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.2em] text-black uppercase">
+            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.1em] text-black uppercase">
               Explora Nuestra Gama Completa
             </span>
-            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
+            <div className="mt-3 h-[3px] w-24 border-l-100 border-[#94A034] mx-auto" />
           </div>
 
           {/* Categories Grid - optimized gap and font size for single-line fit */}
@@ -177,38 +177,38 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Logo + Section Title - Transparent background, White text for dark BG */}
           <div className="mb-10 flex flex-col items-center">
-            <span className="font-orbitron text-[18px] sm:text-[22px] lg:text-[26px] font-bold tracking-[0.2em] text-black uppercase">
+            <span className="font-orbitron text-[18px] sm:text-[22px] lg:text-[26px] font-bold tracking-[0.1em] text-black uppercase">
               Nuestros Valores Fundamentales
             </span>
-            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
+            <div className="mt-3 h-[3px] w-24 border-l-100 border-[#94A034] mx-auto" />
           </div>
 
           {/* Four boxes - Figma: integrated white header strip + body #171717 */}
           <div className="grid w-full justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "INNOVACIÓN",
+                title: "PERFORMANCE",
                 subtitle: "Diseñando el futuro",
                 description: "Tools that deliver real output and excel in demanding professional environments.",
                 iconPath: "/innovation.png",
                 imgPath: "/innovation_v.png"
               },
               {
-                title: "CALIDAD",
+                title: "SAFETY",
                 subtitle: "Construidos para durar",
                 description: "Engineering that protects the user without compromising on power or efficiency.",
                 iconPath: "/Group.png",
                 imgPath: "/quality_v.png"
               },
               {
-                title: "CONFIABILIDAD",
+                title: "SIMPLICITY",
                 subtitle: "Confianza en el Rendimiento",
                 description: "Stevron stays intuitive to use, removing unnecessary complexity from professional work.",
                 iconPath: "/Group (1).png",
                 imgPath: "/reliability_v.png"
               },
               {
-                title: "SOSTENIBILIDAD",
+                title: "MOMENTUM",
                 subtitle: "Un Futuro más Verde",
                 description: "Designed to keep work moving forward, ensuring maximum uptime and project flow.",
                 iconPath: "/innovation.png",
@@ -281,10 +281,10 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Section Label - Transparent background, Black text */}
           <div className="mb-12 flex flex-col items-center">
-            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.2em] text-black uppercase">
+            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.1em] text-black uppercase">
               Our Professional Tools
             </span>
-            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
+            <div className="mt-3 h-[3px] w-24 border-l-100 border-[#94A034] mx-auto" />
           </div>
           {/* Product Grid with Navigation Arrows (Restored Slider) */}
           <div className="relative w-full">
@@ -371,7 +371,7 @@ export default function Home() {
             <span className="font-orbitron text-[20px] sm:text-[24px] lg:text-[28px] font-bold tracking-[0.1em] text-white uppercase">
               Parte de un Grupo Industrial Global
             </span>
-            <div className="mt-3 h-[3px] w-24 bg-white mx-auto" />
+            <div className="mt-3 h-[3px] w-24 border-l-100 border-[#94A034] mx-auto" />
           </div>
 
           {/* Cards Grid - 3 cards, full width to align with other sections */}
@@ -443,10 +443,10 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-16 flex flex-col items-center">
           {/* Section Label - Transparent background, Black text */}
           <div className="mb-8 flex flex-col items-center">
-            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.2em] text-black uppercase">
+            <span className="font-orbitron text-[20px] sm:text-[24px] font-bold tracking-[0.1em] text-black uppercase">
               Preguntas Frecuentes
             </span>
-            <div className="mt-3 h-[3px] w-24 bg-black mx-auto" />
+            <div className="mt-3 h-[3px] w-24 border-l-100 border-[#94A034] mx-auto" />
           </div>
 
           {/* Subtitle */}

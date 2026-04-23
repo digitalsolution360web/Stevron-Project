@@ -13,7 +13,7 @@ export default function CTASection() {
             <span className="font-orbitron text-[11px] min-[350px]:text-[12px] min-[400px]:text-[14px] sm:text-[17px] font-black tracking-wider text-black  uppercase whitespace-nowrap">
               ¿Listo para vivir la excelencia?
             </span> <br />
-            <div className="mt-3 h-[3px] w-24 bg-black m-auto " />
+            <div className="mt-3 h-[3px] w-24 border-l-100 border-[#94A034] mx-auto" />
           </div>
 
           {/* Description */}
